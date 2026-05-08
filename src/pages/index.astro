@@ -6,42 +6,48 @@ import { articles } from '../data/articles.js';
 const derniersAjouts = articles.slice(0, 6);
 
 const coupDeCoeur = [
-    { nom: "Tokyo", pays: "Japon", desc: "De Shibuya illuminé aux temples ancestraux, Tokyo est une aventure à chaque pas.", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.jpg", href: "/que-faire-a-tokyo-entre-amis-guide-et-bons-plans" },
-    { nom: "Maldives", pays: "Maldives", desc: "Plonge dans des lagons turquoise et marche sur des plages de sable blanc inoubliables.", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans" },
-    { nom: "Bali", pays: "Indonésie", desc: "Entre rizières, temples et fêtes sur la plage, Bali ne ressemble à aucun autre endroit.", img: "/images/2025/10/Photo-Bali-a-deflouter-17.jpg", href: "/que-faire-a-bali-entre-amis-guide-et-bons-plans" },
+    { nom: "Tokyo", pays: "Japon", desc: "De Shibuya illuminé aux temples ancestraux, Tokyo est une aventure à chaque pas.", alt: "Que faire à Tokyo entre amis - guide et bons plans", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.jpg", href: "/que-faire-a-tokyo-entre-amis-guide-et-bons-plans" },
+    { nom: "Maldives", pays: "Maldives", desc: "Plonge dans des lagons turquoise et marche sur des plages de sable blanc inoubliables.", alt: "Voyage aux Maldives entre amis - plages de sable blanc et lagons turquoise", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans" },
+    { nom: "Bali", pays: "Indonésie", desc: "Entre rizières, temples et fêtes sur la plage, Bali ne ressemble à aucun autre endroit.", alt: "Que faire à Bali entre amis - activités incontournables et bons plans", img: "/images/2025/10/Photo-Bali-a-deflouter-17.jpg", href: "/que-faire-a-bali-entre-amis-guide-et-bons-plans" },
 ];
 
 const activites = [
-    { nom: "Bali", num: "01", titre: "10 activités incontournables de Bali", img: "/images/2025/10/Bali-soins-et-bain-de-boue-avec-les-elephants-1.jpg", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
-    { nom: "Tokyo", num: "02", titre: "10 activités incontournables de Tokyo", img: "/images/2025/10/vue-aerienne-du-paysage-urbain-de-tokyo-avec-la-montagne-fuji-au-japon-1024x683.jpg", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
-    { nom: "Londres", num: "03", titre: "10 activités incontournables de Londres", img: "/images/2025/11/Londres-a-deflouter-3.jpg", href: "/londres-10-activites-incontournables", desc: "Promenade sur le Tower Bridge au lever du jour, soirée dans un pub du XVIIe siècle, balade en bus rouge à impériale... On t'a sélectionné les 10 incontournables pour vivre Londres à fond." },
-    { nom: "Marrakech", num: "04", titre: "10 activités incontournables de Marrakech", img: "/images/2025/12/Marrakech-a-deflouter-3-1.jpg", href: "/marrakech-10-activites-incontournables", desc: "Hammam traditionnel, balades nocturnes dans les souks, nuit dans un riad somptueux, excursion dans le désert... 10 activités pour tomber amoureux de Marrakech." },
+    { nom: "Bali", num: "01", titre: "10 activités incontournables de Bali", alt: "Activités incontournables à Bali entre amis - bain de boue avec les éléphants", img: "/images/2025/10/Bali-soins-et-bain-de-boue-avec-les-elephants-1.jpg", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
+    { nom: "Tokyo", num: "02", titre: "10 activités incontournables de Tokyo", alt: "Activités incontournables à Tokyo entre amis - vue sur le mont Fuji et Shibuya", img: "/images/2025/10/vue-aerienne-du-paysage-urbain-de-tokyo-avec-la-montagne-fuji-au-japon-1024x683.jpg", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
+    { nom: "Londres", num: "03", titre: "10 activités incontournables de Londres", alt: "Activités incontournables à Londres entre amis - Tower Bridge et pubs historiques", img: "/images/2025/11/Londres-a-deflouter-3.jpg", href: "/londres-10-activites-incontournables", desc: "Promenade sur le Tower Bridge au lever du jour, soirée dans un pub du XVIIe siècle, balade en bus rouge à impériale... On t'a sélectionné les 10 incontournables pour vivre Londres à fond." },
+    { nom: "Marrakech", num: "04", titre: "10 activités incontournables de Marrakech", alt: "Activités incontournables à Marrakech entre amis - hammam et souks", img: "/images/2025/12/Marrakech-a-deflouter-3-1.jpg", href: "/marrakech-10-activites-incontournables", desc: "Hammam traditionnel, balades nocturnes dans les souks, nuit dans un riad somptueux, excursion dans le désert... 10 activités pour tomber amoureux de Marrakech." },
 ];
 
 const piedsDansSable = [
-    { nom: "Maldives", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans", vibe: "Eaux cristallines, sable blanc immaculé et bungalows sur pilotis au-dessus du lagon." },
-    { nom: "Zanzibar", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans", vibe: "Plages sauvages bordées de cocotiers, baignées par un océan Indien turquoise et chaud." },
-    { nom: "Koh Phi Phi", img: "/images/2026/01/Koh-Phi-Phi-Thailand-Blog-1.jpg", href: "/que-faire-a-koh-phi-phi-entre-amis-guide-et-bons-plans", vibe: "Falaises de calcaire plongeant dans des lagons secrets aux couleurs irréelles." },
-    { nom: "Bora Bora", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", vibe: "Le lagon le plus bleu du Pacifique Sud, entouré de coraux et d'un silence absolu." },
+    { nom: "Maldives", alt: "Plage des Maldives entre amis - bungalows sur pilotis et lagon turquoise", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans", vibe: "Eaux cristallines, sable blanc immaculé et bungalows sur pilotis au-dessus du lagon." },
+    { nom: "Zanzibar", alt: "Plus belle plage de Zanzibar - cocotiers et océan Indien turquoise", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans", vibe: "Plages sauvages bordées de cocotiers, baignées par un océan Indien turquoise et chaud." },
+    { nom: "Koh Phi Phi", alt: "Plage de Koh Phi Phi Thaïlande entre amis - lagons et falaises de calcaire", img: "/images/2026/01/Koh-Phi-Phi-Thailand-Blog-1.jpg", href: "/que-faire-a-koh-phi-phi-entre-amis-guide-et-bons-plans", vibe: "Falaises de calcaire plongeant dans des lagons secrets aux couleurs irréelles." },
+    { nom: "Bora Bora", alt: "Bora Bora Polynésie française - plus beau lagon du monde entre amis", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", vibe: "Le lagon le plus bleu du Pacifique Sud, entouré de coraux et d'un silence absolu." },
 ];
 
 const fete = [
-    { nom: "Ibiza", pays: "Espagne", img: "/images/2025/10/Ibiza-a-deflouter-5.jpg", href: "/ou-faire-la-fete-a-ibiza" },
-    { nom: "Las Vegas", pays: "États-Unis", img: "/images/Las-Vegas.jpg", href: "/ou-faire-la-fete-a-las-vegas" },
-    { nom: "Amsterdam", pays: "Pays-Bas", img: "/images/2026/01/Amsterdam-1.jpg", href: "/ou-faire-la-fete-a-amsterdam" },
+    { nom: "Ibiza", pays: "Espagne", alt: "Faire la fête à Ibiza entre amis - meilleures boîtes de nuit", img: "/images/2025/10/Ibiza-a-deflouter-5.jpg", href: "/ou-faire-la-fete-a-ibiza" },
+    { nom: "Las Vegas", pays: "États-Unis", alt: "Faire la fête à Las Vegas entre amis - guide sorties et bons plans", img: "/images/Las-Vegas.jpg", href: "/ou-faire-la-fete-a-las-vegas" },
+    { nom: "Amsterdam", pays: "Pays-Bas", alt: "Faire la fête à Amsterdam entre amis - vie nocturne et bons plans", img: "/images/2026/01/Amsterdam-1.jpg", href: "/ou-faire-la-fete-a-amsterdam" },
 ];
 
 const continents = [
-    { nom: "Europe", tagline: "Capitales mythiques & côtes inoubliables", img: "/images/2026/01/Split-a-deflouter-10.jpg", href: "/europe", count: "12 destinations" },
-    { nom: "Asie", tagline: "Temples, néons et plages secrètes", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.jpg", href: "/asie", count: "10 destinations" },
-    { nom: "Amérique", tagline: "De Miami à Vegas, l'excès en beauté", img: "/images/2025/10/Photo-miami-a-deflouter-10.jpg", href: "/amerique", count: "6 destinations" },
-    { nom: "Afrique", tagline: "Safari, épices et océan Indien", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/afrique", count: "4 destinations" },
-    { nom: "Océanie", tagline: "Coraux, lagons et grands espaces", img: "/images/2026/01/Cairns-Australie.jpg", href: "/oceanie", count: "3 destinations" },
+    { nom: "Europe", tagline: "Capitales mythiques & côtes inoubliables", alt: "Voyager en Europe entre amis - destinations incontournables", img: "/images/2026/01/Split-a-deflouter-10.jpg", href: "/europe", count: "12 destinations" },
+    { nom: "Asie", tagline: "Temples, néons et plages secrètes", alt: "Voyage en Asie entre amis - Bali, Tokyo, Bangkok", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.jpg", href: "/asie", count: "10 destinations" },
+    { nom: "Amérique", tagline: "De Miami à Vegas, l'excès en beauté", alt: "Voyager en Amérique entre amis - Miami, Las Vegas, Rio", img: "/images/2025/10/Photo-miami-a-deflouter-10.jpg", href: "/amerique", count: "6 destinations" },
+    { nom: "Afrique", tagline: "Safari, épices et océan Indien", alt: "Voyage en Afrique entre amis - Zanzibar, Marrakech", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/afrique", count: "4 destinations" },
+    { nom: "Océanie", tagline: "Coraux, lagons et grands espaces", alt: "Voyager en Océanie entre amis - Australie, Bora Bora", img: "/images/2026/01/Cairns-Australie.jpg", href: "/oceanie", count: "3 destinations" },
 ];
 
 ---
 
-<Layout title="Destination Souvenir — Voyager entre amis" heroPage={true}>
+<Layout
+    title="Destination Souvenir — Blog voyage entre amis | Guides & Bons Plans"
+    description="Destination Souvenir, le blog voyage entre amis pour les 18-35 ans. Guides pratiques, activités incontournables, plages de rêve et bons plans pour des souvenirs inoubliables."
+    ogImage="/images/bora-bora-hero.jpg"
+    canonicalPath="/"
+    heroPage={true}
+>
     <link rel="preload" as="image" href="/images/bora-bora-hero.jpg" slot="head" />
 
     <!-- ══════════════════════════════════════
@@ -55,9 +61,9 @@ const continents = [
 
         <!-- Texte central -->
         <div class="hero-content">
-            <p class="hero-label">Voyager entre amis · Guides &amp; Bons Plans</p>
-            <h1>À l'aventure — <em>le monde t'attend !</em></h1>
-            <p class="hero-sub">Guides, bons plans et souvenirs inoubliables pour les 18-35 ans qui veulent tout vivre.</p>
+            <p class="hero-label">Blog voyage entre amis · Guides &amp; Bons Plans</p>
+            <h1>Voyager entre amis — <em>le monde t'attend !</em></h1>
+            <p class="hero-sub">Guides pratiques, bons plans et souvenirs inoubliables pour les 18-35 ans qui veulent tout vivre.</p>
             <div class="hero-actions">
                 <a href="/ou-partir" class="btn-hero-primary">Explorer les destinations <span>→</span></a>
             </div>
@@ -77,13 +83,13 @@ const continents = [
     <section class="section-continents">
         <div class="continents-intro">
             <h2>Par où commencer <em>l'aventure ?</em></h2>
-            <p>Choisis ton continent et explore nos guides.</p>
+            <p>Choisis ta destination voyage et explore nos guides entre amis.</p>
         </div>
         <div class="continents-row">
             {continents.map((c) => (
                 <a href={c.href} class="cont-card">
                     <div class="cont-img">
-                        <img src={c.img} alt={c.nom} loading="lazy" />
+                        <img src={c.img} alt={c.alt} loading="lazy" />
                         <span class="cont-count">{c.count}</span>
                     </div>
                     <div class="cont-body">
@@ -105,7 +111,7 @@ const continents = [
         <div class="ajouts-header">
             <div class="ajouts-label">
                 <span class="pill pill--new">Nouveau</span>
-                <h2>Nos derniers ajouts</h2>
+                <h2>Nos derniers guides de voyage</h2>
             </div>
         </div>
         <div class="ajouts-carousel">
@@ -115,7 +121,7 @@ const continents = [
                     {derniersAjouts.map((d) => (
                         <a href={d.href} class="ajout-card">
                             <div class="ajout-img">
-                                <img src={d.img} alt={d.nom} loading="lazy" />
+                                <img src={d.img} alt={d.titre ?? d.nom} loading="lazy" />
                                 <span class="ajout-tag">{d.tag}</span>
                             </div>
                             <div class="ajout-body">
@@ -146,13 +152,13 @@ const continents = [
         <div class="cdc-header">
             <span class="cdc-eyebrow">❤ Coup de cœur</span>
             <h2 class="cdc-title">Ces destinations <em>qui nous ont marqués</em></h2>
-            <p class="cdc-sub">Notre équipe a testé, voyagé, vécu. Voici les endroits qu'on n'oublie jamais.</p>
+            <p class="cdc-sub">Notre équipe a testé, voyagé, vécu. Voici les meilleures destinations voyage entre amis qu'on n'oublie jamais.</p>
         </div>
         <div class="cdc-layout">
             <!-- Grande card featured -->
             <a href={coupDeCoeur[0].href} class="cdc-featured">
                 <div class="cdc-feat-img">
-                    <img src={coupDeCoeur[0].img} alt={coupDeCoeur[0].nom} loading="lazy" />
+                    <img src={coupDeCoeur[0].img} alt={coupDeCoeur[0].alt} loading="lazy" />
                 </div>
                 <div class="cdc-feat-body">
                     <span class="cdc-feat-pays">{coupDeCoeur[0].pays}</span>
@@ -166,7 +172,7 @@ const continents = [
                 {coupDeCoeur.slice(1).map((d) => (
                     <a href={d.href} class="cdc-small">
                         <div class="cdc-small-img">
-                            <img src={d.img} alt={d.nom} loading="lazy" />
+                            <img src={d.img} alt={d.alt} loading="lazy" />
                         </div>
                         <div class="cdc-small-body">
                             <span class="cdc-small-pays">{d.pays}</span>
@@ -192,7 +198,7 @@ const continents = [
         <div class="actu-container">
             <div class="actu-intro">
                 <span class="tag-sand">Activités incontournables</span>
-                <h2>10 activités incontournables<br /><em>par destination</em></h2>
+                <h2>Les activités incontournables<br /><em>par destination</em></h2>
             </div>
             <div class="actu-list">
                 {activites.map((a, i) => (
@@ -204,7 +210,7 @@ const continents = [
                             <span class="actu-titre-mobile">{a.titre}</span>
                         </div>
                         <div class="actu-band-img">
-                            <img src={a.img} alt={a.nom} loading="lazy" />
+                            <img src={a.img} alt={a.alt} loading="lazy" />
                         </div>
                         <div class="actu-band-desc">
                             <p>{a.desc}</p>
@@ -227,13 +233,13 @@ const continents = [
             <div class="plage-intro">
                 <span class="tag-white">Pieds dans le sable</span>
                 <h2>Les plus belles<br /><em>plages du monde</em></h2>
-                <p>Parce que parfois, tout ce dont on a besoin c'est du sable chaud, une eau cristalline et ses meilleurs amis.</p>
+                <p>Parce que parfois, tout ce dont on a besoin c'est du sable chaud, une eau cristalline et ses meilleurs amis. Les plus belles plages du monde n'attendent que vous.</p>
             </div>
             <div class="plage-grid">
                 {piedsDansSable.map((d) => (
                     <a href={d.href} class="plage-card">
                         <div class="plage-img-wrap">
-                            <img src={d.img} alt={d.nom} loading="lazy" />
+                            <img src={d.img} alt={d.alt} loading="lazy" />
                         </div>
                         <div class="plage-info">
                             <h3>{d.nom}</h3>
@@ -278,7 +284,7 @@ const continents = [
             <div class="fete-grid">
                 {fete.map((f, i) => (
                     <a href={f.href} class={`fete-card ${i === 0 ? "fete-card--big" : ""}`}>
-                        <img src={f.img} alt={f.nom} loading="lazy" />
+                        <img src={f.img} alt={f.alt} loading="lazy" />
                         <div class="fete-overlay">
                             <span class="fete-pays">{f.pays}</span>
                             <h3>{f.nom}</h3>
@@ -1518,24 +1524,31 @@ const continents = [
         font-size: 1rem;
         text-shadow: 0 1px 16px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.7);
     }
+    .hero-scroll-hint { bottom: 5rem; }
 
-    .ajouts-carousel {
-        padding: 0;
-        display: block;
-        overflow: hidden;
-    }
+    .ajouts-carousel { padding: 0; display: block; }
     .ajouts-arrow { display: none; }
     .ajouts-outer {
-        overflow: visible;
-        padding: 0.5rem 0 1rem;
+        overflow-x: auto;
+        overflow-y: visible;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0.5rem 1.2rem 1rem;
+        scroll-padding-left: 1.2rem;
     }
+    .ajouts-outer::-webkit-scrollbar { display: none; }
     .ajouts-scroll {
         gap: 1rem;
-        padding: 0 1.5rem;
-        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        padding: 0;
+        transform: none !important;
+        transition: none;
+        width: max-content;
     }
     .ajout-card {
-        flex: 0 0 82%;
+        flex: 0 0 82vw;
+        max-width: 320px;
+        scroll-snap-align: start;
         border-radius: 16px;
     }
     .ajout-card:nth-child(n+5) { display: none; }
@@ -1575,6 +1588,11 @@ const continents = [
     }
     .actu-band:hover,
     .actu-band--reverse:hover { box-shadow: none; border-color: var(--turquoise); }
+    .actu-band.is-open,
+    .actu-band--reverse.is-open {
+        background: rgba(26,168,152,0.09);
+        border-color: var(--turquoise);
+    }
 
     .actu-band-text {
         display: flex;
@@ -1728,6 +1746,38 @@ const continents = [
     }
     .cont-body p { display: none; }
     .cont-link { display: none; }
+
+    .cdc-sub {
+        color: var(--text);
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+    .cdc-feat-cta {
+        font-size: 0.85rem;
+        padding: 0.7rem 1.4rem;
+        align-self: stretch;
+        justify-content: center;
+    }
+    .cdc-link {
+        color: var(--text);
+    }
+
+    .section-nl { padding: 3.5rem 1.2rem; }
+    .nl-form {
+        flex-direction: column;
+        border-radius: 16px;
+        padding: 0.4rem;
+        gap: 0.4rem;
+    }
+    .nl-form input {
+        padding: 0.9rem 1.2rem;
+        border-radius: 10px;
+    }
+    .nl-form button {
+        border-radius: 10px;
+        padding: 0.9rem 1.2rem;
+        text-align: center;
+    }
 }
 </style>
 
@@ -1780,6 +1830,16 @@ const continents = [
         if (ajoutsIndex < getTotal() - getVisible()) { ajoutsIndex++; ajoutsMove(); updateDots(); }
     });
 
+    // Scroll natif mobile — mise à jour des dots
+    const ajoutsOuter = document.querySelector(".ajouts-outer") as HTMLElement;
+    ajoutsOuter?.addEventListener("scroll", () => {
+        const firstVisible = (Array.from(ajoutsCards ?? []) as HTMLElement[]).find(c => c.offsetWidth > 0);
+        if (!firstVisible) return;
+        const cardW = firstVisible.offsetWidth + 16;
+        ajoutsIndex = Math.round(ajoutsOuter.scrollLeft / cardW);
+        updateDots();
+    }, { passive: true });
+
     // Accordéon activités (mobile)
     document.querySelectorAll(".actu-band, .actu-band--reverse").forEach(band => {
         band.addEventListener("click", (e) => {
@@ -1793,10 +1853,11 @@ const continents = [
         });
     });
 
-    // Swipe tactile
+    // Swipe tactile (desktop uniquement — mobile utilise scroll natif)
     let touchStartX = 0;
     ajoutsTrack?.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, { passive: true });
     ajoutsTrack?.addEventListener("touchend", e => {
+        if (window.innerWidth <= 767) return;
         const diff = touchStartX - e.changedTouches[0].clientX;
         if (Math.abs(diff) > 40) {
             if (diff > 0 && ajoutsIndex < getTotal() - getVisible()) { ajoutsIndex++; ajoutsMove(); updateDots(); }
