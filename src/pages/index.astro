@@ -1,0 +1,1552 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { articles } from '../data/articles.js';
+
+// Toujours les 6 articles les plus récents — ajouter en haut de src/data/articles.js
+const derniersAjouts = articles.slice(0, 6);
+
+const coupDeCoeur = [
+    { nom: "Tokyo", pays: "Japon", desc: "De Shibuya illuminé aux temples ancestraux, Tokyo est une aventure à chaque pas.", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.jpg", href: "/que-faire-a-tokyo-entre-amis-guide-et-bons-plans" },
+    { nom: "Maldives", pays: "Maldives", desc: "Plonge dans des lagons turquoise et marche sur des plages de sable blanc inoubliables.", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans" },
+    { nom: "Bali", pays: "Indonésie", desc: "Entre rizières, temples et fêtes sur la plage, Bali ne ressemble à aucun autre endroit.", img: "/images/2025/10/Photo-Bali-a-deflouter-17.jpg", href: "/que-faire-a-bali-entre-amis-guide-et-bons-plans" },
+];
+
+const activites = [
+    { nom: "Bali", num: "01", img: "/images/2025/10/Bali-soins-et-bain-de-boue-avec-les-elephants-1.jpg", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
+    { nom: "Tokyo", num: "02", img: "/images/2025/10/vue-aerienne-du-paysage-urbain-de-tokyo-avec-la-montagne-fuji-au-japon-1024x683.jpg", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
+    { nom: "Londres", num: "03", img: "/images/2025/11/Londres-a-deflouter-3.jpg", href: "/londres-10-activites-incontournables", desc: "Promenade sur le Tower Bridge au lever du jour, soirée dans un pub du XVIIe siècle, balade en bus rouge à impériale... On t'a sélectionné les 10 incontournables pour vivre Londres à fond." },
+    { nom: "Marrakech", num: "04", img: "/images/2025/12/Marrakech-a-deflouter-3-1.jpg", href: "/marrakech-10-activites-incontournables", desc: "Hammam traditionnel, balades nocturnes dans les souks, nuit dans un riad somptueux, excursion dans le désert... 10 activités pour tomber amoureux de Marrakech." },
+];
+
+const piedsDansSable = [
+    { nom: "Maldives", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans", vibe: "Eaux cristallines, sable blanc immaculé et bungalows sur pilotis au-dessus du lagon." },
+    { nom: "Zanzibar", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans", vibe: "Plages sauvages bordées de cocotiers, baignées par un océan Indien turquoise et chaud." },
+    { nom: "Koh Phi Phi", img: "/images/2026/01/Koh-Phi-Phi-Thailand-Blog-1.jpg", href: "/que-faire-a-koh-phi-phi-entre-amis-guide-et-bons-plans", vibe: "Falaises de calcaire plongeant dans des lagons secrets aux couleurs irréelles." },
+    { nom: "Bora Bora", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", vibe: "Le lagon le plus bleu du Pacifique Sud, entouré de coraux et d'un silence absolu." },
+];
+
+const fete = [
+    { nom: "Ibiza", pays: "Espagne", img: "/images/2025/10/Ibiza-a-deflouter-5.jpg", href: "/ou-faire-la-fete-a-ibiza" },
+    { nom: "Las Vegas", pays: "États-Unis", img: "/images/Las-Vegas.jpg", href: "/ou-faire-la-fete-a-las-vegas" },
+    { nom: "Amsterdam", pays: "Pays-Bas", img: "/images/2026/01/Amsterdam-1.jpg", href: "/ou-faire-la-fete-a-amsterdam" },
+];
+
+const continents = [
+    { nom: "Europe", tagline: "Capitales mythiques & côtes inoubliables", img: "/images/2026/01/Split-a-deflouter-10.jpg", href: "/europe", count: "12 destinations" },
+    { nom: "Asie", tagline: "Temples, néons et plages secrètes", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.jpg", href: "/asie", count: "10 destinations" },
+    { nom: "Amérique", tagline: "De Miami à Vegas, l'excès en beauté", img: "/images/2025/10/Photo-miami-a-deflouter-10.jpg", href: "/amerique", count: "6 destinations" },
+    { nom: "Afrique", tagline: "Safari, épices et océan Indien", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/afrique", count: "4 destinations" },
+    { nom: "Océanie", tagline: "Coraux, lagons et grands espaces", img: "/images/2026/01/Cairns-Australie.jpg", href: "/oceanie", count: "3 destinations" },
+];
+
+---
+
+<Layout title="Destination Souvenir — Voyager entre amis" heroPage={true}>
+
+    <!-- ══════════════════════════════════════
+         HERO — Parallax + nav dans l'image
+    ══════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" id="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+
+
+        <!-- Texte central -->
+        <div class="hero-content">
+            <p class="hero-label">Voyager entre amis · Guides &amp; Bons Plans</p>
+            <h1>À l'aventure — <em>le monde t'attend !</em></h1>
+            <p class="hero-sub">Guides, bons plans et souvenirs inoubliables pour les 18-35 ans qui veulent tout vivre.</p>
+            <div class="hero-actions">
+                <a href="/ou-partir" class="btn-hero-primary">Explorer les destinations <span>→</span></a>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <span>Explore le monde</span>
+            <div class="hint-line"></div>
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         1. EXPLORER PAR CONTINENT
+         Style : bento grid immersif
+    ══════════════════════════════════════ -->
+    <section class="section-continents">
+        <div class="continents-intro">
+            <h2>Par où commencer <em>l'aventure ?</em></h2>
+            <p>Choisis ton continent et explore nos guides.</p>
+        </div>
+        <div class="continents-row">
+            {continents.map((c) => (
+                <a href={c.href} class="cont-card">
+                    <div class="cont-img">
+                        <img src={c.img} alt={c.nom} loading="lazy" />
+                        <span class="cont-count">{c.count}</span>
+                    </div>
+                    <div class="cont-body">
+                        <h3>{c.nom}</h3>
+                        <p>{c.tagline}</p>
+                        <span class="cont-link">Explorer →</span>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         2. NOS DERNIERS AJOUTS
+         Style : bande de cards horizontales
+    ══════════════════════════════════════ -->
+    <section class="section-ajouts">
+        <div class="ajouts-header">
+            <div class="ajouts-label">
+                <span class="pill pill--new">Nouveau</span>
+                <h2>Nos derniers ajouts</h2>
+            </div>
+        </div>
+        <div class="ajouts-carousel">
+            <button class="ajouts-arrow" id="ajouts-prev" aria-label="Précédent">&#8249;</button>
+            <div class="ajouts-outer">
+                <div class="ajouts-scroll" id="ajouts-scroll">
+                    {derniersAjouts.map((d) => (
+                        <a href={d.href} class="ajout-card">
+                            <div class="ajout-img">
+                                <img src={d.img} alt={d.nom} loading="lazy" />
+                                <span class="ajout-tag">{d.tag}</span>
+                            </div>
+                            <div class="ajout-body">
+                                <h3>{d.titre}</h3>
+                                <p class="ajout-desc">{d.desc}</p>
+                                <span class="ajout-cta">Lire l'article →</span>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+            <button class="ajouts-arrow" id="ajouts-next" aria-label="Suivant">&#8250;</button>
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         2. NOS VOYAGES COUP DE COEUR
+         Style : asymétrique — 1 grande + 2 compactes
+    ══════════════════════════════════════ -->
+    <section class="section-cdc">
+        <div class="cdc-header">
+            <span class="cdc-eyebrow">❤ Coup de cœur</span>
+            <h2 class="cdc-title">Ces destinations <em>qui nous ont marqués</em></h2>
+            <p class="cdc-sub">Notre équipe a testé, voyagé, vécu. Voici les endroits qu'on n'oublie jamais.</p>
+        </div>
+        <div class="cdc-layout">
+            <!-- Grande card featured -->
+            <a href={coupDeCoeur[0].href} class="cdc-featured">
+                <div class="cdc-feat-img">
+                    <img src={coupDeCoeur[0].img} alt={coupDeCoeur[0].nom} loading="lazy" />
+                </div>
+                <div class="cdc-feat-body">
+                    <span class="cdc-feat-pays">{coupDeCoeur[0].pays}</span>
+                    <h3 class="cdc-feat-titre">{coupDeCoeur[0].nom}</h3>
+                    <p class="cdc-feat-desc">{coupDeCoeur[0].desc}</p>
+                    <span class="cdc-feat-cta">Découvrir la destination →</span>
+                </div>
+            </a>
+            <!-- 2 petites cards compactes -->
+            <div class="cdc-smalls">
+                {coupDeCoeur.slice(1).map((d) => (
+                    <a href={d.href} class="cdc-small">
+                        <div class="cdc-small-img">
+                            <img src={d.img} alt={d.nom} loading="lazy" />
+                        </div>
+                        <div class="cdc-small-body">
+                            <span class="cdc-small-pays">{d.pays}</span>
+                            <h3>{d.nom}</h3>
+                            <p>{d.desc}</p>
+                            <span class="cdc-small-cta">Découvrir →</span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+        <div class="cdc-footer">
+            <a href="/ou-partir" class="cdc-link">Explorer toutes les destinations →</a>
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         3. ACTIVITÉS INCONTOURNABLES
+         Style : bandes éditoriales alternées
+    ══════════════════════════════════════ -->
+    <section class="section-actu">
+        <div class="actu-container">
+            <div class="actu-intro">
+                <span class="tag-sand">Activités incontournables</span>
+                <h2>10 activités incontournables<br /><em>par destination</em></h2>
+            </div>
+            <div class="actu-list">
+                {activites.map((a, i) => (
+                    <a href={a.href} class={`actu-band ${i % 2 === 1 ? "actu-band--reverse" : ""}`}>
+                        <div class="actu-band-text">
+                            <h3>{a.nom}</h3>
+                            <p>{a.desc}</p>
+                            <span class="actu-band-cta">Voir les 10 activités →</span>
+                        </div>
+                        <div class="actu-band-img">
+                            <img src={a.img} alt={a.nom} loading="lazy" />
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         4. LES DESTINATIONS PIEDS DANS LE SABLE
+         Style : plage / tropical, fond sable
+    ══════════════════════════════════════ -->
+    <section class="section-plage">
+        <div class="plage-wave-top"></div>
+        <div class="plage-container">
+            <div class="plage-intro">
+                <span class="tag-white">Pieds dans le sable</span>
+                <h2>Les plus belles<br /><em>plages du monde</em></h2>
+                <p>Parce que parfois, tout ce dont on a besoin c'est du sable chaud, une eau cristalline et ses meilleurs amis.</p>
+            </div>
+            <div class="plage-grid">
+                {piedsDansSable.map((d) => (
+                    <a href={d.href} class="plage-card">
+                        <div class="plage-img-wrap">
+                            <img src={d.img} alt={d.nom} loading="lazy" />
+                        </div>
+                        <div class="plage-info">
+                            <h3>{d.nom}</h3>
+                            <span class="plage-vibe">{d.vibe}</span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+        <div class="plage-wave-bot"></div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         5. NEWSLETTER
+         Style : club exclusif
+    ══════════════════════════════════════ -->
+    <section class="section-nl">
+        <div class="nl-content">
+            <div class="nl-badge">★ Club Voyageurs</div>
+            <h2>Reçois les bons plans<br /><em>avant tout le monde</em></h2>
+            <p class="nl-perks">Destinations secrètes · Bons plans exclusifs · Codes promo</p>
+            <form class="nl-form">
+                <input type="email" placeholder="ton@email.com" />
+                <button type="submit">Je rejoins le club</button>
+            </form>
+            <p class="nl-note">Gratuit · Sans spam · Désinscription en 1 clic</p>
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         6. OÙ FAIRE LA FÊTE
+         Style : sombre, énergie nuit
+    ══════════════════════════════════════ -->
+    <section class="section-fete">
+        <div class="fete-container">
+            <div class="fete-intro">
+                <span class="fete-eyebrow">Où faire la fête ?</span>
+                <h2>Les destinations<br /><em>qui ne dorment pas</em></h2>
+            </div>
+            <div class="fete-grid">
+                {fete.map((f, i) => (
+                    <a href={f.href} class={`fete-card ${i === 0 ? "fete-card--big" : ""}`}>
+                        <img src={f.img} alt={f.nom} loading="lazy" />
+                        <div class="fete-overlay">
+                            <span class="fete-pays">{f.pays}</span>
+                            <h3>{f.nom}</h3>
+                            <span class="fete-btn">Voir le guide</span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+
+/* ════════════════════════════
+   HERO
+════════════════════════════ */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: -10% 0 -10% 0;
+    background: url('/images/bora-bora-hero.jpg') center / cover no-repeat;
+    will-change: transform;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(13,27,46,0.15) 0%, rgba(13,27,46,0.45) 100%);
+}
+
+
+
+/* Contenu central hero */
+.hero-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    max-width: 820px;
+    padding: 2rem;
+}
+
+/* Label EA-style avec lignes décoratives */
+.hero-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--turquoise-light);
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+.hero-label::before,
+.hero-label::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: var(--turquoise-light);
+    opacity: 0.6;
+}
+
+.hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    margin-bottom: 1rem;
+}
+
+.hero h1 em {
+    font-style: italic;
+    color: var(--turquoise-light);
+}
+
+.hero-sub {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.95);
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    line-height: 1.65;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+}
+
+/* Boutons hero EA-style */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.btn-hero-primary,
+.btn-hero-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.btn-hero-primary span { transition: transform 0.25s; }
+.btn-hero-primary:hover span { transform: translateX(4px); }
+
+.btn-hero-primary {
+    background: #3dcbbf;
+    color: #fff;
+    border-color: #3dcbbf;
+}
+.btn-hero-primary:hover {
+    background: #5eeae0;
+    border-color: #5eeae0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(64,201,176,0.4);
+}
+
+.btn-hero-ghost {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    border-color: rgba(255,255,255,0.4);
+}
+.btn-hero-ghost:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.8);
+    transform: translateY(-2px);
+}
+
+/* Scroll hint */
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    z-index: 5;
+}
+
+.hint-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    animation: scrollDown 2s ease infinite;
+}
+
+@keyframes scrollDown {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    50%  { transform: scaleY(1); transform-origin: top; }
+    51%  { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+
+/* ════════════════════════════
+   1. DERNIERS AJOUTS
+   Style : carousel 4 cards, texte sous image
+════════════════════════════ */
+.section-ajouts {
+    padding: 2rem 0 2.5rem;
+    background: #0d1b2e;
+}
+
+.ajouts-header {
+    max-width: 1280px;
+    margin: 0 auto 1rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ajouts-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ajouts-label h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #fff;
+}
+
+.pill {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+}
+
+.pill--new {
+    background: var(--turquoise);
+    color: #fff;
+}
+
+/* Rangée carousel : [flèche] [overflow] [flèche] */
+.ajouts-carousel {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0 1.5rem;
+}
+
+.ajouts-arrow {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+    z-index: 2;
+}
+
+.ajouts-arrow:hover {
+    background: var(--turquoise);
+    border-color: var(--turquoise);
+}
+
+/* Fenêtre du carousel — clipe les cards hors champ */
+.ajouts-outer {
+    flex: 1;
+    overflow: hidden;
+    padding: 0.5rem 1rem 1rem;
+}
+
+/* Piste — animée par transform via JS */
+.ajouts-scroll {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Exactement 4 cards visibles */
+.ajout-card {
+    flex: 0 0 calc((100% - 3rem) / 4);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #132438;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.ajout-card:hover {
+    border-color: rgba(61,203,191,0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+
+.ajout-img {
+    position: relative;
+    aspect-ratio: 2/1;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.ajout-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.ajout-card:hover .ajout-img img { transform: scale(1.05); }
+
+.ajout-tag {
+    position: absolute;
+    top: 0.7rem; left: 0.7rem;
+    background: var(--turquoise);
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+}
+
+.ajout-body {
+    padding: 1rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    border-top: 2px solid rgba(61,203,191,0.2);
+}
+
+.ajout-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ajout-desc {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.65;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ajout-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--turquoise-light);
+    border-bottom: 1px solid rgba(61,203,191,0.4);
+    padding-bottom: 1px;
+    align-self: flex-start;
+    transition: color 0.2s, border-color 0.2s, gap 0.2s;
+}
+
+.ajout-card:hover .ajout-cta {
+    color: #fff;
+    border-color: #fff;
+    gap: 8px;
+}
+
+
+/* ════════════════════════════
+   2. COUP DE COEUR
+   Style : asymétrique — 1 grande featured + 2 compactes
+════════════════════════════ */
+.section-cdc {
+    background: #fff;
+    padding: 3.5rem 2rem 3.5rem;
+}
+
+.cdc-header {
+    max-width: 1280px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.cdc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--turquoise);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 1.1rem;
+}
+
+.cdc-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.cdc-title em {
+    font-style: italic;
+    color: var(--turquoise);
+}
+
+.cdc-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.cdc-layout {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Grande card featured */
+.cdc-featured {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(13,27,46,0.12);
+    height: 360px;
+    transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.cdc-featured:hover {
+    box-shadow: 0 24px 72px rgba(13,27,46,0.2);
+    transform: translateY(-4px);
+}
+
+.cdc-feat-img {
+    overflow: hidden;
+}
+
+.cdc-feat-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.cdc-featured:hover .cdc-feat-img img { transform: scale(1.06); }
+
+.cdc-feat-body {
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    background: #fff;
+    border-top: 4px solid var(--turquoise);
+}
+
+.cdc-feat-pays {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--turquoise);
+}
+
+.cdc-feat-titre {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.05;
+}
+
+.cdc-feat-desc {
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.cdc-feat-cta {
+    display: inline-flex;
+    align-items: center;
+    background: var(--green-dark);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.8rem;
+    border-radius: 8px;
+    align-self: flex-start;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.cdc-featured:hover .cdc-feat-cta {
+    background: var(--turquoise);
+    transform: translateX(4px);
+}
+
+/* 2 petites cards horizontales */
+.cdc-smalls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.cdc-small {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(13,27,46,0.1);
+    height: 170px;
+    transition: box-shadow 0.35s, transform 0.35s;
+}
+
+.cdc-small:hover {
+    box-shadow: 0 16px 48px rgba(13,27,46,0.16);
+    transform: translateY(-4px);
+}
+
+.cdc-small-img {
+    overflow: hidden;
+}
+
+.cdc-small-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.cdc-small:hover .cdc-small-img img { transform: scale(1.07); }
+
+.cdc-small-body {
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+    background: #fff;
+    border-left: 3px solid var(--turquoise);
+}
+
+.cdc-small-pays {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--turquoise);
+}
+
+.cdc-small-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.1;
+}
+
+.cdc-small-body p {
+    color: var(--text);
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cdc-small-cta {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--turquoise);
+    transition: color 0.2s, letter-spacing 0.2s;
+}
+
+.cdc-small:hover .cdc-small-cta {
+    color: var(--green-dark);
+    letter-spacing: 0.02em;
+}
+
+.cdc-footer {
+    max-width: 1280px;
+    margin: 3.5rem auto 0;
+    text-align: center;
+}
+
+.cdc-link {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(13,27,46,0.2);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.cdc-link:hover {
+    color: var(--turquoise);
+    border-color: var(--turquoise);
+}
+
+
+/* ════════════════════════════
+   3. ACTIVITÉS INCONTOURNABLES
+   Style : bandes éditoriales alternées
+════════════════════════════ */
+.section-actu {
+    background: #fff;
+    padding: 3rem 2rem;
+}
+
+.actu-container { max-width: 1280px; margin: 0 auto; }
+
+.actu-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.tag-sand {
+    display: inline-block;
+    background: var(--sand);
+    color: var(--green-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.actu-intro h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.15;
+}
+
+.actu-intro em { font-style: italic; color: var(--green); }
+
+.actu-list {
+    border-top: 1px solid rgba(13,27,46,0.1);
+}
+
+/* Bande normale : [texte] [image] */
+.actu-band {
+    display: grid;
+    grid-template-columns: 1fr 44%;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.4rem 0 2.4rem 1.5rem;
+    border-bottom: 1px solid rgba(13,27,46,0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.actu-band--reverse {
+    padding: 2.4rem 1.5rem 2.4rem 0;
+}
+
+.actu-band:hover {
+    background: rgba(26,168,152,0.09);
+    box-shadow: inset 4px 0 0 var(--turquoise);
+}
+.actu-band--reverse:hover {
+    box-shadow: inset -4px 0 0 var(--turquoise);
+}
+
+/* Bande inversée : [image] [texte] */
+.actu-band--reverse {
+    grid-template-columns: 44% 1fr;
+}
+.actu-band--reverse .actu-band-img  { grid-column: 1; grid-row: 1; }
+.actu-band--reverse .actu-band-text { grid-column: 2; grid-row: 1; }
+
+/* Texte éditorial */
+.actu-band-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.actu-band-text h3 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.1;
+}
+
+.actu-band-text p {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.7;
+    max-width: 440px;
+}
+
+.actu-band-cta {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--turquoise);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0.3rem;
+    transition: gap 0.25s, color 0.25s;
+}
+
+.actu-band:hover .actu-band-cta { gap: 12px; color: var(--green-dark); }
+
+/* Image panoramique */
+.actu-band-img {
+    border-radius: 14px;
+    overflow: hidden;
+    height: 200px;
+}
+
+.actu-band-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.actu-band:hover .actu-band-img img { transform: scale(1.05); }
+
+
+/* ════════════════════════════
+   4. PIEDS DANS LE SABLE
+   Style : tropical, fond sable chaud
+════════════════════════════ */
+.section-plage {
+    position: relative;
+    background: linear-gradient(160deg, rgba(37,99,235,0.06), var(--sand) 45%, rgba(240,223,168,0.5));
+    padding: 4rem 2rem;
+}
+
+.plage-wave-top,
+.plage-wave-bot {
+    height: 50px;
+    position: absolute;
+    left: 0; right: 0;
+}
+
+.plage-wave-top {
+    top: 0;
+    background: #fff;
+    clip-path: ellipse(55% 100% at 50% 0%);
+}
+
+.plage-wave-bot {
+    bottom: 0;
+    background: var(--sand-light);
+    clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.plage-container { max-width: 1280px; margin: 0 auto; }
+
+.plage-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tag-white {
+    display: inline-block;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(4px);
+    color: var(--green-dark);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.plage-intro h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+}
+
+.plage-intro em { font-style: italic; color: var(--sand-dark); }
+
+.plage-intro p {
+    color: var(--text);
+    font-weight: 500;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.plage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+
+.plage-card {
+    display: block;
+    border-radius: 50% 50% 16px 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plage-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+}
+
+.plage-img-wrap {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+.plage-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.plage-card:hover .plage-img-wrap img { transform: scale(1.07); }
+
+.plage-info {
+    padding: 1.4rem;
+    text-align: center;
+    background: #fff;
+}
+
+.plage-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+.plage-vibe {
+    font-size: 0.92rem;
+    color: var(--text);
+    font-weight: 500;
+    display: block;
+    margin-top: 0.4rem;
+    line-height: 1.55;
+}
+
+
+/* ════════════════════════════
+   5. NEWSLETTER
+   Style : immersif turquoise/vert
+════════════════════════════ */
+.section-nl {
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sand-light);
+}
+
+.nl-content {
+    text-align: center;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.nl-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--green-dark);
+    color: var(--sand);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.3rem;
+    border-radius: 50px;
+}
+
+.nl-content h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.1;
+}
+
+.nl-content em {
+    font-style: normal;
+    color: var(--turquoise);
+}
+
+.nl-perks {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.nl-form {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgba(13,27,46,0.15);
+    border-radius: 60px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(13,27,46,0.08);
+}
+
+.nl-form input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.92rem;
+    color: var(--text);
+    font-family: var(--font-body);
+}
+
+.nl-form input::placeholder { color: rgba(13,27,46,0.35); }
+
+.nl-form button {
+    background: var(--green-dark);
+    color: #fff;
+    border: none;
+    padding: 1rem 1.8rem;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border-radius: 0 60px 60px 0;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.nl-form button:hover { background: var(--turquoise); }
+
+.nl-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+}
+
+
+/* ════════════════════════════
+   6. OÙ FAIRE LA FÊTE
+   Style : nuit, sombre, énergie
+════════════════════════════ */
+.section-fete {
+    background: #0d1b2e;
+    padding: 5rem 2rem;
+}
+
+.fete-container { max-width: 1280px; margin: 0 auto; }
+
+.fete-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.fete-eyebrow {
+    display: block;
+    color: var(--sand);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 0.8rem;
+}
+
+.fete-intro h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+}
+
+.fete-intro em { font-style: italic; color: var(--sand); }
+
+.fete-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    height: 460px;
+}
+
+.fete-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    display: block;
+}
+
+.fete-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    filter: brightness(0.75);
+}
+
+.fete-card:hover img { transform: scale(1.05); filter: brightness(0.85); }
+
+.fete-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.8rem;
+}
+
+.fete-pays {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--sand);
+    margin-bottom: 0.3rem;
+}
+
+.fete-overlay h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.fete-card--big .fete-overlay h3 { font-size: 2.5rem; }
+
+.fete-btn {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+    padding: 0.45rem 1.1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-self: flex-start;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.fete-card:hover .fete-btn {
+    background: var(--sand);
+    color: #0d1b2e;
+    border-color: var(--sand);
+}
+
+
+/* ════════════════════════════
+   EXPLORER PAR CONTINENT
+   Style : 5 cartes portrait, fond blanc, aéré
+════════════════════════════ */
+.section-continents {
+    background: #fff;
+    padding: 5rem 2rem 6rem;
+}
+
+.continents-intro {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.continents-intro h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+}
+
+.continents-intro h2 em {
+    font-style: italic;
+    color: var(--turquoise);
+}
+
+.continents-intro p {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1rem;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.continents-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cont-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid rgba(13,27,46,0.08);
+    box-shadow: 0 4px 20px rgba(13,27,46,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cont-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(13,27,46,0.14);
+}
+
+.cont-img {
+    position: relative;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+}
+
+.cont-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cont-card:hover .cont-img img { transform: scale(1.06); }
+
+.cont-count {
+    position: absolute;
+    bottom: 0.7rem;
+    left: 0.7rem;
+    background: rgba(13,27,46,0.75);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.7rem;
+    border-radius: 50px;
+}
+
+.cont-body {
+    padding: 1.3rem 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.cont-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--green-dark);
+    line-height: 1.1;
+}
+
+.cont-body p {
+    font-size: 0.85rem;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.cont-link {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--turquoise);
+    margin-top: 0.6rem;
+    transition: color 0.2s, letter-spacing 0.2s;
+}
+
+.cont-card:hover .cont-link {
+    color: var(--turquoise-light);
+    letter-spacing: 0.03em;
+}
+
+
+/* ════════════════════════════
+   UTILITAIRES
+════════════════════════════ */
+.desktop-only { display: block; }
+
+@media (max-width: 767px), (max-width: 1024px) and (orientation: portrait) {
+    .desktop-only { display: none; }
+    .hero-burger { display: flex; }
+
+.ajouts-carousel { padding: 0 0.5rem; }
+    .ajout-card { flex: 0 0 calc((100% - 1rem) / 2); }
+    .actu-band,
+    .actu-band--reverse {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2.4rem 0;
+    }
+    .actu-band--reverse .actu-band-img,
+    .actu-band--reverse .actu-band-text {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    .actu-band-img { height: 200px; }
+    .plage-grid { grid-template-columns: repeat(2, 1fr); }
+    .fete-grid { grid-template-columns: 1fr; height: auto; }
+    .cdc-featured { grid-template-columns: 1fr; height: auto; }
+    .cdc-feat-img { height: 260px; }
+    .cdc-feat-body { padding: 2rem; }
+    .cdc-smalls { grid-template-columns: 1fr; }
+    .cdc-small { grid-template-columns: 38% 1fr; height: 160px; }
+    .cdc-small-body { padding: 1.2rem; }
+
+    .continents-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+</style>
+
+<script>
+    // Parallax hero
+    const heroBg = document.getElementById("hero-bg");
+    function handleParallax() {
+        if (heroBg && window.scrollY < window.innerHeight) {
+            heroBg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
+        }
+    }
+    window.addEventListener("scroll", handleParallax, { passive: true });
+
+    // Carousel "Nos derniers ajouts"
+    const ajoutsTrack = document.getElementById("ajouts-scroll");
+    const ajoutsCards = ajoutsTrack?.querySelectorAll(".ajout-card");
+    let ajoutsIndex = 0;
+    const ajoutsTotal = ajoutsCards?.length ?? 0;
+    const ajoutsVisible = 4;
+
+    function ajoutsMove() {
+        if (!ajoutsTrack || !ajoutsCards?.length) return;
+        const cardW = (ajoutsCards[0] as HTMLElement).offsetWidth + 16;
+        ajoutsTrack.style.transform = `translateX(-${ajoutsIndex * cardW}px)`;
+    }
+
+    document.getElementById("ajouts-prev")?.addEventListener("click", () => {
+        if (ajoutsIndex > 0) { ajoutsIndex--; ajoutsMove(); }
+    });
+    document.getElementById("ajouts-next")?.addEventListener("click", () => {
+        if (ajoutsIndex < ajoutsTotal - ajoutsVisible) { ajoutsIndex++; ajoutsMove(); }
+    });
+</script>
