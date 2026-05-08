@@ -12,10 +12,10 @@ const coupDeCoeur = [
 ];
 
 const activites = [
-    { nom: "Bali", num: "01", img: "/images/2025/10/Bali-soins-et-bain-de-boue-avec-les-elephants-1.jpg", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
-    { nom: "Tokyo", num: "02", img: "/images/2025/10/vue-aerienne-du-paysage-urbain-de-tokyo-avec-la-montagne-fuji-au-japon-1024x683.jpg", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
-    { nom: "Londres", num: "03", img: "/images/2025/11/Londres-a-deflouter-3.jpg", href: "/londres-10-activites-incontournables", desc: "Promenade sur le Tower Bridge au lever du jour, soirée dans un pub du XVIIe siècle, balade en bus rouge à impériale... On t'a sélectionné les 10 incontournables pour vivre Londres à fond." },
-    { nom: "Marrakech", num: "04", img: "/images/2025/12/Marrakech-a-deflouter-3-1.jpg", href: "/marrakech-10-activites-incontournables", desc: "Hammam traditionnel, balades nocturnes dans les souks, nuit dans un riad somptueux, excursion dans le désert... 10 activités pour tomber amoureux de Marrakech." },
+    { nom: "Bali", num: "01", titre: "10 activités incontournables de Bali", img: "/images/2025/10/Bali-soins-et-bain-de-boue-avec-les-elephants-1.jpg", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
+    { nom: "Tokyo", num: "02", titre: "10 activités incontournables de Tokyo", img: "/images/2025/10/vue-aerienne-du-paysage-urbain-de-tokyo-avec-la-montagne-fuji-au-japon-1024x683.jpg", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
+    { nom: "Londres", num: "03", titre: "10 activités incontournables de Londres", img: "/images/2025/11/Londres-a-deflouter-3.jpg", href: "/londres-10-activites-incontournables", desc: "Promenade sur le Tower Bridge au lever du jour, soirée dans un pub du XVIIe siècle, balade en bus rouge à impériale... On t'a sélectionné les 10 incontournables pour vivre Londres à fond." },
+    { nom: "Marrakech", num: "04", titre: "10 activités incontournables de Marrakech", img: "/images/2025/12/Marrakech-a-deflouter-3-1.jpg", href: "/marrakech-10-activites-incontournables", desc: "Hammam traditionnel, balades nocturnes dans les souks, nuit dans un riad somptueux, excursion dans le désert... 10 activités pour tomber amoureux de Marrakech." },
 ];
 
 const piedsDansSable = [
@@ -129,6 +129,12 @@ const continents = [
             </div>
             <button class="ajouts-arrow" id="ajouts-next" aria-label="Suivant">&#8250;</button>
         </div>
+        <div class="ajouts-dots" id="ajouts-dots">
+            <span class="ajouts-dot active"></span>
+            <span class="ajouts-dot"></span>
+            <span class="ajouts-dot"></span>
+            <span class="ajouts-dot"></span>
+        </div>
     </section>
 
 
@@ -190,14 +196,19 @@ const continents = [
             </div>
             <div class="actu-list">
                 {activites.map((a, i) => (
-                    <a href={a.href} class={`actu-band ${i % 2 === 1 ? "actu-band--reverse" : ""}`}>
-                        <div class="actu-band-text">
+                    <a href={a.href} class={`actu-band ${i % 2 === 1 ? "actu-band--reverse" : ""}${i === 0 ? " is-open" : ""}`}>
+                        <div class="actu-band-text" data-num={String(i + 1).padStart(2, '0')}>
                             <h3>{a.nom}</h3>
                             <p>{a.desc}</p>
                             <span class="actu-band-cta">Voir les 10 activités →</span>
+                            <span class="actu-titre-mobile">{a.titre}</span>
                         </div>
                         <div class="actu-band-img">
                             <img src={a.img} alt={a.nom} loading="lazy" />
+                        </div>
+                        <div class="actu-band-desc">
+                            <p>{a.desc}</p>
+                            <span class="actu-band-desc-cta">Découvrir les activités →</span>
                         </div>
                     </a>
                 ))}
@@ -985,6 +996,9 @@ const continents = [
     max-width: 440px;
 }
 
+.actu-titre-mobile { display: none; }
+.actu-band-desc { display: none; }
+
 .actu-band-cta {
     font-family: var(--font-sans);
     font-size: 0.82rem;
@@ -1034,7 +1048,7 @@ const continents = [
 }
 
 .plage-wave-top {
-    top: 0;
+    top: -18px;
     background: #fff;
     clip-path: ellipse(55% 100% at 50% 0%);
 }
@@ -1486,26 +1500,175 @@ const continents = [
    UTILITAIRES
 ════════════════════════════ */
 .desktop-only { display: block; }
+.ajouts-dots { display: none; }
 
 @media (max-width: 767px), (max-width: 1024px) and (orientation: portrait) {
     .desktop-only { display: none; }
     .hero-burger { display: flex; }
 
-.ajouts-carousel { padding: 0 0.5rem; }
-    .ajout-card { flex: 0 0 calc((100% - 1rem) / 2); }
+    .hero-label {
+        font-size: 0.85rem;
+        text-shadow: 0 1px 16px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        text-shadow: 0 2px 24px rgba(0,0,0,0.85), 0 1px 6px rgba(0,0,0,0.75);
+    }
+    .hero-sub {
+        font-size: 1rem;
+        text-shadow: 0 1px 16px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.7);
+    }
+
+    .ajouts-carousel {
+        padding: 0;
+        display: block;
+        overflow: hidden;
+    }
+    .ajouts-arrow { display: none; }
+    .ajouts-outer {
+        overflow: visible;
+        padding: 0.5rem 0 1rem;
+    }
+    .ajouts-scroll {
+        gap: 1rem;
+        padding: 0 1.5rem;
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .ajout-card {
+        flex: 0 0 82%;
+        border-radius: 16px;
+    }
+    .ajout-card:nth-child(n+5) { display: none; }
+    .ajouts-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 1.2rem;
+    }
+    .ajouts-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1.5px solid rgba(13,27,46,0.3);
+        transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    }
+    .ajouts-dot.active {
+        background: var(--turquoise);
+        border-color: var(--turquoise);
+        transform: scale(1.25);
+    }
+    /* Activités — accordéon interactif */
+    .section-actu { padding: 3rem 1.2rem 3.5rem; }
+    .actu-list { display: flex; flex-direction: column; gap: 0.6rem; }
     .actu-band,
     .actu-band--reverse {
-        grid-template-columns: 1fr;
+        display: block;
+        border-radius: 14px;
+        overflow: hidden;
+        padding: 0;
+        border: 1px solid rgba(13,27,46,0.1);
+        background: #fff;
+        box-shadow: none;
+        grid-template-columns: unset;
+        cursor: pointer;
+    }
+    .actu-band:hover,
+    .actu-band--reverse:hover { box-shadow: none; border-color: var(--turquoise); }
+
+    .actu-band-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.1rem 1.2rem;
+        gap: 0.2rem;
+    }
+    .actu-band-text::before { display: none; }
+    .actu-band-text h3 {
+        font-size: 1.15rem;
+        color: var(--green-dark);
+    }
+    .actu-titre-mobile {
+        font-family: var(--font-sans);
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--turquoise);
+        line-height: 1.3;
+        transition: color 0.2s;
+    }
+    .actu-band.is-open .actu-titre-mobile,
+    .actu-band--reverse.is-open .actu-titre-mobile {
+        color: var(--turquoise-light);
+    }
+    .actu-band-text p { display: none; }
+    .actu-band-cta { display: none; }
+    .actu-titre-mobile { display: block; }
+
+    .actu-band-img {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 0;
+        position: relative;
+    }
+    .actu-band.is-open .actu-band-img,
+    .actu-band--reverse.is-open .actu-band-img { height: 200px; }
+    .actu-band-img {
+        margin: 0 1rem;
+        border-radius: 12px;
+    }
+    .actu-band-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(13,27,46,0.15);
+    }
+    .actu-band-desc {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0 1.2rem;
+    }
+    .actu-band.is-open .actu-band-desc,
+    .actu-band--reverse.is-open .actu-band-desc {
+        max-height: 200px;
+        padding: 0.9rem 1.2rem 1.1rem;
+    }
+    .actu-band-desc p {
+        font-size: 0.88rem;
+        color: var(--text);
+        font-weight: 500;
+        line-height: 1.6;
+        margin-bottom: 0.6rem;
+    }
+    .actu-band-desc-cta {
+        font-family: var(--font-sans);
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--turquoise);
+    }
+    .section-plage { padding: 3rem 0 3.5rem; }
+    .plage-intro { padding: 0 1.2rem; margin-bottom: 2rem; }
+    .plage-grid {
+        display: flex;
+        flex-wrap: nowrap;
         gap: 1rem;
-        padding: 2.4rem 0;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 0.5rem 1.2rem 1rem;
+        scrollbar-width: none;
+        scroll-padding-left: 1.2rem;
     }
-    .actu-band--reverse .actu-band-img,
-    .actu-band--reverse .actu-band-text {
-        grid-column: 1;
-        grid-row: auto;
+    .plage-grid::-webkit-scrollbar { display: none; }
+    .plage-card {
+        flex: 0 0 58vw;
+        scroll-snap-align: start;
     }
-    .actu-band-img { height: 200px; }
-    .plage-grid { grid-template-columns: repeat(2, 1fr); }
+    .plage-card:first-child { margin-left: 0.3rem; }
     .fete-grid { grid-template-columns: 1fr; height: auto; }
     .cdc-featured { grid-template-columns: 1fr; height: auto; }
     .cdc-feat-img { height: 260px; }
@@ -1514,10 +1677,57 @@ const continents = [
     .cdc-small { grid-template-columns: 38% 1fr; height: 160px; }
     .cdc-small-body { padding: 1.2rem; }
 
-    .continents-row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .section-continents {
+        padding: 3rem 1.2rem 3.5rem;
     }
+    .continents-intro {
+        margin-bottom: 2rem;
+    }
+    .continents-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.4rem 1rem;
+    }
+    .cont-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(33.333% - 0.7rem);
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        transform: none !important;
+    }
+    .cont-img {
+        aspect-ratio: 1/1;
+        width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--turquoise);
+        padding: 3px;
+        background: #fff;
+    }
+    .cont-img img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .cont-count { display: none; }
+    .cont-body {
+        padding: 0.5rem 0 0;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+    .cont-body h3 {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--green-dark);
+    }
+    .cont-body p { display: none; }
+    .cont-link { display: none; }
 }
 </style>
 
@@ -1535,19 +1745,62 @@ const continents = [
     const ajoutsTrack = document.getElementById("ajouts-scroll");
     const ajoutsCards = ajoutsTrack?.querySelectorAll(".ajout-card");
     let ajoutsIndex = 0;
-    const ajoutsTotal = ajoutsCards?.length ?? 0;
-    const ajoutsVisible = 4;
+
+    function getVisible() {
+        const cards = Array.from(ajoutsCards ?? []) as HTMLElement[];
+        const visibles = cards.filter(c => c.offsetWidth > 0);
+        if (!visibles.length) return 4;
+        const outer = ajoutsTrack?.parentElement as HTMLElement;
+        return Math.max(1, Math.round(outer.offsetWidth / (visibles[0].offsetWidth + 16)));
+    }
+
+    function getTotal() {
+        return (Array.from(ajoutsCards ?? []) as HTMLElement[]).filter(c => c.offsetWidth > 0).length;
+    }
 
     function ajoutsMove() {
         if (!ajoutsTrack || !ajoutsCards?.length) return;
-        const cardW = (ajoutsCards[0] as HTMLElement).offsetWidth + 16;
+        const firstVisible = (Array.from(ajoutsCards) as HTMLElement[]).find(c => c.offsetWidth > 0);
+        if (!firstVisible) return;
+        const gap = parseFloat(getComputedStyle(ajoutsTrack).gap) || 16;
+        const cardW = firstVisible.offsetWidth + gap;
         ajoutsTrack.style.transform = `translateX(-${ajoutsIndex * cardW}px)`;
     }
 
+    function updateDots() {
+        document.querySelectorAll(".ajouts-dot").forEach((d, i) => {
+            d.classList.toggle("active", i === ajoutsIndex);
+        });
+    }
+
     document.getElementById("ajouts-prev")?.addEventListener("click", () => {
-        if (ajoutsIndex > 0) { ajoutsIndex--; ajoutsMove(); }
+        if (ajoutsIndex > 0) { ajoutsIndex--; ajoutsMove(); updateDots(); }
     });
     document.getElementById("ajouts-next")?.addEventListener("click", () => {
-        if (ajoutsIndex < ajoutsTotal - ajoutsVisible) { ajoutsIndex++; ajoutsMove(); }
+        if (ajoutsIndex < getTotal() - getVisible()) { ajoutsIndex++; ajoutsMove(); updateDots(); }
     });
+
+    // Accordéon activités (mobile)
+    document.querySelectorAll(".actu-band, .actu-band--reverse").forEach(band => {
+        band.addEventListener("click", (e) => {
+            if (window.innerWidth > 767) return;
+            const isOpen = band.classList.contains("is-open");
+            if (!isOpen) {
+                e.preventDefault();
+                document.querySelectorAll(".actu-band, .actu-band--reverse").forEach(b => b.classList.remove("is-open"));
+                band.classList.add("is-open");
+            }
+        });
+    });
+
+    // Swipe tactile
+    let touchStartX = 0;
+    ajoutsTrack?.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    ajoutsTrack?.addEventListener("touchend", e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) {
+            if (diff > 0 && ajoutsIndex < getTotal() - getVisible()) { ajoutsIndex++; ajoutsMove(); updateDots(); }
+            if (diff < 0 && ajoutsIndex > 0) { ajoutsIndex--; ajoutsMove(); updateDots(); }
+        }
+    }, { passive: true });
 </script>

@@ -160,6 +160,12 @@ const { title = "Destination Souvenir", description = "Découvre les meilleures 
         mobileClose?.addEventListener("click", closeMenu);
         backdrop?.addEventListener("click", closeMenu);
 
+        // Active les transitions seulement après le chargement (évite l'animation au démarrage)
+        requestAnimationFrame(() => {
+            mobileMenu?.classList.add("ready");
+            backdrop?.classList.add("ready");
+        });
+
         // Bouton retour en haut
         const backToTop = document.getElementById("back-to-top");
         window.addEventListener("scroll", () => {
@@ -345,8 +351,8 @@ const { title = "Destination Souvenir", description = "Découvre les meilleures 
         z-index: 290;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.35s;
     }
+    .mobile-backdrop.ready { transition: opacity 0.35s; }
     .mobile-backdrop.open {
         opacity: 1;
         pointer-events: auto;
@@ -363,9 +369,9 @@ const { title = "Destination Souvenir", description = "Découvre les meilleures 
         display: flex;
         flex-direction: column;
         transform: translateX(100%);
-        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         overflow-y: auto;
     }
+    .mobile-menu.ready { transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
     .mobile-menu.open { transform: translateX(0); }
 
     /* top: logo + close */
@@ -605,7 +611,8 @@ const { title = "Destination Souvenir", description = "Découvre les meilleures 
     /* ── RESPONSIVE ── */
     @media (max-width: 767px), (max-width: 1024px) and (orientation: portrait) {
         .header-nav, .header-cta { display: none; }
-        .burger { display: flex; grid-column: 3; grid-row: 1; justify-self: end; }
+        .burger { display: flex; grid-column: 3; grid-row: 1; justify-self: end; filter: drop-shadow(0 1px 6px rgba(0,0,0,0.7)); }
+        .header-logo img { filter: brightness(0) invert(1) drop-shadow(0 1px 6px rgba(0,0,0,0.7)); }
 
         .footer-top { grid-template-columns: 1fr; gap: 2rem; }
         .footer-center { text-align: left; }
