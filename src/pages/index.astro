@@ -42,6 +42,7 @@ const continents = [
 ---
 
 <Layout title="Destination Souvenir — Voyager entre amis" heroPage={true}>
+    <link rel="preload" as="image" href="/images/bora-bora-hero.jpg" slot="head" />
 
     <!-- ══════════════════════════════════════
          HERO — Parallax + nav dans l'image
@@ -298,7 +299,7 @@ const continents = [
 .hero-bg {
     position: absolute;
     inset: -10% 0 -10% 0;
-    background: url('/images/bora-bora-hero.jpg') center / cover no-repeat;
+    background: #0d1b2e url('/images/bora-bora-hero.jpg') center / cover no-repeat;
     will-change: transform;
 }
 
