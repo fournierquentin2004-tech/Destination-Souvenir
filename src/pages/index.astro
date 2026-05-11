@@ -6,14 +6,14 @@ import { articles } from '../data/articles.js';
 const derniersAjouts = articles.slice(0, 6);
 
 const coupDeCoeur = [
-    { nom: "Tokyo", pays: "Japon", desc: "De Shibuya illuminé aux temples ancestraux, Tokyo est une aventure à chaque pas.", alt: "Que faire à Tokyo entre amis - guide et bons plans", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.jpg", href: "/que-faire-a-tokyo-entre-amis-guide-et-bons-plans" },
-    { nom: "Maldives", pays: "Maldives", desc: "Plonge dans des lagons turquoise et marche sur des plages de sable blanc inoubliables.", alt: "Voyage aux Maldives entre amis - plages de sable blanc et lagons turquoise", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans" },
-    { nom: "Bali", pays: "Indonésie", desc: "Entre rizières, temples et fêtes sur la plage, Bali ne ressemble à aucun autre endroit.", alt: "Que faire à Bali entre amis - activités incontournables et bons plans", img: "/images/2025/10/Photo-Bali-a-deflouter-17.jpg", href: "/que-faire-a-bali-entre-amis-guide-et-bons-plans" },
+    { nom: "El Nido", pays: "Philippines", desc: "Lagons secrets, falaises karstiques plongeant dans une mer émeraude — le paradis tel qu'on l'imagine.", alt: "Que faire à El Nido Philippines entre amis - lagons et falaises karstiques", img: "/images/El%20Nido%20Philippines%20blog/1.jpg", href: "/que-faire-a-el-nido-entre-amis-guide-et-bons-plans" },
+    { nom: "Sydney", pays: "Australie", desc: "L'Opéra, Bondi Beach et une énergie de ville qui mêle nature sauvage et vie urbaine trépidante.", alt: "Que faire à Sydney entre amis - Opera House, Bondi Beach et bons plans", img: "/images/Sydney%20%C3%A0%20d%C3%A9flouter/1.jpg", href: "/que-faire-a-sydney-entre-amis-guide-et-bons-plans" },
+    { nom: "Marrakech", pays: "Maroc", desc: "Souks labyrinthiques, riads somptueux et le désert à portée de main pour des souvenirs inoubliables.", alt: "Que faire à Marrakech entre amis - hammam, souks et désert", img: "/images/Marrakech%20blog/1.jpg", href: "/marrakech-10-activites-incontournables" },
 ];
 
 const activites = [
-    { nom: "Bali", num: "01", titre: "10 activités incontournables de Bali", alt: "Activités incontournables à Bali entre amis - bain de boue avec les éléphants", img: "/images/2025/10/Bali-soins-et-bain-de-boue-avec-les-elephants-1.jpg", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
-    { nom: "Tokyo", num: "02", titre: "10 activités incontournables de Tokyo", alt: "Activités incontournables à Tokyo entre amis - vue sur le mont Fuji et Shibuya", img: "/images/2025/10/vue-aerienne-du-paysage-urbain-de-tokyo-avec-la-montagne-fuji-au-japon-1024x683.jpg", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
+    { nom: "Bali", num: "01", titre: "10 activités incontournables de Bali", alt: "Activités incontournables à Bali entre amis - bain de boue avec les éléphants", img: "/images/Bali%20blog/4.jpg", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
+    { nom: "Tokyo", num: "02", titre: "10 activités incontournables de Tokyo", alt: "Activités incontournables à Tokyo entre amis - vue sur le mont Fuji et Shibuya", img: "/images/Tokyo%20blog/14.jpg", objPos: "center top", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
     { nom: "Londres", num: "03", titre: "10 activités incontournables de Londres", alt: "Activités incontournables à Londres entre amis - Tower Bridge et pubs historiques", img: "/images/2025/11/Londres-a-deflouter-3.jpg", href: "/londres-10-activites-incontournables", desc: "Promenade sur le Tower Bridge au lever du jour, soirée dans un pub du XVIIe siècle, balade en bus rouge à impériale... On t'a sélectionné les 10 incontournables pour vivre Londres à fond." },
     { nom: "Marrakech", num: "04", titre: "10 activités incontournables de Marrakech", alt: "Activités incontournables à Marrakech entre amis - hammam et souks", img: "/images/2025/12/Marrakech-a-deflouter-3-1.jpg", href: "/marrakech-10-activites-incontournables", desc: "Hammam traditionnel, balades nocturnes dans les souks, nuit dans un riad somptueux, excursion dans le désert... 10 activités pour tomber amoureux de Marrakech." },
 ];
@@ -23,6 +23,8 @@ const piedsDansSable = [
     { nom: "Zanzibar", alt: "Plus belle plage de Zanzibar - cocotiers et océan Indien turquoise", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans", vibe: "Plages sauvages bordées de cocotiers, baignées par un océan Indien turquoise et chaud." },
     { nom: "Koh Phi Phi", alt: "Plage de Koh Phi Phi Thaïlande entre amis - lagons et falaises de calcaire", img: "/images/2026/01/Koh-Phi-Phi-Thailand-Blog-1.jpg", href: "/que-faire-a-koh-phi-phi-entre-amis-guide-et-bons-plans", vibe: "Falaises de calcaire plongeant dans des lagons secrets aux couleurs irréelles." },
     { nom: "Bora Bora", alt: "Bora Bora Polynésie française - plus beau lagon du monde entre amis", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", vibe: "Le lagon le plus bleu du Pacifique Sud, entouré de coraux et d'un silence absolu." },
+    { nom: "Australie", alt: "Les 6 plus belles plages d'Australie - eaux turquoise et sable blanc", img: "/images/Australie%20plage%20Blog/1.jpg", href: "/les-6-plus-belles-plages-d-australie", vibe: "Plages sauvages à couper le souffle, des eaux turquoise de la Grande Barrière aux criques isolées." },
+    { nom: "Cancún", alt: "Plage de Cancún Mexique - Caraïbes turquoise et sable blanc", img: "/images/Canc%C3%BAn%20Mexique%20Blog/1.jpg", href: "/que-faire-a-cancun-entre-amis-guide-et-bons-plans", vibe: "Caraïbes turquoise, sable blanc et fêtes tropicales sur la Riviera Maya." },
 ];
 
 const fete = [
@@ -62,7 +64,7 @@ const continents = [
         <!-- Texte central -->
         <div class="hero-content">
             <p class="hero-label">Blog voyage entre amis · Guides &amp; Bons Plans</p>
-            <h1>Voyager entre amis — <em>le monde t'attend !</em></h1>
+            <h1>Voyager entre amis — <em>le monde t'attend&nbsp;!</em></h1>
             <p class="hero-sub">Guides pratiques, bons plans et souvenirs inoubliables pour les 18-35 ans qui veulent tout vivre.</p>
             <div class="hero-actions">
                 <a href="/ou-partir" class="btn-hero-primary">Explorer les destinations <span>→</span></a>
@@ -210,7 +212,7 @@ const continents = [
                             <span class="actu-titre-mobile">{a.titre}</span>
                         </div>
                         <div class="actu-band-img">
-                            <img src={a.img} alt={a.alt} loading="lazy" />
+                            <img src={a.img} alt={a.alt} loading="lazy" style={a.objPos ? `object-position: ${a.objPos}` : undefined} />
                         </div>
                         <div class="actu-band-desc">
                             <p>{a.desc}</p>
@@ -1112,6 +1114,8 @@ const continents = [
     gap: 1.2rem;
 }
 
+.plage-card:nth-child(n+5) { display: none; }
+
 .plage-card {
     display: block;
     border-radius: 50% 50% 16px 16px;
@@ -1517,9 +1521,10 @@ const continents = [
         text-shadow: 0 1px 16px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.7);
     }
     .hero h1 {
-        font-size: clamp(2.2rem, 9vw, 3rem);
+        font-size: clamp(1.9rem, 8.5vw, 3rem);
         text-shadow: 0 2px 24px rgba(0,0,0,0.85), 0 1px 6px rgba(0,0,0,0.75);
     }
+    .hero h1 em { font-size: 1em; white-space: nowrap; }
     .hero-sub {
         font-size: 1rem;
         text-shadow: 0 1px 16px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.7);
@@ -1686,6 +1691,7 @@ const continents = [
         flex: 0 0 58vw;
         scroll-snap-align: start;
     }
+    .plage-card:nth-child(n+5) { display: block; }
     .plage-card:first-child { margin-left: 0.3rem; }
     .fete-grid { grid-template-columns: 1fr; height: auto; }
     .cdc-featured { grid-template-columns: 1fr; height: auto; }
