@@ -2,65 +2,65 @@
 import Layout from '../layouts/Layout.astro';
 
 const activites = [
-    { titre: "Excursion snorkeling", desc: "Embarque sur un bateau et explore les lagons turquoise des Maldives. Nage parmi les coraux éclatants et les poissons colorés, détends-toi sur des bancs de sable blanc et rencontre des dauphins curieux. Une aventure à vivre absolument !", img: "/images/Maldives%20blog/13.jpg", alt: "Snorkeling dans les lagons turquoise des Maldives", lien: "https://www.getyourguide.com/fr-fr/male-l159176/voyage-d-aventure-aux-maldives-t614694/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
-    { titre: "Rencontre avec les tortues", desc: "Parcours les îles et les lagons scintillants des Maldives à bord d'un hors-bord. Plonge dans des eaux transparentes pour découvrir poissons tropicaux et récifs colorés, puis admire les tortues en liberté et savoure un déjeuner sur un banc de sable immaculé.", img: "/images/Maldives%20blog/1.jpg", alt: "Tortues marines dans les eaux cristallines des Maldives", lien: "https://www.getyourguide.com/fr-fr/maafushi-l159192/maafushi-tour-en-bateau-avec-plongee-en-apnee-dans-les-jardins-de-corail-et-dejeuner-t728674/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
-    { titre: "Nage avec les requins-nourrices", desc: "Nage au plus près des requins-nourrices et découvre leur comportement paisible dans leur habitat naturel. Admire leur taille impressionnante, leur élégance sous l'eau et la manière dont ils évoluent autour des récifs coralliens. Une rencontre marine unique et fascinante !", img: "/images/Maldives%20blog/4.jpg", alt: "Requins-nourrices dans les récifs coralliens des Maldives", lien: "https://www.getyourguide.com/fr-fr/bodufolhudhoo-l254183/experience-locale-requin-nourrice-et-recifs-caches-de-l-atoll-d-ari-t1127988/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
+    { titre: "Excursion dauphins", desc: "Pars au lever du soleil avec tes amis pour observer les dauphins dans les eaux de Lovina. Nage à leurs côtés, explore les coraux colorés en snorkeling et profite de la douceur des vagues tropicales. Une aventure inoubliable&nbsp;!", img: "/images/Bali%20blog/5.jpg", alt: "Excursion dauphins à Bali au lever du soleil", lien: "https://www.getyourguide.com/fr-fr/lovina-beach-l40960/lovinabali-observation-des-dauphins-baignade-et-plongee-en-apnee-t811180/?ranking_uuid=4fc37da5-9d91-4475-9f93-77170933e979" },
+    { titre: "Bain de boue avec les éléphants", desc: "Vis un moment unique en partageant le quotidien des éléphants. Nourris-les, brosse-les et plonge dans un bain de boue avec ces géants. Une expérience rare et mémorable au cœur de la nature balinaise.", img: "/images/Bali%20blog/21.jpg", alt: "Bain de boue avec les éléphants à Bali", lien: "https://www.getyourguide.com/fr-fr/bali-l347/bali-zoo-experience-guidee-de-soins-aux-elephants-avec-bain-de-boue-t195518/?ranking_uuid=0d5ab96d-af11-426e-a2a0-afbe032e9fce" },
+    { titre: "Sanctuaire des singes d'Ubud", desc: "Pars avec tes amis à la découverte de la forêt sacrée des singes à Ubud. Observe plus de 600 macaques évoluer librement, capture des photos inoubliables et laisse-toi guider à travers ce lieu mystique, où nature et culture balinaise se rencontrent.", img: "/images/Bali%20blog/7.jpg", alt: "Forêt des singes d'Ubud à Bali", lien: "https://www.getyourguide.com/fr-fr/ubud-l32246/foret-de-singes-d-ubud-visite-guidee-a-pied-avec-billet-t440241/?ranking_uuid=fd07cf7d-ed5f-430f-9b18-8c62ccba418a" },
 ];
 
 const hebergements = [
-    { icon: "🏡", type: "Îles locales", ex: "Maafushi, Dhiffushi, Thulusdhoo", desc: "Parfait pour les groupes. Budget raisonnable, ambiance conviviale et accès aux activités.", tag: "Budget" },
-    { icon: "🛖", type: "Guesthouses", ex: "Sur les îles habitées", desc: "Excellent compromis entre budget et authenticité. Contact direct avec la culture locale.", tag: "Équilibre" },
-    { icon: "🌊", type: "Villas sur pilotis", ex: "Resorts privés", desc: "L'expérience iconique des Maldives. À vivre au moins une nuit pour le souvenir.", tag: "Luxe" },
+    { type: "Seminyak / Kuta", ex: "Guesthouses et hôtels de plage", desc: "Idéal pour les groupes qui veulent plages animées et vie nocturne. Budget accessible, ambiance festive.", tag: "Budget" },
+    { type: "Canggu / Ubud", ex: "Villas avec piscine privée", desc: "Le parfait équilibre entre surf, nature et culture balinaise. Villas abordables avec piscine à partager.", tag: "Équilibre" },
+    { type: "Uluwatu / Nusa Dua", ex: "Resorts de luxe sur falaises", desc: "Plages de rêve, falaises spectaculaires et spas haut de gamme. L'expérience Bali ultime entre amis.", tag: "Luxe" },
 ];
 
 const transports = [
-    { icon: "🚤", nom: "Speed boat", desc: "Rapide et pratique entre les îles. Idéal pour les excursions.", img: "/images/Maldives%20blog/9.jpg" },
-    { icon: "⛵", nom: "Dhoni local", desc: "Économique mais horaires fixes. L'âme des Maldives.", img: "/images/Maldives%20blog/10.jpg" },
-    { icon: "✈️", nom: "Hydravion", desc: "Expérience unique et panoramique. Spectaculaire mais onéreux.", img: "/images/Maldives%20blog/11.jpg" },
+    { nom: "Scooter", desc: "Le moyen de transport emblématique de Bali. Pratique, pas cher et idéal pour explorer l'île librement. Permis international recommandé.", img: "/images/Bali%20blog/24.jpg" },
+    { nom: "Grab / Taxi", desc: "Pratique et abordable pour les trajets courts. L'appli Grab est incontournable pour éviter les arnaques.", img: "/images/Bali%20blog/14.jpg" },
+    { nom: "Ferry / Speedboat", desc: "Indispensable pour rejoindre les îles voisines comme Nusa Penida ou les Gili. Expérience incontournable !", img: "/images/Bali%20blog/15.jpg" },
 ];
 
 const conseils = [
-    { icon: "🌤️", titre: "Meilleure période", desc: "Décembre à avril — 28°C en moyenne, temps sec et mer calme." },
-    { icon: "🏨", titre: "Réserve tôt", desc: "Hôtel et activités à réserver plusieurs mois à l'avance pour les meilleurs prix." },
-    { icon: "☀️", titre: "Crème solaire bio", desc: "Indispensable. Privilégie une formule biodégradable pour protéger les coraux." },
-    { icon: "✈️", titre: "Vol en avance", desc: "Réserve ton vol tôt pour profiter des meilleures offres et avoir plus de choix." },
+    { titre: "Assurance voyage", desc: "Indispensable à Bali, surtout si vous louez un scooter. Couvre les soins médicaux et les accidents." },
+    { titre: "Meilleure période", desc: "Mai à septembre — saison sèche, temps idéal pour profiter des plages et des activités en plein air." },
+    { titre: "Location de scooter", desc: "Le meilleur moyen de découvrir l'île à votre rythme. Comptez 5 à 8 € par jour. Permis obligatoire." },
+    { titre: "Respect de la culture", desc: "Porte un sarong pour entrer dans les temples et reste discret dans les zones traditionnelles." },
 ];
 
 const faq = [
-    { q: "Quelles sont les meilleures activités à faire aux Maldives entre amis ?", r: "Snorkeling et plongée dans les lagons turquoise, nage avec les tortues marines, excursion sur une île déserte, sunset cruise avec dauphins, et nage avec les requins-nourrices. Chaque expérience est unique et inoubliable." },
-    { q: "Où dormir aux Maldives ?", r: "Trois options selon ton budget : les îles locales comme Maafushi (budget raisonnable, ambiance conviviale), les guesthouses sur les îles habitées (bon compromis budget / authenticité), ou les villas sur pilotis en resort privé (expérience iconique à vivre au moins une nuit)." },
-    { q: "Quand partir aux Maldives ?", r: "La période idéale s'étend de décembre à avril, avec des températures autour de 28°C et un climat sec parfait pour profiter des plages et des activités nautiques. Évite la saison des pluies (mai à novembre) si tu veux du soleil garanti." },
+    { q: "Quelle est la meilleure période pour aller à Bali entre amis ?", r: "La saison sèche de mai à septembre est idéale : beau temps garanti, mer calme et températures autour de 28°C. Évite la saison des pluies (novembre à mars) si tu veux profiter pleinement des activités en plein air." },
+    { q: "Quel quartier choisir pour dormir à Bali ?", r: "Seminyak et Kuta pour les plages animées et la vie nocturne, Canggu pour le surf et l'ambiance décontractée, Ubud pour la culture et la nature, Uluwatu pour les falaises spectaculaires. Chaque quartier a sa propre vibe — idéalement, combinez-en plusieurs !" },
+    { q: "Comment se déplacer à Bali entre amis ?", r: "Le scooter est le moyen le plus pratique et économique (5-8 €/jour), mais un permis international est obligatoire. L'appli Grab fonctionne très bien pour les trajets courts. Pour les îles voisines comme Nusa Penida, prenez le ferry ou un speedboat." },
 ];
 
 const similaires = [
-    { titre: "Que faire à Cairns entre amis", desc: "Plongée dans la Grande Barrière de Corail, forêts tropicales et aventures en plein air.", img: "/images/2026/01/Cairns-Australie.jpg", href: "/que-faire-a-cairns-entre-amis-guide-et-bons-plans", tag: "Océanie" },
-    { titre: "Que faire à Bora Bora entre amis", desc: "Le lagon le plus bleu du Pacifique, bungalows sur pilotis et couchers de soleil inoubliables.", img: "/images/bora-bora-hero.jpg", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", tag: "Océanie" },
-    { titre: "Que faire à Zanzibar entre amis", desc: "Plages sauvages, épices envoûtantes et couchers de soleil sur l'océan Indien.", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans", tag: "Afrique" },
+    { titre: "Que faire à Koh Phi Phi entre amis", desc: "Falaises de calcaire, lagons secrets et fêtes sur la plage dans les îles thaïlandaises les plus spectaculaires.", img: "/images/2026/01/Koh-Phi-Phi-Thailand-Blog-1.jpg", href: "/que-faire-a-koh-phi-phi-entre-amis-guide-et-bons-plans", tag: "Asie" },
+    { titre: "Que faire à Bangkok entre amis", desc: "Temples dorés, street food incroyable et vie nocturne explosive dans la capitale thaïlandaise.", img: "/images/Bangkok%20blog/2.jpg", href: "/que-faire-a-bangkok-entre-amis-guide-et-bons-plans", tag: "Asie" },
+    { titre: "Que faire aux Maldives entre amis", desc: "Lagons turquoise, bungalows sur pilotis et snorkeling dans les eaux les plus claires du monde.", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans", tag: "Asie" },
 ];
 ---
 
 <Layout
-    title="Que faire aux Maldives entre amis : guide et bons plans 2026"
-    description="Tu prépares un voyage aux Maldives entre amis ? Snorkeling, tortues, îles désertes, sunset cruise... Découvre le guide complet avec activités, hébergement et budget."
-    ogImage="/images/Maldives%20blog/16.jpg"
-    canonicalPath="/que-faire-aux-maldives-entre-amis-guide-et-bons-plans"
+    title="Que faire à Bali entre amis : guide et bons plans 2026"
+    description="Tu prépares un voyage à Bali entre amis ? Dauphins, éléphants, forêt des singes, rizières... Découvre le guide complet avec activités, hébergement et budget."
+    ogImage="/images/Bali%20blog/17.jpg"
+    canonicalPath="/que-faire-a-bali-entre-amis-guide-et-bons-plans"
     heroPage={true}
     ogType="article"
 >
-    <link rel="preload" as="image" href="/images/Maldives%20blog/16.jpg" slot="head" />
+    <link rel="preload" as="image" href="/images/Bali%20blog/16.jpg" slot="head" />
 
     <!-- Schema Article -->
     <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Que faire aux Maldives entre amis : guide et bons plans 2026",
-        "description": "Tu prépares un voyage aux Maldives entre amis ? Snorkeling, tortues, îles désertes, sunset cruise... Découvre le guide complet avec activités, hébergement et budget.",
-        "image": "https://destinationsouvenir.com/images/Maldives%20blog/16.jpg",
+        "headline": "Que faire à Bali entre amis : guide et bons plans 2026",
+        "description": "Tu prépares un voyage à Bali entre amis ? Dauphins, éléphants, forêt des singes, rizières... Découvre le guide complet avec activités, hébergement et budget.",
+        "image": "https://destinationsouvenir.com/images/Bali%20blog/17.jpg",
         "author": { "@type": "Organization", "name": "Destination Souvenir", "url": "https://destinationsouvenir.com" },
         "publisher": { "@type": "Organization", "name": "Destination Souvenir", "logo": { "@type": "ImageObject", "url": "https://destinationsouvenir.com/logo.png" } },
         "datePublished": "2026-01-01",
         "dateModified": "2026-06-07",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-aux-maldives-entre-amis-guide-et-bons-plans" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-a-bali-entre-amis-guide-et-bons-plans" },
         "inLanguage": "fr-FR"
     })}</script>
 
@@ -69,9 +69,9 @@ const similaires = [
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            { "@type": "Question", "name": "Quelles sont les meilleures activités à faire aux Maldives entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Snorkeling et plongée dans les lagons turquoise, nage avec les tortues marines, excursion sur une île déserte, sunset cruise avec dauphins, et nage avec les requins-nourrices. Chaque expérience est unique et inoubliable." } },
-            { "@type": "Question", "name": "Où dormir aux Maldives ?", "acceptedAnswer": { "@type": "Answer", "text": "Trois options selon ton budget : les îles locales comme Maafushi (budget raisonnable, ambiance conviviale), les guesthouses sur les îles habitées (bon compromis budget / authenticité), ou les villas sur pilotis en resort privé (expérience iconique à vivre au moins une nuit)." } },
-            { "@type": "Question", "name": "Quand partir aux Maldives ?", "acceptedAnswer": { "@type": "Answer", "text": "La période idéale s'étend de décembre à avril, avec des températures autour de 28°C et un climat sec parfait pour profiter des plages et des activités nautiques. Évite la saison des pluies (mai à novembre) si tu veux du soleil garanti." } }
+            { "@type": "Question", "name": "Quelle est la meilleure période pour aller à Bali entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "La saison sèche de mai à septembre est idéale : beau temps garanti, mer calme et températures autour de 28°C. Évite la saison des pluies (novembre à mars) si tu veux profiter pleinement des activités en plein air." } },
+            { "@type": "Question", "name": "Quel quartier choisir pour dormir à Bali ?", "acceptedAnswer": { "@type": "Answer", "text": "Seminyak et Kuta pour les plages animées et la vie nocturne, Canggu pour le surf et l'ambiance décontractée, Ubud pour la culture et la nature, Uluwatu pour les falaises spectaculaires." } },
+            { "@type": "Question", "name": "Comment se déplacer à Bali entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Le scooter est le moyen le plus pratique et économique (5-8 €/jour), mais un permis international est obligatoire. L'appli Grab fonctionne très bien pour les trajets courts. Pour les îles voisines, prenez le ferry ou un speedboat." } }
         ]
     })}</script>
 
@@ -82,7 +82,7 @@ const similaires = [
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://destinationsouvenir.com" },
             { "@type": "ListItem", "position": 2, "name": "Asie", "item": "https://destinationsouvenir.com/asie" },
-            { "@type": "ListItem", "position": 3, "name": "Maldives", "item": "https://destinationsouvenir.com/que-faire-aux-maldives-entre-amis-guide-et-bons-plans" }
+            { "@type": "ListItem", "position": 3, "name": "Bali", "item": "https://destinationsouvenir.com/que-faire-a-bali-entre-amis-guide-et-bons-plans" }
         ]
     })}</script>
 
@@ -91,21 +91,21 @@ const similaires = [
         <div class="hero-bg"></div>
         <div class="hero-veil"></div>
         <div class="hero-cnt">
-            <p class="hero-kicker">Asie &nbsp;·&nbsp; Maldives</p>
-            <h1>Que faire aux <em>Maldives</em><br />entre amis&nbsp;?</h1>
+            <p class="hero-kicker">Asie &nbsp;·&nbsp; Bali</p>
+            <h1>Que faire à <em>Bali</em><br />entre amis&nbsp;?</h1>
             <div class="hero-rule"></div>
             <p class="hero-meta">Guide complet &nbsp;·&nbsp; activités &nbsp;·&nbsp; hébergement &nbsp;·&nbsp; budget</p>
-            <p class="hero-intro">Imagine-toi au milieu d'un décor irréel, entouré de lagons turquoise et de plages de sable blanc. Les journées s'enchaînent entre baignades, excursions snorkeling et activités entre amis. Un voyage aux Maldives, <em>c'est une expérience qui change tout dès l'arrivée.</em></p>
+            <p class="hero-intro">Bali, surnommée l'île des dieux, est bien plus qu'une carte postale. Les rizières s'étendent à perte de vue, les couchers de soleil embrasent l'océan et les plages animées te font perdre la raison. Un voyage à Bali entre amis, <em>c'est une expérience qui change tout.</em></p>
         </div>
     </section>
 
 
-    <!-- ══ ACTIVITÉS (grid de cartes) ══ -->
+    <!-- ══ ACTIVITÉS ══ -->
     <section class="acts" id="activites">
         <div class="acts-inner">
             <div class="acts-hd">
                 <span class="pill pill--sand">À faire absolument</span>
-                <h2>3 activités incontournables<br /><em>aux Maldives entre amis</em></h2>
+                <h2>3 activités incontournables<br /><em>à Bali entre amis</em></h2>
             </div>
             <div class="acts-carousel" id="actsCarousel">
                 <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">
@@ -143,14 +143,14 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/Maldives%20blog/17.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+            <img src="/images/Bali%20blog/20.jpg" alt="Paysage de Bali" loading="lazy" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Maldives%20blog/12.jpg" alt="Plage de sable blanc aux Maldives" loading="lazy" />
-            <img src="/images/Maldives%20blog/21.jpg" alt="Récif corallien aux Maldives" loading="lazy" />
+            <img src="/images/Bali%20blog/23.jpg" alt="Éléphants à Bali" loading="lazy" />
+            <img src="/images/Bali%20blog/6.jpg" alt="Scène de Bali" loading="lazy" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Maldives%20blog/8.jpg" alt="Bateau dhoni traditionnel aux Maldives" loading="lazy" />
+            <img src="/images/Bali%20blog/22.jpg" alt="Nature à Bali" loading="lazy" />
         </div>
     </div>
 
@@ -159,12 +159,12 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/Maldives%20blog/5.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+                <img src="/images/Bali%20blog/13.jpg" alt="Villa avec piscine à Bali" loading="lazy" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
-                <h2>Où se loger<br /><em>aux Maldives ?</em></h2>
-                <p class="logements-sub">Des îles locales aux villas sur pilotis — où dormir aux Maldives selon ton budget.</p>
+                <h2>Où se loger<br /><em>à Bali ?</em></h2>
+                <p class="logements-sub">Des guesthouses de Seminyak aux villas de luxe d'Uluwatu — où dormir à Bali selon ton budget.</p>
                 <div class="logements-list">
                     {hebergements.map((h) => (
                         <div class="logement-item">
@@ -178,24 +178,24 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/Maldives%20blog/5.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+                    <img src="/images/Bali%20blog/13.jpg" alt="Villa avec piscine à Bali" loading="lazy" />
                 </div>
                 <p class="tip">
-                    <span><strong>Astuce :</strong> réserve plusieurs mois à l'avance, surtout en haute saison (décembre–avril).</span>
+                    <span><strong>Astuce :</strong> réserve ta villa en avance, surtout en haute saison (juillet–août). Les meilleures villas partent très vite&nbsp;!</span>
                 </p>
-                <a href="https://www.booking.com/hotel/mv/taj-exotica-resort-spa.fr.html?aid=2311236&label=fr-fr-booking-desktop-DCpBIW3k2%2AWIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9195582%3Ali%3Adec%3Adm&sid=8c01b89ff726d3b7cb358c360dc7e62f&all_sr_blocks=23977302_397799048_2_41_0&checkin=2026-01-27&checkout=2026-01-30&dest_id=129&dest_type=country&dist=0&group_adults=2&group_children=0&hapos=27&highlighted_blocks=23977302_397799048_2_41_0&hpos=2&matching_block_id=23977302_397799048_2_41_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=23977302_397799048_2_41_0__586350&srepoch=1769545564&srpvid=c88b9822f509407c587fd8cbeabd748f&type=total&ucfs=1&#hotelTmpl" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement aux Maldives</a>
+                <a href="https://www.booking.com/hotel/id/bucu-view-bungalows.fr.html?aid=2311236&label=fr-fr-booking-desktop-DCpBIW3k2%2AWIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9056139%3Ali%3Adec%3Adm&sid=8c01b89ff726d3b7cb358c360dc7e62f&all_sr_blocks=32885816_0_2_1_0&checkin=2025-11-19&checkout=2025-11-22&dest_id=-2701757&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=2&highlighted_blocks=32885816_0_2_1_0&hpos=2&matching_block_id=32885816_0_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=32885816_0_2_1_0__436748508&srepoch=1760789699&srpvid=e211561aea810162&type=total&ucfs=1&" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Bali</a>
             </div>
         </div>
     </section>
 
 
-    <!-- ══ BUDGET (tableau 3 niveaux) ══ -->
+    <!-- ══ BUDGET ══ -->
     <section class="budget" id="budget">
         <div class="budget-inner">
             <div class="budget-hd">
                 <span class="pill pill--turquoise">Budget</span>
-                <h2>Combien coûte<br /><em>un voyage aux Maldives&nbsp;?</em></h2>
-                <p>Contrairement aux idées reçues, un voyage aux Maldives entre amis peut être accessible — même hors resorts de luxe.</p>
+                <h2>Combien coûte<br /><em>un voyage à Bali&nbsp;?</em></h2>
+                <p>Contrairement aux idées reçues, un voyage à Bali entre amis peut être très accessible — l'une des destinations les plus abordables d'Asie.</p>
             </div>
 
             <div class="budget-table">
@@ -207,33 +207,33 @@ const similaires = [
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Hébergement</div>
-                    <div class="btr-val">60 – 110 €</div>
-                    <div class="btr-val">120 – 200 €</div>
-                    <div class="btr-val btr-val--luxe">400 €+</div>
+                    <div class="btr-val">10 – 20 €</div>
+                    <div class="btr-val">30 – 70 €</div>
+                    <div class="btr-val btr-val--luxe">150 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Repas</div>
-                    <div class="btr-val">11 – 19 €</div>
-                    <div class="btr-val">20 – 40 €</div>
-                    <div class="btr-val btr-val--luxe">70 €+</div>
+                    <div class="btr-val">2 – 5 €</div>
+                    <div class="btr-val">10 – 20 €</div>
+                    <div class="btr-val btr-val--luxe">40 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Transport</div>
-                    <div class="btr-val">5 – 15 €</div>
-                    <div class="btr-val">20 – 40 €</div>
-                    <div class="btr-val btr-val--luxe">80 €+</div>
+                    <div class="btr-val">5 €/j</div>
+                    <div class="btr-val">15 – 30 €</div>
+                    <div class="btr-val btr-val--luxe">50 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Activités</div>
-                    <div class="btr-val">20 – 40 €</div>
-                    <div class="btr-val">60 – 120 €</div>
-                    <div class="btr-val btr-val--luxe">200 €+</div>
+                    <div class="btr-val">10 – 25 €</div>
+                    <div class="btr-val">30 – 50 €</div>
+                    <div class="btr-val btr-val--luxe">80 €+</div>
                 </div>
             </div>
 
             <div class="budget-total">
                 <span class="budget-total-lbl">1 semaine · par personne · hors vol</span>
-                <span class="budget-total-range">1 300 – 1 900 €</span>
+                <span class="budget-total-range">350 – 800 €</span>
             </div>
 
             <p class="tip tip--light">
@@ -252,13 +252,13 @@ const similaires = [
         <div class="transport-inner">
             <div class="transport-hd">
                 <span class="pill pill--sand">Déplacements</span>
-                <h2>Comment se déplacer<br /><em>aux Maldives ?</em></h2>
+                <h2>Comment se déplacer<br /><em>à Bali ?</em></h2>
             </div>
             <div class="transport-list">
                 {transports.map((t) => (
                     <div class="transport-item">
                         <div class="transport-item-img">
-                            <img src={t.img} alt={`${t.nom} aux Maldives`} loading="lazy" />
+                            <img src={t.img} alt={`${t.nom} à Bali`} loading="lazy" />
                         </div>
                         <div class="transport-item-body">
                             <h3>{t.nom}</h3>
@@ -271,12 +271,12 @@ const similaires = [
     </section>
 
 
-    <!-- ══ CONSEILS (2×2 icon boxes) ══ -->
+    <!-- ══ CONSEILS ══ -->
     <section class="conseils" id="conseils">
         <div class="conseils-inner">
             <div class="conseils-hd">
                 <span class="pill pill--sand">Avant de partir</span>
-                <h2>Conseils pratiques<br /><em>pour voyager aux Maldives entre amis</em></h2>
+                <h2>Conseils pratiques<br /><em>pour voyager à Bali entre amis</em></h2>
             </div>
             <div class="conseils-grid">
                 {conseils.map((c, i) => (
@@ -296,14 +296,14 @@ const similaires = [
         <div class="conclusion-inner">
             <div class="conclusion-body">
                 <span class="pill pill--turquoise">Pourquoi y aller ?</span>
-                <h2>Un voyage aux Maldives,<br /><em>ça change une vie</em></h2>
-                <p>Lagons turquoise, fonds marins incroyables, îles désertes et moments chill sur la plage. Une destination taillée pour créer des souvenirs inoubliables dans un décor de carte postale.</p>
+                <h2>Un voyage à Bali,<br /><em>ça change une vie</em></h2>
+                <p>Bali, c'est l'équilibre parfait entre détente, exploration et fête. Un matin tu médites devant un temple sacré, le lendemain tu surfes les vagues de Kuta ou tu pars observer les dauphins au lever du soleil.</p>
                 <p>Et surtout — c'est 10 fois mieux quand on le vit entre amis.</p>
             </div>
             <div class="conclusion-img-wrap">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="/images/Maldives%20blog/13.jpg" />
-                    <img src="/images/Maldives%20blog/12.jpg" alt="Coucher de soleil sur le lagon des Maldives" loading="lazy" />
+                    <source media="(min-width: 768px)" srcset="/images/Bali%20blog/20.jpg" />
+                    <img src="/images/Bali%20blog/20.jpg" alt="Coucher de soleil sur les rizières de Bali" loading="lazy" />
                 </picture>
             </div>
         </div>
@@ -319,19 +319,25 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/1.jpg" alt="Tortues marines dans les eaux cristallines des Maldives" loading="lazy" />
+                        <img src="/images/Bali%20blog/4.jpg" alt="Activités à Bali entre amis" loading="lazy" />
                     </div>
-                    <a href="https://www.getyourguide.com/fr-fr/maldives-l169135/" target="_blank" rel="noopener" class="cta-btn cta-btn--dark">Réserver une activité</a>
+                    <a href="https://www.getyourguide.fr/bali-l347/" target="_blank" rel="noopener" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/8.jpg" alt="Bateau traditionnel dhoni aux Maldives" loading="lazy" />
+                        <img src="/images/Bali%20blog/25.jpg" alt="Villa et hébergement à Bali" loading="lazy" />
                     </div>
-                    <a href="https://www.booking.com/index.fr.html?aid=2311236&label=fr-fr-booking-desktop-DCpBIW3k2%2AWIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9195582%3Ali%3Adec%3Adm&sid=8c01b89ff726d3b7cb358c360dc7e62f&srpvid=c47b675e21170128&&errorc_searchstring_not_found=ss" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
+                    <a href="https://www.booking.com/index.fr.html?aid=2311236&label=fr-fr-booking-desktop-DCpBIW3k2%2AWIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9195582%3Ali%3Adec%3Adm&sid=8c01b89ff726d3b7cb358c360dc7e62f&srpvid=941b729dd7970510&&errorc_searchstring_not_found=ss" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/22.jpg" alt="Vue aérienne des palmiers et lagons des Maldives" loading="lazy" />
+                        <img src="/images/Bali%20blog/27.jpg" alt="Transport à Bali" loading="lazy" />
+                    </div>
+                    <a href="https://www.kqzyfj.com/click-101634807-17115158?url=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2Fbali%2Fjakarta%3Fdate%3D2026-03-12%26date2%3D2026-03-25%26people%3D2%26direction%3Dforward" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn--ghost">Déplace-toi partout en Indonésie</a>
+                </div>
+                <div class="cta-card">
+                    <div class="cta-card-img">
+                        <img src="/images/Bali%20blog/26.jpg" alt="Vol pour Bali" loading="lazy" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -345,7 +351,7 @@ const similaires = [
         <div class="faq-inner">
             <div class="faq-hd">
                 <span class="pill pill--sand">Questions fréquentes</span>
-                <h2>FAQ — Maldives entre amis :<br /><em>vos questions</em></h2>
+                <h2>FAQ — Bali entre amis :<br /><em>vos questions</em></h2>
             </div>
             <div class="faq-list">
                 {faq.map((item, i) => (
@@ -406,7 +412,6 @@ const similaires = [
 
 
 <script>
-    // Carousel activités (mobile uniquement)
     const carousel = document.getElementById('actsCarousel');
     if (carousel && window.innerWidth <= 767) {
         const grid = carousel.querySelector('.acts-grid') as HTMLElement;
@@ -415,27 +420,20 @@ const similaires = [
         const prevBtn = carousel.querySelector('.carousel-btn--prev') as HTMLElement;
         const nextBtn = carousel.querySelector('.carousel-btn--next') as HTMLElement;
         let current = 0;
-
         function goTo(index: number) {
             current = ((index % cards.length) + cards.length) % cards.length;
             grid.scrollTo({ left: current * grid.offsetWidth, behavior: 'smooth' });
             dots.forEach((d, i) => d.classList.toggle('active', i === current));
         }
-
         prevBtn?.addEventListener('click', () => goTo(current - 1));
         nextBtn?.addEventListener('click', () => goTo(current + 1));
         dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
-
         grid.addEventListener('scroll', () => {
             const index = Math.round(grid.scrollLeft / grid.offsetWidth);
-            if (index !== current) {
-                current = index;
-                dots.forEach((d, i) => d.classList.toggle('active', i === current));
-            }
+            if (index !== current) { current = index; dots.forEach((d, i) => d.classList.toggle('active', i === current)); }
         }, { passive: true });
     }
 
-    // Carousel articles similaires (mobile uniquement)
     const simCarousel = document.getElementById('simCarousel');
     if (simCarousel && window.innerWidth <= 767) {
         const simGrid = simCarousel.querySelector('.sim-grid') as HTMLElement;
@@ -458,7 +456,6 @@ const similaires = [
         }, { passive: true });
     }
 
-    // FAQ accordion exclusif
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         item.addEventListener('toggle', () => {
@@ -472,10 +469,7 @@ const similaires = [
 
     const heroBg = document.querySelector('.hero-bg') as HTMLElement | null;
     if (heroBg) {
-        const onScroll = () => {
-            const y = window.scrollY;
-            heroBg.style.transform = `translateY(${y * 0.45}px)`;
-        };
+        const onScroll = () => { heroBg.style.transform = `translateY(${window.scrollY * 0.45}px)`; };
         window.addEventListener('scroll', onScroll, { passive: true });
     }
 </script>
@@ -483,6 +477,21 @@ const similaires = [
 </Layout>
 
 <style>
+
+/* ══════════════════════════════
+   VARIABLES
+══════════════════════════════ */
+:root {
+    --turquoise: #1aa898;
+    --turquoise-light: #3dcbbf;
+    --green-dark: #0d1b2e;
+    --sand: #f0dfa8;
+    --sand-dark: #c9a96e;
+    --sand-light: #fdf8ef;
+    --text: #2d3748;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Poppins', 'Inter', sans-serif;
+}
 
 /* ══════════════════════════════
    HERO
@@ -502,10 +511,10 @@ const similaires = [
     inset: -8%;
     background-size: cover;
     background-position: center;
-    background-image: url('/images/Maldives%20blog/16.jpg');
+    background-image: url('/images/Bali%20blog/17.jpg');
 }
 @media (max-width: 767px) {
-    .hero-bg { background-image: url('/images/Maldives%20blog/14.jpg'); }
+    .hero-bg { background-image: url('/images/Bali%20blog/19.jpg'); }
 }
 .hero-veil {
     position: absolute;
@@ -536,9 +545,7 @@ const similaires = [
     align-items: center;
     justify-content: center;
     gap: 14px;
-    text-shadow:
-        0 0 12px #000, 0 0 12px #000,
-        0 2px 20px rgba(0,0,0,0.85);
+    text-shadow: 0 0 12px #000, 0 0 12px #000, 0 2px 20px rgba(0,0,0,0.85);
 }
 .hero-kicker::before, .hero-kicker::after {
     content: '';
@@ -552,18 +559,10 @@ const similaires = [
     font-weight: 900;
     line-height: 1.08;
     margin-bottom: 1.6rem;
-    text-shadow:
-        0 0 12px rgba(0,0,0,0.85),
-        0 4px 40px rgba(0,0,0,0.7),
-        -1px -1px 0 rgba(0,0,0,0.4),
-        1px  1px 0 rgba(0,0,0,0.4);
+    text-shadow: 0 0 12px rgba(0,0,0,0.85), 0 4px 40px rgba(0,0,0,0.7), -1px -1px 0 rgba(0,0,0,0.4), 1px 1px 0 rgba(0,0,0,0.4);
     -webkit-text-stroke: 0.5px rgba(0,0,0,0.35);
 }
-.hero-cnt h1 em {
-    font-style: italic;
-    color: var(--turquoise-light);
-    -webkit-text-stroke: 0.5px rgba(0,27,46,0.4);
-}
+.hero-cnt h1 em { font-style: italic; color: var(--turquoise-light); -webkit-text-stroke: 0.5px rgba(0,27,46,0.4); }
 .hero-rule { width: 48px; height: 1px; background: rgba(255,255,255,0.35); margin: 0 auto 1.2rem; }
 .hero-meta {
     font-family: var(--font-sans);
@@ -581,19 +580,12 @@ const similaires = [
     font-weight: 600;
     color: #fff;
     line-height: 1.8;
-    text-shadow:
-        0 0 12px #000, 0 0 12px #000,
-        0 2px 20px rgba(0,0,0,0.85);
+    text-shadow: 0 0 12px #000, 0 0 12px #000, 0 2px 20px rgba(0,0,0,0.85);
     -webkit-text-stroke: 0;
     max-width: 540px;
     margin: 0 auto;
 }
-.hero-intro em {
-    font-style: italic;
-    color: var(--turquoise-light);
-    font-weight: 600;
-    -webkit-text-stroke: 0.4px rgba(0,27,46,0.5);
-}
+.hero-intro em { font-style: italic; color: var(--turquoise-light); font-weight: 600; -webkit-text-stroke: 0.4px rgba(0,27,46,0.5); }
 
 
 /* ══════════════════════════════
@@ -615,134 +607,34 @@ const similaires = [
 .pill--turquoise { background: var(--turquoise); color: #fff; }
 
 
-
-
 /* ══════════════════════════════
-   STRIP PHOTO
-══════════════════════════════ */
-.strip { height: 58vh; overflow: hidden; }
-.strip img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-
-/* ══════════════════════════════
-   ACTIVITÉS (grid de cartes)
+   ACTIVITÉS
 ══════════════════════════════ */
 .acts { background: #fff; padding: 6rem 2rem; }
 .acts-inner { max-width: 1280px; margin: 0 auto; }
-.acts-hd {
-    text-align: center;
-    margin-bottom: 3.5rem;
-}
-.acts-hd h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 900;
-    color: var(--green-dark);
-    line-height: 1.1;
-}
+.acts-hd { text-align: center; margin-bottom: 3.5rem; }
+.acts-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; }
 .acts-hd h2 em { font-style: italic; color: var(--turquoise); }
 .carousel-btn, .carousel-dots { display: none; }
 .sim-carousel-btn, .sim-carousel-dots { display: none; }
 
-.acts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.act-card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(13,27,46,0.08);
-    box-shadow: 0 4px 24px rgba(13,27,46,0.07);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.35s, box-shadow 0.35s;
-}
+.acts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.act-card { background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid rgba(13,27,46,0.08); box-shadow: 0 4px 24px rgba(13,27,46,0.07); display: flex; flex-direction: column; transition: transform 0.35s, box-shadow 0.35s; }
 .act-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(13,27,46,0.14); }
-
-.act-card-img {
-    position: relative;
-    aspect-ratio: 16/10;
-    overflow: hidden;
-}
-.act-card-img img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
-}
+.act-card-img { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+.act-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); }
 .act-card:hover .act-card-img img { transform: scale(1.06); }
-
-.act-num {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 36px;
-    height: 36px;
-    background: rgba(13,27,46,0.75);
-    backdrop-filter: blur(6px);
-    color: #fff;
-    font-family: var(--font-serif);
-    font-size: 0.75rem;
-    font-weight: 900;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 0.02em;
-}
-
-.act-card-body {
-    padding: 1.8rem 1.8rem 2rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 0.7rem;
-}
-.act-card-body h3 {
-    font-family: var(--font-serif);
-    font-size: 1.35rem;
-    font-weight: 900;
-    color: var(--green-dark);
-    line-height: 1.2;
-}
-.act-card-body p {
-    font-size: 0.92rem;
-    color: var(--text);
-    line-height: 1.75;
-    flex: 1;
-}
-.act-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.6rem;
-    padding: 0.75rem 1.4rem;
-    background: var(--turquoise);
-    color: #fff;
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    width: fit-content;
-}
+.act-card-body { padding: 1.8rem 1.8rem 2rem; display: flex; flex-direction: column; flex: 1; gap: 0.7rem; }
+.act-card-body h3 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 900; color: var(--green-dark); line-height: 1.2; }
+.act-card-body p { font-size: 0.92rem; color: var(--text); line-height: 1.75; flex: 1; }
+.act-btn { display: inline-flex; align-items: center; justify-content: center; margin-top: 0.6rem; padding: 0.75rem 1.4rem; background: var(--turquoise); color: #fff; font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; border-radius: 50px; text-decoration: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; width: fit-content; }
 .act-btn:hover { background: #159e8e; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,168,152,0.3); }
 
 
 /* ══════════════════════════════
    GALERIE MOSAÏQUE
 ══════════════════════════════ */
-.mosaic {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 480px;
-    gap: 4px;
-}
+.mosaic { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 480px; gap: 4px; }
 .mosaic-a { overflow: hidden; }
 .mosaic-a img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s; }
 .mosaic-a:hover img { transform: scale(1.04); }
@@ -759,93 +651,25 @@ const similaires = [
 /* ══════════════════════════════
    HÉBERGEMENT
 ══════════════════════════════ */
-.logements {
-    background: #f8f7f4;
-    padding: 6rem 2rem;
-}
-.logements-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 640px 1fr;
-    gap: 4rem;
-    align-items: start;
-}
-.logements-img {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(13,27,46,0.12);
-}
-.logements-img--desktop {
-    position: sticky;
-    top: 5rem;
-}
+.logements { background: #f8f7f4; padding: 6rem 2rem; }
+.logements-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 640px 1fr; gap: 4rem; align-items: start; }
+.logements-img { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(13,27,46,0.12); }
+.logements-img--desktop { position: sticky; top: 5rem; }
 .logements-img--mobile { display: none; }
-.logements-img img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
+.logements-img img { width: 100%; height: 700px; object-fit: cover; object-position: center; display: block; }
 .logements-content .pill { margin-bottom: 1.4rem; display: inline-block; }
-.logements-content h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 900;
-    color: var(--green-dark);
-    line-height: 1.1;
-    margin-bottom: 0.8rem;
-}
+.logements-content h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; margin-bottom: 0.8rem; }
 .logements-content h2 em { font-style: italic; color: var(--sand-dark); }
 .logements-sub { color: var(--text); font-size: 1rem; font-weight: 500; margin-bottom: 2.5rem; line-height: 1.6; }
-
 .logements-list { margin-bottom: 2rem; }
-.logement-item {
-    padding: 1.4rem 0;
-    border-bottom: 1px solid rgba(13,27,46,0.08);
-}
+.logement-item { padding: 1.4rem 0; border-bottom: 1px solid rgba(13,27,46,0.08); }
 .logement-item:first-child { padding-top: 0; border-top: 1px solid rgba(13,27,46,0.08); }
-.logement-item-hd {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.3rem;
-}
-.logement-item-hd h3 {
-    font-family: var(--font-serif);
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: var(--green-dark);
-    margin: 0;
-}
-.logement-tag {
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    background: var(--sand);
-    color: var(--green-dark);
-    padding: 0.22rem 0.65rem;
-    border-radius: 50px;
-}
+.logement-item-hd { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.3rem; }
+.logement-item-hd h3 { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 900; color: var(--green-dark); margin: 0; }
+.logement-tag { font-family: var(--font-sans); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; background: var(--sand); color: var(--green-dark); padding: 0.22rem 0.65rem; border-radius: 50px; }
 .logement-ex { font-size: 0.78rem; color: var(--turquoise); font-weight: 600; margin-bottom: 0.35rem; font-family: var(--font-sans); }
 .logement-desc { font-size: 0.92rem; color: var(--text); line-height: 1.65; font-weight: 500; margin: 0; }
-
-.tip {
-    display: flex;
-    gap: 0.8rem;
-    align-items: flex-start;
-    background: rgba(255,255,255,0.8);
-    border-left: 3px solid var(--turquoise);
-    padding: 1.1rem 1.4rem;
-    font-size: 0.92rem;
-    color: var(--text);
-    line-height: 1.65;
-    border-radius: 0 10px 10px 0;
-    margin-bottom: 2rem;
-}
+.tip { display: flex; gap: 0.8rem; align-items: flex-start; background: rgba(255,255,255,0.8); border-left: 3px solid var(--turquoise); padding: 1.1rem 1.4rem; font-size: 0.92rem; color: var(--text); line-height: 1.65; border-radius: 0 10px 10px 0; margin-bottom: 2rem; }
 .tip strong { color: var(--green-dark); }
 .tip--light { background: rgba(255,255,255,0.07); border-left-color: var(--turquoise-light); color: rgba(255,255,255,0.75); }
 .tip--light strong { color: #fff; }
@@ -860,47 +684,18 @@ const similaires = [
 .budget-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 0.8rem; }
 .budget-hd h2 em { font-style: italic; color: var(--turquoise-light); }
 .budget-hd p { color: rgba(255,255,255,0.82); font-size: 0.95rem; line-height: 1.65; }
-
-.budget-total {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    margin-bottom: 2.5rem;
-    padding: 2.2rem 2rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 16px;
-    text-align: center;
-}
+.budget-total { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; margin-bottom: 2.5rem; padding: 2.2rem 2rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; text-align: center; }
 .budget-total-lbl { font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.22em; color: var(--turquoise-light); }
 .budget-total-range { font-family: var(--font-serif); font-size: clamp(2.4rem, 5vw, 3.5rem); font-weight: 900; color: #fff; line-height: 1; }
-
-.budget-table {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 1.8rem;
-}
-.budget-table-head {
-    display: grid;
-    grid-template-columns: 1fr repeat(3, 140px);
-    background: rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-}
+.budget-table { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; margin-bottom: 1.8rem; }
+.budget-table-head { display: grid; grid-template-columns: 1fr repeat(3, 140px); background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.07); }
 .bth-cell { padding: 1rem 1.2rem; font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
 .bth-label { color: #fff; }
 .bth-col { text-align: center; }
 .bth-col--budget { color: #7dd3c8; }
 .bth-col--moyen { color: var(--turquoise-light); }
 .bth-col--luxe { color: #f0d9a8; }
-.budget-table-row {
-    display: grid;
-    grid-template-columns: 1fr repeat(3, 140px);
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    transition: background 0.2s;
-}
+.budget-table-row { display: grid; grid-template-columns: 1fr repeat(3, 140px); border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.2s; }
 .budget-table-row:last-child { border-bottom: none; }
 .budget-table-row:hover { background: rgba(255,255,255,0.03); }
 .btr-label { padding: 1rem 1.2rem; font-family: var(--font-sans); font-size: 0.88rem; color: rgba(255,255,255,0.9); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
@@ -917,48 +712,19 @@ const similaires = [
 .transport-hd { text-align: center; margin-bottom: 3rem; }
 .transport-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; }
 .transport-hd h2 em { font-style: italic; color: var(--turquoise); }
-
-.transport-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.transport-item {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid rgba(13,27,46,0.08);
-    box-shadow: 0 4px 20px rgba(13,27,46,0.06);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+.transport-list { display: flex; flex-direction: column; gap: 1rem; }
+.transport-item { display: grid; grid-template-columns: 260px 1fr; border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid rgba(13,27,46,0.08); box-shadow: 0 4px 20px rgba(13,27,46,0.06); transition: transform 0.3s, box-shadow 0.3s; }
 .transport-item:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(13,27,46,0.13); }
 .transport-item-img { overflow: hidden; }
 .transport-item-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
 .transport-item:hover .transport-item-img img { transform: scale(1.06); }
-.transport-item-body {
-    padding: 1.8rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.4rem;
-}
-.transport-num {
-    font-family: var(--font-sans);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    color: var(--turquoise);
-    text-transform: uppercase;
-}
+.transport-item-body { padding: 1.8rem 2rem; display: flex; flex-direction: column; justify-content: center; gap: 0.4rem; }
 .transport-item-body h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 900; color: var(--green-dark); margin: 0; }
 .transport-item-body p { font-size: 0.92rem; color: var(--text); line-height: 1.7; margin: 0; font-weight: 500; }
-
 @media (min-width: 768px) {
     .transport-inner { max-width: 1200px; }
     .transport-list { flex-direction: row; gap: 1.5rem; }
-    .transport-item { grid-template-columns: 1fr; flex-direction: column; }
+    .transport-item { grid-template-columns: 1fr; flex-direction: column; flex: 1; }
     .transport-item-img { height: 240px; }
     .transport-item-body { padding: 1.6rem 1.8rem 2rem; justify-content: flex-start; }
     .transport-item-body h3 { font-size: 1.5rem; }
@@ -969,36 +735,15 @@ const similaires = [
 /* ══════════════════════════════
    CONSEILS
 ══════════════════════════════ */
-.conseils {
-    background: #fff;
-    padding: 0 2rem 6rem;
-}
+.conseils { background: #fff; padding: 0 2rem 6rem; }
 .conseils-inner { max-width: 1200px; margin: 0 auto; }
 .conseils-hd { text-align: center; margin-bottom: 3rem; }
 .conseils-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; }
 .conseils-hd h2 em { font-style: italic; color: var(--sand-dark); }
-
 .conseils-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-.conseil-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 2rem 1.8rem 2.2rem;
-    box-shadow: 0 6px 28px rgba(13,27,46,0.10);
-    border: 1px solid rgba(13,27,46,0.08);
-    border-top: 3px solid var(--turquoise);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+.conseil-card { background: #fff; border-radius: 16px; padding: 2rem 1.8rem 2.2rem; box-shadow: 0 6px 28px rgba(13,27,46,0.10); border: 1px solid rgba(13,27,46,0.08); border-top: 3px solid var(--turquoise); transition: transform 0.3s, box-shadow 0.3s; }
 .conseil-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(13,27,46,0.12); }
-.conseil-num {
-    font-family: var(--font-sans);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    color: var(--turquoise);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 1rem;
-}
+.conseil-num { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; color: var(--turquoise); text-transform: uppercase; display: block; margin-bottom: 1rem; }
 .conseil-card h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 900; color: var(--green-dark); margin-bottom: 0.6rem; line-height: 1.2; }
 .conseil-card p { font-size: 0.88rem; color: var(--text); line-height: 1.7; font-weight: 500; }
 
@@ -1006,34 +751,14 @@ const similaires = [
 /* ══════════════════════════════
    CONCLUSION
 ══════════════════════════════ */
-.conclusion {
-    background: var(--green-dark);
-    padding: 6rem 2rem;
-}
-.conclusion-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-}
+.conclusion { background: var(--green-dark); padding: 6rem 2rem; }
+.conclusion-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .conclusion-body { color: #fff; display: flex; flex-direction: column; gap: 1.2rem; }
 .conclusion-body h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; line-height: 1.1; }
 .conclusion-body h2 em { font-style: italic; color: var(--turquoise-light); }
 .conclusion-body p { font-size: 1rem; color: #fff; line-height: 1.8; }
-.conclusion-img-wrap {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.4);
-}
-.conclusion-img-wrap img {
-    width: 100%;
-    height: 480px;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-}
+.conclusion-img-wrap { border-radius: 20px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.4); }
+.conclusion-img-wrap img { width: 100%; height: 480px; object-fit: cover; object-position: center center; display: block; }
 
 
 /* ══════════════════════════════
@@ -1042,59 +767,19 @@ const similaires = [
 .cta { background: #fff; padding: 7rem 2rem; }
 .cta-inner { max-width: 1100px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
 .cta-sub { color: var(--green-dark) !important; }
-.cta-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; width: 100%; margin-top: 0.5rem; }
+.cta-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; width: 100%; margin-top: 0.5rem; }
 .cta-card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; border: 1px solid rgba(13,27,46,0.08); box-shadow: 0 4px 20px rgba(13,27,46,0.06); transition: transform 0.3s, box-shadow 0.3s; }
 .cta-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(13,27,46,0.12); }
 .cta-card-img { height: 200px; overflow: hidden; }
 .cta-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
 .cta-card:hover .cta-card-img img { transform: scale(1.05); }
 .cta-card .cta-btn { margin: 1rem 1.2rem 1.4rem; border-radius: 10px; justify-content: center; }
-.nl-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    background: var(--green-dark);
-    color: #fff;
-    font-family: var(--font-sans);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    padding: 0.45rem 1.3rem;
-    border-radius: 50px;
-}
+.nl-badge { display: inline-flex; align-items: center; gap: 7px; background: var(--green-dark); color: #fff; font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 0.45rem 1.3rem; border-radius: 50px; }
 .cta-inner h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; }
 .cta-inner h2 em { font-style: italic; color: var(--turquoise); }
 .cta-sub { font-size: 0.95rem; color: rgba(13,27,46,0.5); line-height: 1.6; }
-.cta-btns { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 0.4rem; }
-.cta-btn {
-    position: relative;
-    overflow: hidden;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0.9rem 1.8rem;
-    border-radius: 50px;
-    font-family: var(--font-sans);
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s, background 0.3s, color 0.3s, border-color 0.3s;
-    border: 2px solid transparent;
-}
-.cta-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
-    transform: skewX(-20deg);
-    transition: left 0.55s ease;
-    pointer-events: none;
-}
+.cta-btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 8px; padding: 0.9rem 1.8rem; border-radius: 50px; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-decoration: none; transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s, background 0.3s, color 0.3s, border-color 0.3s; border: 2px solid transparent; }
+.cta-btn::before { content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent); transform: skewX(-20deg); transition: left 0.55s ease; pointer-events: none; }
 .cta-btn:hover::before { left: 160%; }
 .cta-btn:hover { transform: translateY(-4px) scale(1.03); }
 .cta-btn--dark { background: var(--green-dark); color: #fff; border-color: var(--green-dark); }
@@ -1113,60 +798,17 @@ const similaires = [
 .faq-hd { text-align: center; margin-bottom: 3rem; }
 .faq-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; }
 .faq-hd h2 em { font-style: italic; color: var(--turquoise); }
-
 .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
-.faq-item {
-    background: #fff;
-    border-radius: 14px;
-    border: 1.5px solid rgba(13,27,46,0.08);
-    box-shadow: 0 2px 12px rgba(13,27,46,0.05);
-    overflow: hidden;
-    transition: border-color 0.25s, box-shadow 0.25s;
-}
-.faq-item[open] {
-    border-color: var(--turquoise);
-    box-shadow: 0 4px 24px rgba(26,168,152,0.12);
-}
-
-.faq-question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.2rem;
-    padding: 1.4rem 1.6rem;
-    cursor: pointer;
-    list-style: none;
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--green-dark);
-    line-height: 1.4;
-    user-select: none;
-    transition: color 0.2s;
-}
+.faq-item { background: #fff; border-radius: 14px; border: 1.5px solid rgba(13,27,46,0.08); box-shadow: 0 2px 12px rgba(13,27,46,0.05); overflow: hidden; transition: border-color 0.25s, box-shadow 0.25s; }
+.faq-item[open] { border-color: var(--turquoise); box-shadow: 0 4px 24px rgba(26,168,152,0.12); }
+.faq-question { display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; padding: 1.4rem 1.6rem; cursor: pointer; list-style: none; font-family: var(--font-sans); font-size: 0.95rem; font-weight: 700; color: var(--green-dark); line-height: 1.4; user-select: none; transition: color 0.2s; }
 .faq-question::-webkit-details-marker { display: none; }
 .faq-item[open] .faq-question { color: var(--turquoise); }
-
-.faq-chevron {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: rgba(13,27,46,0.06);
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--green-dark);
-    transition: background 0.25s, color 0.25s;
-}
+.faq-chevron { width: 30px; height: 30px; border-radius: 50%; background: rgba(13,27,46,0.06); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--green-dark); transition: background 0.25s, color 0.25s; }
 .faq-chevron svg { display: block; transition: transform 0.35s; }
 .faq-item[open] .faq-chevron { background: var(--turquoise); color: #fff; }
 .faq-item[open] .faq-chevron svg { transform: rotate(180deg); }
-
-.faq-answer {
-    padding: 0 1.6rem 1.6rem;
-    border-top: 1px solid rgba(13,27,46,0.06);
-}
+.faq-answer { padding: 0 1.6rem 1.6rem; border-top: 1px solid rgba(13,27,46,0.06); }
 .faq-answer p { font-size: 0.95rem; color: var(--text); line-height: 1.85; padding-top: 1.2rem; }
 
 
@@ -1175,44 +817,15 @@ const similaires = [
 ══════════════════════════════ */
 .similaires { background: #fff; padding: 1.5rem 2rem 5rem; }
 .similaires-inner { max-width: 1280px; margin: 0 auto; }
-.sim-title {
-    font-family: var(--font-serif);
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    font-weight: 900;
-    color: var(--green-dark);
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
+.sim-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 900; color: var(--green-dark); text-align: center; margin-bottom: 2.5rem; }
 .sim-title em { font-style: italic; color: var(--turquoise); }
 .sim-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.sim-card {
-    border-radius: 16px;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid rgba(13,27,46,0.13);
-    box-shadow: 0 6px 28px rgba(13,27,46,0.11);
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+.sim-card { border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid rgba(13,27,46,0.13); box-shadow: 0 6px 28px rgba(13,27,46,0.11); display: flex; flex-direction: column; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
 .sim-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(13,27,46,0.14); }
 .sim-img { position: relative; aspect-ratio: 16/9; overflow: hidden; }
 .sim-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
 .sim-card:hover .sim-img img { transform: scale(1.06); }
-.sim-tag {
-    position: absolute;
-    top: 0.7rem; left: 0.7rem;
-    background: var(--turquoise);
-    color: #fff;
-    font-size: 0.58rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 0.22rem 0.65rem;
-    border-radius: 50px;
-    font-family: var(--font-sans);
-}
+.sim-tag { position: absolute; top: 0.7rem; left: 0.7rem; background: var(--turquoise); color: #fff; font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.22rem 0.65rem; border-radius: 50px; font-family: var(--font-sans); }
 .sim-body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
 .sim-body h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 900; color: var(--green-dark); line-height: 1.3; }
 .sim-body p { font-size: 0.86rem; color: var(--text); line-height: 1.6; flex: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-weight: 500; }
@@ -1227,73 +840,19 @@ const similaires = [
 
     .hero-cnt h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
 
-    .hero-caption { bottom: 1.5rem; }
-    .hero-caption p { font-size: 0.88rem; }
-
     .acts { padding: 4rem 0; }
     .acts-inner { padding: 0 1.2rem; }
     .acts-carousel { position: relative; }
-    .acts-grid {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        gap: 0;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
+    .acts-grid { display: flex; flex-direction: row; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; scrollbar-width: none; -ms-overflow-style: none; }
     .acts-grid::-webkit-scrollbar { display: none; }
-    .act-card {
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-        border-radius: 0;
-    }
-    .carousel-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 38%;
-        transform: translateY(-50%);
-        z-index: 10;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: 1px solid rgba(255,255,255,0.3);
-        background: rgba(255,255,255,0.15);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        color: #c9a96e;
-        cursor: pointer;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-        transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
-    }
-    .carousel-btn:active {
-        background: var(--turquoise);
-        border-color: var(--turquoise);
-        transform: translateY(-50%) scale(0.93);
-    }
+    .act-card { flex: 0 0 100%; scroll-snap-align: start; border-radius: 0; }
+    .carousel-btn { display: flex; align-items: center; justify-content: center; position: absolute; top: 38%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #c9a96e; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: background 0.25s, transform 0.25s, box-shadow 0.25s; }
+    .carousel-btn:active { background: var(--turquoise); border-color: var(--turquoise); transform: translateY(-50%) scale(0.93); }
     .carousel-btn--prev { left: 0.2rem; }
     .carousel-btn--next { right: 0.2rem; }
-    .carousel-dots {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 1.2rem;
-    }
-    .carousel-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: rgba(13,27,46,0.2);
-        cursor: pointer;
-        transition: background 0.25s, transform 0.25s;
-    }
-    .carousel-dot.active {
-        background: var(--turquoise);
-        transform: scale(1.3);
-    }
+    .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 1.2rem; }
+    .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(13,27,46,0.2); cursor: pointer; transition: background 0.25s, transform 0.25s; }
+    .carousel-dot.active { background: var(--turquoise); transform: scale(1.3); }
 
     .mosaic { grid-template-columns: 1fr; height: auto; gap: 4px; }
     .mosaic-a { height: 56vw; }
@@ -1331,8 +890,6 @@ const similaires = [
     .cta-card { flex-direction: row; align-items: center; }
     .cta-card-img { width: 160px; height: 130px; flex-shrink: 0; }
     .cta-card .cta-btn { margin: 0 1rem; flex: 1; text-align: center; font-size: 0.78rem; }
-    .cta-img-mobile { display: block; height: 220px; overflow: hidden; }
-    .cta-img-mobile img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .cta-btn { justify-content: center; }
 
     .faq { padding: 0 1.2rem 4rem; }
@@ -1353,12 +910,3 @@ const similaires = [
     .sim-dot.active { background: var(--turquoise); transform: scale(1.3); }
 }
 </style>
-
-<script>
-    const heroBg = document.querySelector('.hero-bg') as HTMLElement;
-    window.addEventListener('scroll', () => {
-        if (heroBg && window.scrollY < window.innerHeight) {
-            heroBg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
-        }
-    }, { passive: true });
-</script>
