@@ -45,8 +45,46 @@ const similaires = [
     ogImage="/images/Maldives%20blog/16.jpg"
     canonicalPath="/que-faire-aux-maldives-entre-amis-guide-et-bons-plans"
     heroPage={true}
+    ogType="article"
 >
     <link rel="preload" as="image" href="/images/Maldives%20blog/16.jpg" slot="head" />
+
+    <!-- Schema Article -->
+    <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Que faire aux Maldives entre amis : guide et bons plans 2026",
+        "description": "Tu prépares un voyage aux Maldives entre amis ? Snorkeling, tortues, îles désertes, sunset cruise... Découvre le guide complet avec activités, hébergement et budget.",
+        "image": "https://destinationsouvenir.com/images/Maldives%20blog/16.jpg",
+        "author": { "@type": "Organization", "name": "Destination Souvenir", "url": "https://destinationsouvenir.com" },
+        "publisher": { "@type": "Organization", "name": "Destination Souvenir", "logo": { "@type": "ImageObject", "url": "https://destinationsouvenir.com/logo.png" } },
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-06-07",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-aux-maldives-entre-amis-guide-et-bons-plans" },
+        "inLanguage": "fr-FR"
+    })}</script>
+
+    <!-- Schema FAQPage -->
+    <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "Quelles sont les meilleures activités à faire aux Maldives entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Snorkeling et plongée dans les lagons turquoise, nage avec les tortues marines, excursion sur une île déserte, sunset cruise avec dauphins, et nage avec les requins-nourrices. Chaque expérience est unique et inoubliable." } },
+            { "@type": "Question", "name": "Où dormir aux Maldives ?", "acceptedAnswer": { "@type": "Answer", "text": "Trois options selon ton budget : les îles locales comme Maafushi (budget raisonnable, ambiance conviviale), les guesthouses sur les îles habitées (bon compromis budget / authenticité), ou les villas sur pilotis en resort privé (expérience iconique à vivre au moins une nuit)." } },
+            { "@type": "Question", "name": "Quand partir aux Maldives ?", "acceptedAnswer": { "@type": "Answer", "text": "La période idéale s'étend de décembre à avril, avec des températures autour de 28°C et un climat sec parfait pour profiter des plages et des activités nautiques. Évite la saison des pluies (mai à novembre) si tu veux du soleil garanti." } }
+        ]
+    })}</script>
+
+    <!-- Schema BreadcrumbList -->
+    <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://destinationsouvenir.com" },
+            { "@type": "ListItem", "position": 2, "name": "Asie", "item": "https://destinationsouvenir.com/asie" },
+            { "@type": "ListItem", "position": 3, "name": "Maldives", "item": "https://destinationsouvenir.com/que-faire-aux-maldives-entre-amis-guide-et-bons-plans" }
+        ]
+    })}</script>
 
     <!-- ══ HERO ══ -->
     <section class="hero">
@@ -57,7 +95,7 @@ const similaires = [
             <h1>Que faire aux <em>Maldives</em><br />entre amis&nbsp;?</h1>
             <div class="hero-rule"></div>
             <p class="hero-meta">Guide complet &nbsp;·&nbsp; activités &nbsp;·&nbsp; hébergement &nbsp;·&nbsp; budget</p>
-            <p class="hero-intro">Imagine-toi au milieu d'un décor irréel, entouré de lagons turquoise et de plages de sable blanc. Les journées s'enchaînent entre baignades, excursions snorkeling et moments hors du temps. Aux Maldives, <em>le quotidien disparaît dès ton arrivée.</em></p>
+            <p class="hero-intro">Imagine-toi au milieu d'un décor irréel, entouré de lagons turquoise et de plages de sable blanc. Les journées s'enchaînent entre baignades, excursions snorkeling et activités entre amis. Un voyage aux Maldives, <em>c'est une expérience qui change tout dès l'arrivée.</em></p>
         </div>
     </section>
 
@@ -112,7 +150,7 @@ const similaires = [
             <img src="/images/Maldives%20blog/21.jpg" alt="Récif corallien aux Maldives" loading="lazy" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Maldives%20blog/8.jpg" alt="Bateau dhoni traditionnel" loading="lazy" />
+            <img src="/images/Maldives%20blog/8.jpg" alt="Bateau dhoni traditionnel aux Maldives" loading="lazy" />
         </div>
     </div>
 
@@ -126,7 +164,7 @@ const similaires = [
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
                 <h2>Où se loger<br /><em>aux Maldives ?</em></h2>
-                <p class="logements-sub">Des îles locales aux villas sur pilotis — il y en a pour tous les budgets.</p>
+                <p class="logements-sub">Des îles locales aux villas sur pilotis — où dormir aux Maldives selon ton budget.</p>
                 <div class="logements-list">
                     {hebergements.map((h) => (
                         <div class="logement-item">
@@ -157,7 +195,7 @@ const similaires = [
             <div class="budget-hd">
                 <span class="pill pill--turquoise">Budget</span>
                 <h2>Combien coûte<br /><em>un voyage aux Maldives&nbsp;?</em></h2>
-                <p>Contrairement aux idées reçues, les Maldives peuvent être accessibles hors resorts de luxe.</p>
+                <p>Contrairement aux idées reçues, un voyage aux Maldives entre amis peut être accessible — même hors resorts de luxe.</p>
             </div>
 
             <div class="budget-table">
@@ -220,7 +258,7 @@ const similaires = [
                 {transports.map((t) => (
                     <div class="transport-item">
                         <div class="transport-item-img">
-                            <img src={t.img} alt={t.nom} loading="lazy" />
+                            <img src={t.img} alt={`${t.nom} aux Maldives`} loading="lazy" />
                         </div>
                         <div class="transport-item-body">
                             <h3>{t.nom}</h3>
@@ -237,8 +275,8 @@ const similaires = [
     <section class="conseils" id="conseils">
         <div class="conseils-inner">
             <div class="conseils-hd">
-                <span class="pill pill--white">Avant de partir</span>
-                <h2>Conseils pratiques<br /><em>pour un voyage réussi</em></h2>
+                <span class="pill pill--sand">Avant de partir</span>
+                <h2>Conseils pratiques<br /><em>pour voyager aux Maldives entre amis</em></h2>
             </div>
             <div class="conseils-grid">
                 {conseils.map((c, i) => (
@@ -281,19 +319,19 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/1.jpg" alt="Activités aux Maldives" loading="lazy" />
+                        <img src="/images/Maldives%20blog/1.jpg" alt="Tortues marines dans les eaux cristallines des Maldives" loading="lazy" />
                     </div>
                     <a href="https://www.getyourguide.com/fr-fr/maldives-l169135/" target="_blank" rel="noopener" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/8.jpg" alt="Hébergement aux Maldives" loading="lazy" />
+                        <img src="/images/Maldives%20blog/8.jpg" alt="Bateau traditionnel dhoni aux Maldives" loading="lazy" />
                     </div>
                     <a href="https://www.booking.com/index.fr.html?aid=2311236&label=fr-fr-booking-desktop-DCpBIW3k2%2AWIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9195582%3Ali%3Adec%3Adm&sid=8c01b89ff726d3b7cb358c360dc7e62f&srpvid=c47b675e21170128&&errorc_searchstring_not_found=ss" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/22.jpg" alt="Vol pour les Maldives" loading="lazy" />
+                        <img src="/images/Maldives%20blog/22.jpg" alt="Vue aérienne des palmiers et lagons des Maldives" loading="lazy" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -307,7 +345,7 @@ const similaires = [
         <div class="faq-inner">
             <div class="faq-hd">
                 <span class="pill pill--sand">Questions fréquentes</span>
-                <h2>Tout ce que tu dois savoir<br /><em>avant de partir</em></h2>
+                <h2>FAQ — Maldives entre amis :<br /><em>vos questions</em></h2>
             </div>
             <div class="faq-list">
                 {faq.map((item, i) => (

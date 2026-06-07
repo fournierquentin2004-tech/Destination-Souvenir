@@ -5,13 +5,15 @@ interface Props {
     heroPage?: boolean;
     ogImage?: string;
     canonicalPath?: string;
+    ogType?: string;
 }
 const {
     title = "Destination Souvenir",
     description = "Découvre les meilleures destinations pour voyager entre amis",
     heroPage = false,
     ogImage = "/images/bora-bora-hero.jpg",
-    canonicalPath = ""
+    canonicalPath = "",
+    ogType = "website"
 } = Astro.props;
 
 const siteUrl = "https://destinationsouvenir.com";
@@ -30,7 +32,7 @@ const ogImageFull = `${siteUrl}${ogImage}`;
     <link rel="canonical" href={canonical} />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Destination Souvenir" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
