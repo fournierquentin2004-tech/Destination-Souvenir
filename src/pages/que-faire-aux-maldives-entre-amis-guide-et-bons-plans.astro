@@ -1215,7 +1215,7 @@ const similaires = [
 }
 .sim-body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
 .sim-body h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 900; color: var(--green-dark); line-height: 1.3; }
-.sim-body p { font-size: 0.86rem; color: var(--text); line-height: 1.6; flex: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-weight: 500; }
+.sim-body p { font-size: 0.86rem; color: var(--text); line-height: 1.6; flex: 1; font-weight: 500; }
 .sim-cta { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; color: var(--turquoise); margin-top: 0.3rem; transition: color 0.2s; }
 .sim-card:hover .sim-cta { color: var(--green-dark); }
 
@@ -1318,8 +1318,9 @@ const similaires = [
     .transport-item-img { height: 180px; }
     .transport-item-body { padding: 1.4rem 1.4rem 1.6rem; }
 
-    .conseils { padding: 1.5rem 1.2rem 4rem; }
-    .conseils-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .conseils { padding: 1.5rem 0.5rem 4rem; }
+    .conseils-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+    .conseil-card { padding: 1.4rem 1.2rem 1.6rem; }
 
     .conclusion { padding: 4rem 1.2rem; }
     .conclusion-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1343,7 +1344,7 @@ const similaires = [
     .sim-carousel { position: relative; }
     .sim-grid { display: flex; flex-direction: row; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; scrollbar-width: none; -ms-overflow-style: none; }
     .sim-grid::-webkit-scrollbar { display: none; }
-    .sim-card { flex: 0 0 100%; scroll-snap-align: start; border-radius: 0; box-shadow: none; border: none; }
+    .sim-card { flex: 0 0 92%; scroll-snap-align: start; border-radius: 12px; box-shadow: 0 4px 20px rgba(13,27,46,0.10); border: 1px solid rgba(13,27,46,0.14); margin: 0 0.5rem; }
     .sim-carousel-btn { display: flex; align-items: center; justify-content: center; position: absolute; top: 38%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #c9a96e; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: background 0.25s, transform 0.25s; }
     .sim-carousel-btn:active { background: var(--turquoise); border-color: var(--turquoise); transform: translateY(-50%) scale(0.93); }
     .sim-carousel-btn--prev { left: 0.2rem; }
