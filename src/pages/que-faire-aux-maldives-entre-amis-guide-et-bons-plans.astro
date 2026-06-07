@@ -2,9 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 
 const activites = [
-    { num: "01", titre: "Excursion snorkeling", desc: "Embarque sur un bateau et explore les lagons turquoise des Maldives. Nage parmi les coraux éclatants et les poissons colorés, détends-toi sur des bancs de sable blanc et rencontre des dauphins curieux. Une aventure à vivre absolument !", img: "/images/Maldives%20blog/2.jpg", alt: "Snorkeling dans les lagons turquoise des Maldives", lien: "https://www.getyourguide.com/fr-fr/male-l159176/voyage-d-aventure-aux-maldives-t614694/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
-    { num: "02", titre: "Rencontre avec les tortues", desc: "Plonge dans des eaux transparentes pour découvrir poissons tropicaux et récifs colorés, puis admire les tortues en liberté et savoure un déjeuner sur un banc de sable immaculé.", img: "/images/Maldives%20blog/3.jpg", alt: "Tortues marines dans les eaux cristallines des Maldives", lien: "https://www.getyourguide.com/fr-fr/maafushi-l159192/maafushi-tour-en-bateau-avec-plongee-en-apnee-dans-les-jardins-de-corail-et-dejeuner-t728674/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
-    { num: "03", titre: "Nage avec les requins-nourrices", desc: "Nage au plus près des requins-nourrices et découvre leur comportement paisible dans leur habitat naturel. Admire leur élégance sous l'eau et leur façon d'évoluer autour des récifs coralliens. Une rencontre marine unique et fascinante !", img: "/images/Maldives%20blog/4.jpg", alt: "Requins-nourrices dans les récifs coralliens des Maldives", lien: "https://www.getyourguide.com/fr-fr/bodufolhudhoo-l254183/experience-locale-requin-nourrice-et-recifs-caches-de-l-atoll-d-ari-t1127988/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
+    { titre: "Excursion snorkeling", desc: "Embarque sur un bateau et explore les lagons turquoise des Maldives. Nage parmi les coraux éclatants et les poissons colorés, détends-toi sur des bancs de sable blanc et rencontre des dauphins curieux. Une aventure à vivre absolument !", img: "/images/Maldives%20blog/13.jpg", alt: "Snorkeling dans les lagons turquoise des Maldives", lien: "https://www.getyourguide.com/fr-fr/male-l159176/voyage-d-aventure-aux-maldives-t614694/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
+    { titre: "Rencontre avec les tortues", desc: "Parcours les îles et les lagons scintillants des Maldives à bord d'un hors-bord. Plonge dans des eaux transparentes pour découvrir poissons tropicaux et récifs colorés, puis admire les tortues en liberté et savoure un déjeuner sur un banc de sable immaculé.", img: "/images/Maldives%20blog/1.jpg", alt: "Tortues marines dans les eaux cristallines des Maldives", lien: "https://www.getyourguide.com/fr-fr/maafushi-l159192/maafushi-tour-en-bateau-avec-plongee-en-apnee-dans-les-jardins-de-corail-et-dejeuner-t728674/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
+    { titre: "Nage avec les requins-nourrices", desc: "Nage au plus près des requins-nourrices et découvre leur comportement paisible dans leur habitat naturel. Admire leur taille impressionnante, leur élégance sous l'eau et la manière dont ils évoluent autour des récifs coralliens. Une rencontre marine unique et fascinante !", img: "/images/Maldives%20blog/4.jpg", alt: "Requins-nourrices dans les récifs coralliens des Maldives", lien: "https://www.getyourguide.com/fr-fr/bodufolhudhoo-l254183/experience-locale-requin-nourrice-et-recifs-caches-de-l-atoll-d-ari-t1127988/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
 ];
 
 const hebergements = [
@@ -69,22 +69,34 @@ const similaires = [
                 <span class="pill pill--sand">À faire absolument</span>
                 <h2>3 activités incontournables<br /><em>aux Maldives entre amis</em></h2>
             </div>
-            <div class="acts-grid">
-                {activites.map((a) => (
-                    <article class="act-card">
-                        <div class="act-card-img">
-                            <img src={a.img} alt={a.alt} loading="lazy" />
-                            <span class="act-num">{a.num}</span>
-                        </div>
-                        <div class="act-card-body">
-                            <h3>{a.titre}</h3>
-                            <p>{a.desc}</p>
-                            <a href={a.lien} target="_blank" rel="noopener noreferrer" class="act-btn">
-                                Découvrir l'activité
-                            </a>
-                        </div>
-                    </article>
-                ))}
+            <div class="acts-carousel" id="actsCarousel">
+                <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <div class="acts-grid">
+                    {activites.map((a) => (
+                        <article class="act-card">
+                            <div class="act-card-img">
+                                <img src={a.img} alt={a.alt} loading="lazy" />
+                            </div>
+                            <div class="act-card-body">
+                                <h3>{a.titre}</h3>
+                                <p>{a.desc}</p>
+                                <a href={a.lien} target="_blank" rel="noopener noreferrer" class="act-btn">
+                                    Découvrir l'activité
+                                </a>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+                <button class="carousel-btn carousel-btn--next" aria-label="Suivant">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+                <div class="carousel-dots">
+                    {activites.map((_, i) => (
+                        <span class={`carousel-dot${i === 0 ? ' active' : ''}`} data-index={String(i)}></span>
+                    ))}
+                </div>
             </div>
         </div>
     </section>
@@ -93,14 +105,14 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/Maldives%20blog/8.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+            <img src="/images/Maldives%20blog/17.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Maldives%20blog/9.jpg" alt="Plage de sable blanc aux Maldives" loading="lazy" />
-            <img src="/images/Maldives%20blog/10.jpg" alt="Récif corallien aux Maldives" loading="lazy" />
+            <img src="/images/Maldives%20blog/12.jpg" alt="Plage de sable blanc aux Maldives" loading="lazy" />
+            <img src="/images/Maldives%20blog/21.jpg" alt="Récif corallien aux Maldives" loading="lazy" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Maldives%20blog/11.jpg" alt="Bateau dhoni traditionnel" loading="lazy" />
+            <img src="/images/Maldives%20blog/8.jpg" alt="Bateau dhoni traditionnel" loading="lazy" />
         </div>
     </div>
 
@@ -108,30 +120,32 @@ const similaires = [
     <!-- ══ HÉBERGEMENT ══ -->
     <section class="logements" id="hebergement">
         <div class="logements-inner">
-            <div class="logements-hd">
-                <span class="pill pill--white">Où dormir</span>
+            <div class="logements-img logements-img--desktop">
+                <img src="/images/Maldives%20blog/5.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+            </div>
+            <div class="logements-content">
+                <span class="pill pill--sand">Où dormir</span>
                 <h2>Où se loger<br /><em>aux Maldives ?</em></h2>
-                <p>Des îles locales aux villas sur pilotis — il y en a pour tous les budgets.</p>
-            </div>
-            <div class="logements-grid">
-                {hebergements.map((h) => (
-                    <div class="logement-card">
-                        <div class="logement-top">
-                            <span class="logement-icon">{h.icon}</span>
-                            <span class="logement-tag">{h.tag}</span>
+                <p class="logements-sub">Des îles locales aux villas sur pilotis — il y en a pour tous les budgets.</p>
+                <div class="logements-list">
+                    {hebergements.map((h) => (
+                        <div class="logement-item">
+                            <div class="logement-item-hd">
+                                <h3>{h.type}</h3>
+                                <span class="logement-tag">{h.tag}</span>
+                            </div>
+                            <p class="logement-ex">{h.ex}</p>
+                            <p class="logement-desc">{h.desc}</p>
                         </div>
-                        <h3>{h.type}</h3>
-                        <p class="logement-ex">{h.ex}</p>
-                        <p class="logement-desc">{h.desc}</p>
-                    </div>
-                ))}
-            </div>
-            <p class="tip">
-                <span>💡</span>
-                <span><strong>Astuce :</strong> réserve plusieurs mois à l'avance, surtout en haute saison (décembre–avril).</span>
-            </p>
-            <div class="logements-cta">
-                <a href="https://www.booking.com/searchresults.fr.html?dest_id=975&dest_type=country" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">🏨 Trouver un hébergement aux Maldives</a>
+                    ))}
+                </div>
+                <div class="logements-img logements-img--mobile">
+                    <img src="/images/Maldives%20blog/5.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+                </div>
+                <p class="tip">
+                    <span><strong>Astuce :</strong> réserve plusieurs mois à l'avance, surtout en haute saison (décembre–avril).</span>
+                </p>
+                <a href="https://www.booking.com/searchresults.fr.html?dest_id=975&dest_type=country" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement aux Maldives</a>
             </div>
         </div>
     </section>
@@ -318,6 +332,35 @@ const similaires = [
 
 
 <script>
+    // Carousel activités (mobile uniquement)
+    const carousel = document.getElementById('actsCarousel');
+    if (carousel && window.innerWidth <= 767) {
+        const grid = carousel.querySelector('.acts-grid') as HTMLElement;
+        const cards = carousel.querySelectorAll('.act-card');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        const prevBtn = carousel.querySelector('.carousel-btn--prev') as HTMLElement;
+        const nextBtn = carousel.querySelector('.carousel-btn--next') as HTMLElement;
+        let current = 0;
+
+        function goTo(index: number) {
+            current = Math.max(0, Math.min(index, cards.length - 1));
+            grid.scrollTo({ left: current * grid.offsetWidth, behavior: 'smooth' });
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        prevBtn?.addEventListener('click', () => goTo(current - 1));
+        nextBtn?.addEventListener('click', () => goTo(current + 1));
+        dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+        grid.addEventListener('scroll', () => {
+            const index = Math.round(grid.scrollLeft / grid.offsetWidth);
+            if (index !== current) {
+                current = index;
+                dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            }
+        }, { passive: true });
+    }
+
     const heroBg = document.querySelector('.hero-bg') as HTMLElement | null;
     if (heroBg) {
         const onScroll = () => {
@@ -384,7 +427,9 @@ const similaires = [
     align-items: center;
     justify-content: center;
     gap: 14px;
-    text-shadow: 0 1px 12px rgba(0,0,0,0.55);
+    text-shadow:
+        0 0 12px #000, 0 0 12px #000,
+        0 2px 20px rgba(0,0,0,0.85);
 }
 .hero-kicker::before, .hero-kicker::after {
     content: '';
@@ -398,9 +443,18 @@ const similaires = [
     font-weight: 900;
     line-height: 1.08;
     margin-bottom: 1.6rem;
-    text-shadow: 0 2px 40px rgba(0,0,0,0.45);
+    text-shadow:
+        0 0 12px rgba(0,0,0,0.85),
+        0 4px 40px rgba(0,0,0,0.7),
+        -1px -1px 0 rgba(0,0,0,0.4),
+        1px  1px 0 rgba(0,0,0,0.4);
+    -webkit-text-stroke: 0.5px rgba(0,0,0,0.35);
 }
-.hero-cnt h1 em { font-style: italic; color: var(--turquoise-light); }
+.hero-cnt h1 em {
+    font-style: italic;
+    color: var(--turquoise-light);
+    -webkit-text-stroke: 0.5px rgba(0,27,46,0.4);
+}
 .hero-rule { width: 48px; height: 1px; background: rgba(255,255,255,0.35); margin: 0 auto 1.2rem; }
 .hero-meta {
     font-family: var(--font-sans);
@@ -408,16 +462,20 @@ const similaires = [
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.85);
-    text-shadow: 0 1px 10px rgba(0,0,0,0.4);
+    font-weight: 600;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.6));
     margin-bottom: 2rem;
 }
 .hero-intro {
     font-family: var(--font-serif);
-    font-size: clamp(0.98rem, 1.8vw, 1.15rem);
-    font-weight: 400;
-    color: rgba(255,255,255,0.92);
+    font-size: clamp(1.05rem, 1.9vw, 1.22rem);
+    font-weight: 600;
+    color: #fff;
     line-height: 1.8;
-    text-shadow: 0 1px 20px rgba(0,0,0,0.7), 0 2px 6px rgba(0,0,0,0.5);
+    text-shadow:
+        0 0 12px #000, 0 0 12px #000,
+        0 2px 20px rgba(0,0,0,0.85);
+    -webkit-text-stroke: 0;
     max-width: 540px;
     margin: 0 auto;
 }
@@ -425,6 +483,7 @@ const similaires = [
     font-style: italic;
     color: var(--turquoise-light);
     font-weight: 600;
+    -webkit-text-stroke: 0.4px rgba(0,27,46,0.5);
 }
 
 
@@ -473,6 +532,7 @@ const similaires = [
     line-height: 1.1;
 }
 .acts-hd h2 em { font-style: italic; color: var(--turquoise); }
+.carousel-btn, .carousel-dots { display: none; }
 
 .acts-grid {
     display: grid;
@@ -578,6 +638,11 @@ const similaires = [
 .mosaic-a:hover img { transform: scale(1.04); }
 .mosaic-b { display: grid; grid-template-rows: 1fr 1fr; gap: 4px; overflow: hidden; }
 .mosaic-b img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s; }
+@media (min-width: 768px) {
+    .mosaic-b { height: 480px; grid-template-rows: 238px 238px; }
+    .mosaic-b img:first-child { order: 2; }
+    .mosaic-b img:last-child { order: 1; }
+}
 .mosaic-b img:hover { transform: scale(1.04); }
 
 
@@ -585,59 +650,84 @@ const similaires = [
    HÉBERGEMENT
 ══════════════════════════════ */
 .logements {
-    background: linear-gradient(160deg, rgba(37,99,235,0.04), var(--sand) 40%, rgba(240,223,168,0.5));
+    background: #f8f7f4;
     padding: 6rem 2rem;
 }
-.logements-inner { max-width: 1280px; margin: 0 auto; }
-.logements-hd { text-align: center; margin-bottom: 3rem; }
-.logements-hd h2 {
+.logements-inner {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+.logements-img {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(13,27,46,0.12);
+}
+.logements-img--desktop {
+    position: sticky;
+    top: 5rem;
+}
+.logements-img--mobile { display: none; }
+.logements-img img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.logements-content .pill { margin-bottom: 1.4rem; display: inline-block; }
+.logements-content h2 {
     font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 900;
     color: var(--green-dark);
     line-height: 1.1;
     margin-bottom: 0.8rem;
 }
-.logements-hd h2 em { font-style: italic; color: var(--sand-dark); }
-.logements-hd p { color: var(--text); font-size: 1rem; font-weight: 500; max-width: 440px; margin: 0 auto; }
+.logements-content h2 em { font-style: italic; color: var(--sand-dark); }
+.logements-sub { color: var(--text); font-size: 1rem; font-weight: 500; margin-bottom: 2.5rem; line-height: 1.6; }
 
-.logements-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+.logements-list { margin-bottom: 2rem; }
+.logement-item {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid rgba(13,27,46,0.08);
 }
-.logement-card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 2rem 1.8rem 2.2rem;
-    box-shadow: 0 4px 20px rgba(13,27,46,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid rgba(13,27,46,0.05);
+.logement-item:first-child { padding-top: 0; border-top: 1px solid rgba(13,27,46,0.08); }
+.logement-item-hd {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.3rem;
 }
-.logement-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(13,27,46,0.14); }
-.logement-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-.logement-icon { font-size: 2.2rem; }
+.logement-item-hd h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--green-dark);
+    margin: 0;
+}
 .logement-tag {
     font-family: var(--font-sans);
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     background: var(--sand);
     color: var(--green-dark);
-    padding: 0.25rem 0.7rem;
+    padding: 0.22rem 0.65rem;
     border-radius: 50px;
 }
-.logement-card h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 900; color: var(--green-dark); margin-bottom: 0.3rem; }
-.logement-ex { font-size: 0.78rem; color: var(--turquoise); font-weight: 600; margin-bottom: 0.8rem; font-family: var(--font-sans); display: block; }
-.logement-desc { font-size: 0.92rem; color: var(--text); line-height: 1.65; font-weight: 500; }
+.logement-ex { font-size: 0.78rem; color: var(--turquoise); font-weight: 600; margin-bottom: 0.35rem; font-family: var(--font-sans); }
+.logement-desc { font-size: 0.92rem; color: var(--text); line-height: 1.65; font-weight: 500; margin: 0; }
 
 .tip {
     display: flex;
     gap: 0.8rem;
     align-items: flex-start;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.8);
     border-left: 3px solid var(--turquoise);
     padding: 1.1rem 1.4rem;
     font-size: 0.92rem;
@@ -649,8 +739,6 @@ const similaires = [
 .tip strong { color: var(--green-dark); }
 .tip--light { background: rgba(255,255,255,0.07); border-left-color: var(--turquoise-light); color: rgba(255,255,255,0.75); }
 .tip--light strong { color: #fff; }
-
-.logements-cta { text-align: center; }
 
 
 /* ══════════════════════════════
@@ -833,6 +921,8 @@ const similaires = [
 .cta-sub { font-size: 0.95rem; color: rgba(13,27,46,0.5); line-height: 1.6; }
 .cta-btns { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 0.4rem; }
 .cta-btn {
+    position: relative;
+    overflow: hidden;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -843,15 +933,29 @@ const similaires = [
     font-weight: 700;
     letter-spacing: 0.04em;
     text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s, background 0.3s, color 0.3s, border-color 0.3s;
     border: 2px solid transparent;
 }
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.55s ease;
+    pointer-events: none;
+}
+.cta-btn:hover::before { left: 160%; }
+.cta-btn:hover { transform: translateY(-4px) scale(1.03); }
 .cta-btn--dark { background: var(--green-dark); color: #fff; border-color: var(--green-dark); }
-.cta-btn--dark:hover { background: var(--turquoise); border-color: var(--turquoise); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,168,152,0.3); }
+.cta-btn--dark:hover { background: var(--turquoise); border-color: var(--turquoise); box-shadow: 0 12px 32px rgba(26,168,152,0.4); }
 .cta-btn--ghost { background: transparent; color: var(--green-dark); border-color: rgba(13,27,46,0.25); }
-.cta-btn--ghost:hover { border-color: var(--turquoise); color: var(--turquoise); transform: translateY(-2px); }
+.cta-btn--ghost:hover { border-color: var(--turquoise); color: var(--turquoise); box-shadow: 0 8px 24px rgba(26,168,152,0.15); }
 .cta-btn--turquoise { background: var(--turquoise); color: #fff; border-color: var(--turquoise); }
-.cta-btn--turquoise:hover { background: #159e8e; border-color: #159e8e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,168,152,0.3); }
+.cta-btn--turquoise:hover { background: #159e8e; border-color: #159e8e; box-shadow: 0 12px 32px rgba(26,168,152,0.4); }
 
 
 /* ══════════════════════════════
@@ -971,15 +1075,83 @@ const similaires = [
     .hero-caption { bottom: 1.5rem; }
     .hero-caption p { font-size: 0.88rem; }
 
-    .acts { padding: 4rem 1.2rem; }
-    .acts-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+    .acts { padding: 4rem 0; }
+    .acts-inner { padding: 0 1.2rem; }
+    .acts-carousel { position: relative; }
+    .acts-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 0;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .acts-grid::-webkit-scrollbar { display: none; }
+    .act-card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        border-radius: 0;
+    }
+    .carousel-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 38%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.3);
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: #c9a96e;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .carousel-btn:active {
+        background: var(--turquoise);
+        border-color: var(--turquoise);
+        transform: translateY(-50%) scale(0.93);
+    }
+    .carousel-btn--prev { left: 0.8rem; }
+    .carousel-btn--next { right: 0.8rem; }
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 1.2rem;
+    }
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(13,27,46,0.2);
+        cursor: pointer;
+        transition: background 0.25s, transform 0.25s;
+    }
+    .carousel-dot.active {
+        background: var(--turquoise);
+        transform: scale(1.3);
+    }
 
     .mosaic { grid-template-columns: 1fr; height: auto; gap: 4px; }
     .mosaic-a { height: 56vw; }
     .mosaic-b { grid-template-columns: 1fr 1fr; grid-template-rows: unset; height: 38vw; }
+    .mosaic-b img:first-child { order: 2; }
+    .mosaic-b img:last-child { order: 1; }
 
     .logements { padding: 4rem 1.2rem; }
-    .logements-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .logements-inner { grid-template-columns: 1fr; gap: 0; }
+    .logements-img--desktop { display: none; }
+    .logements-img--mobile { display: block; margin-bottom: 1.5rem; }
+    .logements-img img { height: 200px; }
+    .logements-content h2 { text-align: center; font-size: 2.2rem; }
 
     .budget { padding: 4rem 1.2rem; }
     .budget-table-head, .budget-table-row { grid-template-columns: 1fr repeat(3, 72px); }
