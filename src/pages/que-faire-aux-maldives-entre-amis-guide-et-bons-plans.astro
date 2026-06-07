@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 const activites = [
-    { titre: "Excursion snorkeling", desc: "Embarque sur un bateau et explore les lagons turquoise des Maldives. Nage parmi les coraux éclatants et les poissons colorés, détends-toi sur des bancs de sable blanc et rencontre des dauphins curieux. Une aventure à vivre absolument !", img: "/images/Maldives%20blog/13.jpg", alt: "Snorkeling dans les lagons turquoise des Maldives", lien: "https://www.getyourguide.com/fr-fr/male-l159176/voyage-d-aventure-aux-maldives-t614694/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
+    { titre: "Excursion snorkeling", desc: "Embarque sur un bateau et explore les lagons turquoise des Maldives. Nage parmi les coraux éclatants et les poissons colorés, détends-toi sur des bancs de sable blanc et rencontre des dauphins curieux. Une aventure à vivre absolument !", img: "/images/Maldives%20blog/13.jpg", alt: "Snorkeling dans les lagons turquoise des Maldives", lien: "https://www.getyourguide.com/fr-fr/male-l159176/voyage-d-aventure-aux-maldives-t614694/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
     { titre: "Rencontre avec les tortues", desc: "Parcours les îles et les lagons scintillants des Maldives à bord d'un hors-bord. Plonge dans des eaux transparentes pour découvrir poissons tropicaux et récifs colorés, puis admire les tortues en liberté et savoure un déjeuner sur un banc de sable immaculé.", img: "/images/Maldives%20blog/1.jpg", alt: "Tortues marines dans les eaux cristallines des Maldives", lien: "https://www.getyourguide.com/fr-fr/maafushi-l159192/maafushi-tour-en-bateau-avec-plongee-en-apnee-dans-les-jardins-de-corail-et-dejeuner-t728674/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
     { titre: "Nage avec les requins-nourrices", desc: "Nage au plus près des requins-nourrices et découvre leur comportement paisible dans leur habitat naturel. Admire leur taille impressionnante, leur élégance sous l'eau et la manière dont ils évoluent autour des récifs coralliens. Une rencontre marine unique et fascinante !", img: "/images/Maldives%20blog/4.jpg", alt: "Requins-nourrices dans les récifs coralliens des Maldives", lien: "https://www.getyourguide.com/fr-fr/bodufolhudhoo-l254183/experience-locale-requin-nourrice-et-recifs-caches-de-l-atoll-d-ari-t1127988/?ranking_uuid=3f2070e2-a76d-4c91-8505-1f34de183c96" },
 ];
@@ -14,9 +14,9 @@ const hebergements = [
 ];
 
 const transports = [
-    { icon: "🚤", nom: "Hors-bord", desc: "Rapide et pratique entre les îles. Idéal pour les excursions.", img: "/images/Maldives%20blog/6.jpg" },
-    { icon: "⛵", nom: "Dhoni local", desc: "Économique mais horaires fixes. L'âme des Maldives.", img: "/images/Maldives%20blog/11.jpg" },
-    { icon: "✈️", nom: "Hydravion", desc: "Expérience unique et panoramique. Spectaculaire mais onéreux.", img: "/images/Maldives%20blog/7.jpg" },
+    { icon: "🚤", nom: "Speed boat", desc: "Rapide et pratique entre les îles. Idéal pour les excursions.", img: "/images/Maldives%20blog/9.jpg" },
+    { icon: "⛵", nom: "Dhoni local", desc: "Économique mais horaires fixes. L'âme des Maldives.", img: "/images/Maldives%20blog/10.jpg" },
+    { icon: "✈️", nom: "Hydravion", desc: "Expérience unique et panoramique. Spectaculaire mais onéreux.", img: "/images/Maldives%20blog/11.jpg" },
 ];
 
 const conseils = [
@@ -160,11 +160,6 @@ const similaires = [
                 <p>Contrairement aux idées reçues, les Maldives peuvent être accessibles hors resorts de luxe.</p>
             </div>
 
-            <div class="budget-total">
-                <span class="budget-total-lbl">1 semaine · par personne · hors vol</span>
-                <span class="budget-total-range">1 300 – 1 900 €</span>
-            </div>
-
             <div class="budget-table">
                 <div class="budget-table-head">
                     <div class="bth-cell bth-label">Dépense / jour</div>
@@ -173,29 +168,34 @@ const similaires = [
                     <div class="bth-cell bth-col bth-col--luxe">Luxe</div>
                 </div>
                 <div class="budget-table-row">
-                    <div class="btr-label">🏡 Hébergement</div>
+                    <div class="btr-label">Hébergement</div>
                     <div class="btr-val">60 – 110 €</div>
                     <div class="btr-val">120 – 200 €</div>
                     <div class="btr-val btr-val--luxe">400 €+</div>
                 </div>
                 <div class="budget-table-row">
-                    <div class="btr-label">🍽️ Repas</div>
+                    <div class="btr-label">Repas</div>
                     <div class="btr-val">11 – 19 €</div>
                     <div class="btr-val">20 – 40 €</div>
                     <div class="btr-val btr-val--luxe">70 €+</div>
                 </div>
                 <div class="budget-table-row">
-                    <div class="btr-label">🚤 Transport</div>
+                    <div class="btr-label">Transport</div>
                     <div class="btr-val">5 – 15 €</div>
                     <div class="btr-val">20 – 40 €</div>
                     <div class="btr-val btr-val--luxe">80 €+</div>
                 </div>
                 <div class="budget-table-row">
-                    <div class="btr-label">🤿 Activités</div>
+                    <div class="btr-label">Activités</div>
                     <div class="btr-val">20 – 40 €</div>
                     <div class="btr-val">60 – 120 €</div>
                     <div class="btr-val btr-val--luxe">200 €+</div>
                 </div>
+            </div>
+
+            <div class="budget-total">
+                <span class="budget-total-lbl">1 semaine · par personne · hors vol</span>
+                <span class="budget-total-range">1 300 – 1 900 €</span>
             </div>
 
             <p class="tip tip--light">
@@ -203,28 +203,26 @@ const similaires = [
                 <span><strong>Astuce :</strong> réserve ton vol plusieurs mois à l'avance pour les meilleures offres.</span>
             </p>
             <div class="budget-cta">
-                <a href="https://www.skyscanner.fr/vols-pour/mv/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--turquoise">✈️ Comparer les vols sur Skyscanner</a>
+                <a href="https://www.skyscanner.fr/vols-pour/mv/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--turquoise">Comparer les vols sur Skyscanner</a>
             </div>
         </div>
     </section>
 
 
-    <!-- ══ TRANSPORT (3 cartes avec image) ══ -->
+    <!-- ══ TRANSPORT ══ -->
     <section class="transport" id="transport">
         <div class="transport-inner">
             <div class="transport-hd">
                 <span class="pill pill--sand">Déplacements</span>
                 <h2>Comment se déplacer<br /><em>aux Maldives ?</em></h2>
             </div>
-            <div class="transport-grid">
+            <div class="transport-list">
                 {transports.map((t) => (
-                    <div class="transport-card">
-                        <div class="transport-img">
+                    <div class="transport-item">
+                        <div class="transport-item-img">
                             <img src={t.img} alt={t.nom} loading="lazy" />
-                            <div class="transport-img-veil"></div>
-                            <span class="transport-icon">{t.icon}</span>
                         </div>
-                        <div class="transport-body">
+                        <div class="transport-item-body">
                             <h3>{t.nom}</h3>
                             <p>{t.desc}</p>
                         </div>
@@ -243,9 +241,9 @@ const similaires = [
                 <h2>Conseils pratiques<br /><em>pour un voyage réussi</em></h2>
             </div>
             <div class="conseils-grid">
-                {conseils.map((c) => (
+                {conseils.map((c, i) => (
                     <div class="conseil-card">
-                        <span class="conseil-icon">{c.icon}</span>
+                        <span class="conseil-num">0{i + 1}</span>
                         <h3>{c.titre}</h3>
                         <p>{c.desc}</p>
                     </div>
@@ -257,13 +255,18 @@ const similaires = [
 
     <!-- ══ CONCLUSION ══ -->
     <section class="conclusion">
-        <img src="/images/Maldives%20blog/12.jpg" alt="Coucher de soleil sur le lagon des Maldives" loading="lazy" class="conclusion-img" />
-        <div class="conclusion-overlay">
+        <div class="conclusion-inner">
             <div class="conclusion-body">
                 <span class="pill pill--turquoise">Pourquoi y aller ?</span>
                 <h2>Un voyage aux Maldives,<br /><em>ça change une vie</em></h2>
                 <p>Lagons turquoise, fonds marins incroyables, îles désertes et moments chill sur la plage. Une destination taillée pour créer des souvenirs inoubliables dans un décor de carte postale.</p>
                 <p>Et surtout — c'est 10 fois mieux quand on le vit entre amis.</p>
+            </div>
+            <div class="conclusion-img-wrap">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="/images/Maldives%20blog/13.jpg" />
+                    <img src="/images/Maldives%20blog/12.jpg" alt="Coucher de soleil sur le lagon des Maldives" loading="lazy" />
+                </picture>
             </div>
         </div>
     </section>
@@ -272,13 +275,28 @@ const similaires = [
     <!-- ══ CTA ══ -->
     <section class="cta">
         <div class="cta-inner">
-            <div class="nl-badge">✈️ Prêt à partir ?</div>
+            <div class="nl-badge">Prêt à partir ?</div>
             <h2>Prépare ton séjour<br /><em>dès maintenant</em></h2>
             <p class="cta-sub">Réserve tes activités, ton hébergement et ton vol au meilleur prix.</p>
-            <div class="cta-btns">
-                <a href="https://www.getyourguide.fr/maldives-l975/" target="_blank" rel="noopener" class="cta-btn cta-btn--dark">🤿 Réserver une activité</a>
-                <a href="https://www.booking.com/searchresults.fr.html?dest_id=975&dest_type=country" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">🏨 Trouver un hébergement</a>
-                <a href="https://www.skyscanner.fr/vols-pour/mv/" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">✈️ Comparer les vols</a>
+            <div class="cta-cards">
+                <div class="cta-card">
+                    <div class="cta-card-img">
+                        <img src="/images/Maldives%20blog/1.jpg" alt="Activités aux Maldives" loading="lazy" />
+                    </div>
+                    <a href="https://www.getyourguide.fr/maldives-l975/" target="_blank" rel="noopener" class="cta-btn cta-btn--dark">Réserver une activité</a>
+                </div>
+                <div class="cta-card">
+                    <div class="cta-card-img">
+                        <img src="/images/Maldives%20blog/8.jpg" alt="Hébergement aux Maldives" loading="lazy" />
+                    </div>
+                    <a href="https://www.booking.com/searchresults.fr.html?dest_id=975&dest_type=country" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
+                </div>
+                <div class="cta-card">
+                    <div class="cta-card-img">
+                        <img src="/images/Maldives%20blog/22.jpg" alt="Vol pour les Maldives" loading="lazy" />
+                    </div>
+                    <a href="https://www.skyscanner.fr/vols-pour/mv/" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Comparer les vols</a>
+                </div>
             </div>
         </div>
     </section>
@@ -296,7 +314,12 @@ const similaires = [
                     <details class="faq-item" open={i === 0}>
                         <summary class="faq-question">
                             <span>{item.q}</span>
-                            <span class="faq-chevron" aria-hidden="true"></span>
+                            <span class="faq-chevron" aria-hidden="true">
+                                <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                    <line x1="1" y1="1" x2="7" y2="7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    <line x1="7" y1="7" x2="13" y2="1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
+                            </span>
                         </summary>
                         <div class="faq-answer">
                             <p>{item.r}</p>
@@ -312,7 +335,11 @@ const similaires = [
     <section class="similaires">
         <div class="similaires-inner">
             <h2 class="sim-title">Ces articles aussi <em>vont te plaire</em></h2>
-            <div class="sim-grid">
+            <div class="sim-carousel" id="simCarousel">
+                <button class="sim-carousel-btn sim-carousel-btn--prev" aria-label="Précédent">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <div class="sim-grid">
                 {similaires.map((s) => (
                     <a href={s.href} class="sim-card">
                         <div class="sim-img">
@@ -326,6 +353,15 @@ const similaires = [
                         </div>
                     </a>
                 ))}
+                </div>
+                <button class="sim-carousel-btn sim-carousel-btn--next" aria-label="Suivant">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+                <div class="sim-carousel-dots">
+                    {similaires.map((_, i) => (
+                        <span class={`sim-dot${i === 0 ? ' active' : ''}`} data-index={String(i)}></span>
+                    ))}
+                </div>
             </div>
         </div>
     </section>
@@ -343,7 +379,7 @@ const similaires = [
         let current = 0;
 
         function goTo(index: number) {
-            current = Math.max(0, Math.min(index, cards.length - 1));
+            current = ((index % cards.length) + cards.length) % cards.length;
             grid.scrollTo({ left: current * grid.offsetWidth, behavior: 'smooth' });
             dots.forEach((d, i) => d.classList.toggle('active', i === current));
         }
@@ -360,6 +396,41 @@ const similaires = [
             }
         }, { passive: true });
     }
+
+    // Carousel articles similaires (mobile uniquement)
+    const simCarousel = document.getElementById('simCarousel');
+    if (simCarousel && window.innerWidth <= 767) {
+        const simGrid = simCarousel.querySelector('.sim-grid') as HTMLElement;
+        const simCards = simCarousel.querySelectorAll('.sim-card');
+        const simDots = simCarousel.querySelectorAll('.sim-dot');
+        const simPrev = simCarousel.querySelector('.sim-carousel-btn--prev') as HTMLElement;
+        const simNext = simCarousel.querySelector('.sim-carousel-btn--next') as HTMLElement;
+        let simCurrent = 0;
+        function simGoTo(index: number) {
+            simCurrent = ((index % simCards.length) + simCards.length) % simCards.length;
+            simGrid.scrollTo({ left: simCurrent * simGrid.offsetWidth, behavior: 'smooth' });
+            simDots.forEach((d, i) => d.classList.toggle('active', i === simCurrent));
+        }
+        simPrev?.addEventListener('click', () => simGoTo(simCurrent - 1));
+        simNext?.addEventListener('click', () => simGoTo(simCurrent + 1));
+        simDots.forEach((d, i) => d.addEventListener('click', () => simGoTo(i)));
+        simGrid.addEventListener('scroll', () => {
+            const index = Math.round(simGrid.scrollLeft / simGrid.offsetWidth);
+            if (index !== simCurrent) { simCurrent = index; simDots.forEach((d, i) => d.classList.toggle('active', i === simCurrent)); }
+        }, { passive: true });
+    }
+
+    // FAQ accordion exclusif
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.addEventListener('toggle', () => {
+            if ((item as HTMLDetailsElement).open) {
+                faqItems.forEach(other => {
+                    if (other !== item) (other as HTMLDetailsElement).open = false;
+                });
+            }
+        });
+    });
 
     const heroBg = document.querySelector('.hero-bg') as HTMLElement | null;
     if (heroBg) {
@@ -533,6 +604,7 @@ const similaires = [
 }
 .acts-hd h2 em { font-style: italic; color: var(--turquoise); }
 .carousel-btn, .carousel-dots { display: none; }
+.sim-carousel-btn, .sim-carousel-dots { display: none; }
 
 .acts-grid {
     display: grid;
@@ -654,11 +726,11 @@ const similaires = [
     padding: 6rem 2rem;
 }
 .logements-inner {
-    max-width: 1060px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 5rem;
+    grid-template-columns: 640px 1fr;
+    gap: 4rem;
     align-items: start;
 }
 .logements-img {
@@ -673,7 +745,7 @@ const similaires = [
 .logements-img--mobile { display: none; }
 .logements-img img {
     width: 100%;
-    height: 440px;
+    height: 700px;
     object-fit: cover;
     object-position: center;
     display: block;
@@ -749,7 +821,7 @@ const similaires = [
 .budget-hd { text-align: center; margin-bottom: 2.5rem; }
 .budget-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 0.8rem; }
 .budget-hd h2 em { font-style: italic; color: var(--turquoise-light); }
-.budget-hd p { color: rgba(255,255,255,0.5); font-size: 0.95rem; line-height: 1.65; }
+.budget-hd p { color: rgba(255,255,255,0.82); font-size: 0.95rem; line-height: 1.65; }
 
 .budget-total {
     display: flex;
@@ -780,7 +852,7 @@ const similaires = [
     border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .bth-cell { padding: 1rem 1.2rem; font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
-.bth-label { color: rgba(255,255,255,0.3); }
+.bth-label { color: #fff; }
 .bth-col { text-align: center; }
 .bth-col--budget { color: #7dd3c8; }
 .bth-col--moyen { color: var(--turquoise-light); }
@@ -793,115 +865,152 @@ const similaires = [
 }
 .budget-table-row:last-child { border-bottom: none; }
 .budget-table-row:hover { background: rgba(255,255,255,0.03); }
-.btr-label { padding: 1rem 1.2rem; font-family: var(--font-sans); font-size: 0.88rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 0.5rem; }
-.btr-val { padding: 1rem 1.2rem; font-family: var(--font-sans); font-size: 0.88rem; font-weight: 600; color: rgba(255,255,255,0.45); text-align: center; display: flex; align-items: center; justify-content: center; }
+.btr-label { padding: 1rem 1.2rem; font-family: var(--font-sans); font-size: 0.88rem; color: rgba(255,255,255,0.9); font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+.btr-val { padding: 1rem 1.2rem; font-family: var(--font-sans); font-size: 0.88rem; font-weight: 600; color: rgba(255,255,255,0.78); text-align: center; display: flex; align-items: center; justify-content: center; white-space: nowrap; }
 .btr-val--luxe { color: #f0d9a8; }
 .budget-cta { text-align: center; margin-top: 1.5rem; }
 
 
 /* ══════════════════════════════
-   TRANSPORT (3 cartes avec photo)
+   TRANSPORT
 ══════════════════════════════ */
 .transport { background: #fff; padding: 6rem 2rem; }
-.transport-inner { max-width: 1280px; margin: 0 auto; }
-.transport-hd { text-align: center; margin-bottom: 3.5rem; }
+.transport-inner { max-width: 900px; margin: 0 auto; }
+.transport-hd { text-align: center; margin-bottom: 3rem; }
 .transport-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; }
 .transport-hd h2 em { font-style: italic; color: var(--turquoise); }
 
-.transport-grid {
+.transport-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.transport-item {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-.transport-card {
-    border-radius: 20px;
+    grid-template-columns: 260px 1fr;
+    border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(13,27,46,0.08);
-    box-shadow: 0 4px 20px rgba(13,27,46,0.07);
-    transition: transform 0.3s, box-shadow 0.3s;
     background: #fff;
+    border: 1px solid rgba(13,27,46,0.08);
+    box-shadow: 0 4px 20px rgba(13,27,46,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.transport-card:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(13,27,46,0.13); }
+.transport-item:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(13,27,46,0.13); }
+.transport-item-img { overflow: hidden; }
+.transport-item-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+.transport-item:hover .transport-item-img img { transform: scale(1.06); }
+.transport-item-body {
+    padding: 1.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+}
+.transport-num {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--turquoise);
+    text-transform: uppercase;
+}
+.transport-item-body h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 900; color: var(--green-dark); margin: 0; }
+.transport-item-body p { font-size: 0.92rem; color: var(--text); line-height: 1.7; margin: 0; font-weight: 500; }
 
-.transport-img {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
+@media (min-width: 768px) {
+    .transport-inner { max-width: 1200px; }
+    .transport-list { flex-direction: row; gap: 1.5rem; }
+    .transport-item { grid-template-columns: 1fr; flex-direction: column; }
+    .transport-item-img { height: 240px; }
+    .transport-item-body { padding: 1.6rem 1.8rem 2rem; justify-content: flex-start; }
+    .transport-item-body h3 { font-size: 1.5rem; }
+    .transport-item-body p { font-size: 0.95rem; }
 }
-.transport-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s; }
-.transport-card:hover .transport-img img { transform: scale(1.06); }
-.transport-img-veil {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(13,27,46,0.1) 0%, rgba(13,27,46,0.55) 100%);
-}
-.transport-icon {
-    position: absolute;
-    bottom: 1rem;
-    left: 1.2rem;
-    font-size: 2rem;
-    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
-}
-.transport-body { padding: 1.5rem 1.6rem 1.8rem; }
-.transport-body h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 900; color: var(--green-dark); margin-bottom: 0.5rem; }
-.transport-body p { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
 
 
 /* ══════════════════════════════
-   CONSEILS (2×2 icon cards)
+   CONSEILS
 ══════════════════════════════ */
 .conseils {
-    background: linear-gradient(160deg, rgba(37,99,235,0.04), var(--sand) 40%, rgba(240,223,168,0.5));
-    padding: 6rem 2rem;
+    background: #fff;
+    padding: 0 2rem 6rem;
 }
-.conseils-inner { max-width: 900px; margin: 0 auto; }
+.conseils-inner { max-width: 1200px; margin: 0 auto; }
 .conseils-hd { text-align: center; margin-bottom: 3rem; }
 .conseils-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; }
 .conseils-hd h2 em { font-style: italic; color: var(--sand-dark); }
 
-.conseils-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.conseils-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
 .conseil-card {
     background: #fff;
-    border-radius: 18px;
-    padding: 2.2rem 2rem;
-    box-shadow: 0 4px 20px rgba(13,27,46,0.07);
-    border: 1px solid rgba(13,27,46,0.05);
+    border-radius: 16px;
+    padding: 2rem 1.8rem 2.2rem;
+    box-shadow: 0 6px 28px rgba(13,27,46,0.10);
+    border: 1px solid rgba(13,27,46,0.08);
+    border-top: 3px solid var(--turquoise);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .conseil-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(13,27,46,0.12); }
-.conseil-icon { font-size: 2.2rem; display: block; margin-bottom: 1rem; }
-.conseil-card h3 { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 800; color: var(--green-dark); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
-.conseil-card p { font-size: 0.9rem; color: var(--text); line-height: 1.7; }
+.conseil-num {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--turquoise);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+.conseil-card h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 900; color: var(--green-dark); margin-bottom: 0.6rem; line-height: 1.2; }
+.conseil-card p { font-size: 0.88rem; color: var(--text); line-height: 1.7; font-weight: 500; }
 
 
 /* ══════════════════════════════
    CONCLUSION
 ══════════════════════════════ */
 .conclusion {
-    position: relative;
-    height: 540px;
-    overflow: hidden;
+    background: var(--green-dark);
+    padding: 6rem 2rem;
 }
-.conclusion-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.6); }
-.conclusion-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(13,27,46,0.9) 0%, rgba(13,27,46,0.3) 60%, transparent 100%);
-    display: flex;
-    align-items: flex-end;
-    padding: 4rem;
+.conclusion-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
 }
-.conclusion-body { max-width: 700px; color: #fff; display: flex; flex-direction: column; gap: 1rem; }
+.conclusion-body { color: #fff; display: flex; flex-direction: column; gap: 1.2rem; }
 .conclusion-body h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; line-height: 1.1; }
 .conclusion-body h2 em { font-style: italic; color: var(--turquoise-light); }
-.conclusion-body p { font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.8; }
+.conclusion-body p { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.8; }
+.conclusion-img-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+}
+.conclusion-img-wrap img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
 
 
 /* ══════════════════════════════
    CTA
 ══════════════════════════════ */
-.cta { background: var(--sand-light, #fdf8ef); padding: 7rem 2rem; }
-.cta-inner { max-width: 600px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+.cta { background: #fff; padding: 7rem 2rem; }
+.cta-inner { max-width: 1100px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+.cta-sub { color: var(--green-dark) !important; }
+.cta-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; width: 100%; margin-top: 0.5rem; }
+.cta-card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; border: 1px solid rgba(13,27,46,0.08); box-shadow: 0 4px 20px rgba(13,27,46,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+.cta-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(13,27,46,0.12); }
+.cta-card-img { height: 200px; overflow: hidden; }
+.cta-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+.cta-card:hover .cta-card-img img { transform: scale(1.05); }
+.cta-card .cta-btn { margin: 1rem 1.2rem 1.4rem; border-radius: 10px; justify-content: center; }
 .nl-badge {
     display: inline-flex;
     align-items: center;
@@ -961,64 +1070,72 @@ const similaires = [
 /* ══════════════════════════════
    FAQ
 ══════════════════════════════ */
-.faq { background: #fff; padding: 6rem 2rem; border-top: 1px solid rgba(13,27,46,0.07); }
-.faq-inner { max-width: 760px; margin: 0 auto; }
-.faq-hd { text-align: center; margin-bottom: 3.5rem; }
+.faq { background: #fff; padding: 0 2rem 6rem; }
+.faq-inner { max-width: 780px; margin: 0 auto; }
+.faq-hd { text-align: center; margin-bottom: 3rem; }
 .faq-hd h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; }
 .faq-hd h2 em { font-style: italic; color: var(--turquoise); }
 
-.faq-list { display: flex; flex-direction: column; }
-.faq-item { border-bottom: 1px solid rgba(13,27,46,0.1); }
-.faq-item:first-child { border-top: 1px solid rgba(13,27,46,0.1); }
+.faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.faq-item {
+    background: #fff;
+    border-radius: 14px;
+    border: 1.5px solid rgba(13,27,46,0.08);
+    box-shadow: 0 2px 12px rgba(13,27,46,0.05);
+    overflow: hidden;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+.faq-item[open] {
+    border-color: var(--turquoise);
+    box-shadow: 0 4px 24px rgba(26,168,152,0.12);
+}
 
 .faq-question {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
-    padding: 1.6rem 0;
+    gap: 1.2rem;
+    padding: 1.4rem 1.6rem;
     cursor: pointer;
     list-style: none;
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--green-dark);
     line-height: 1.4;
     user-select: none;
+    transition: color 0.2s;
 }
 .faq-question::-webkit-details-marker { display: none; }
+.faq-item[open] .faq-question { color: var(--turquoise); }
 
 .faq-chevron {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background: rgba(26,168,152,0.1);
-    border: 1.5px solid rgba(26,168,152,0.25);
+    background: rgba(13,27,46,0.06);
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.25s, transform 0.3s;
+    color: var(--green-dark);
+    transition: background 0.25s, color 0.25s;
 }
-.faq-chevron::after {
-    content: '+';
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: var(--turquoise);
-    line-height: 1;
-    transition: transform 0.3s;
-}
-.faq-item[open] .faq-chevron { background: rgba(26,168,152,0.15); }
-.faq-item[open] .faq-chevron::after { transform: rotate(45deg); }
+.faq-chevron svg { display: block; transition: transform 0.35s; }
+.faq-item[open] .faq-chevron { background: var(--turquoise); color: #fff; }
+.faq-item[open] .faq-chevron svg { transform: rotate(180deg); }
 
-.faq-answer { padding: 0 1rem 1.8rem 0; }
-.faq-answer p { font-size: 0.95rem; color: var(--text); line-height: 1.8; max-width: 640px; }
+.faq-answer {
+    padding: 0 1.6rem 1.6rem;
+    border-top: 1px solid rgba(13,27,46,0.06);
+}
+.faq-answer p { font-size: 0.95rem; color: var(--text); line-height: 1.85; padding-top: 1.2rem; }
 
 
 /* ══════════════════════════════
    ARTICLES SIMILAIRES
 ══════════════════════════════ */
-.similaires { background: #fff; padding: 5rem 2rem; border-top: 1px solid rgba(13,27,46,0.07); }
+.similaires { background: #fff; padding: 1.5rem 2rem 5rem; }
 .similaires-inner { max-width: 1280px; margin: 0 auto; }
 .sim-title {
     font-family: var(--font-serif);
@@ -1034,8 +1151,8 @@ const similaires = [
     border-radius: 16px;
     overflow: hidden;
     background: #fff;
-    border: 1px solid rgba(13,27,46,0.08);
-    box-shadow: 0 4px 20px rgba(13,27,46,0.06);
+    border: 1px solid rgba(13,27,46,0.13);
+    box-shadow: 0 6px 28px rgba(13,27,46,0.11);
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -1060,7 +1177,7 @@ const similaires = [
 }
 .sim-body { padding: 1.4rem 1.5rem 1.6rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
 .sim-body h3 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 900; color: var(--green-dark); line-height: 1.3; }
-.sim-body p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; flex: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sim-body p { font-size: 0.86rem; color: var(--text); line-height: 1.6; flex: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-weight: 500; }
 .sim-cta { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; color: var(--turquoise); margin-top: 0.3rem; transition: color 0.2s; }
 .sim-card:hover .sim-cta { color: var(--green-dark); }
 
@@ -1119,8 +1236,8 @@ const similaires = [
         border-color: var(--turquoise);
         transform: translateY(-50%) scale(0.93);
     }
-    .carousel-btn--prev { left: 0.8rem; }
-    .carousel-btn--next { right: 0.8rem; }
+    .carousel-btn--prev { left: 0.2rem; }
+    .carousel-btn--next { right: 0.2rem; }
     .carousel-dots {
         display: flex;
         justify-content: center;
@@ -1159,23 +1276,43 @@ const similaires = [
     .budget-total-range { font-size: clamp(2rem, 8vw, 2.8rem); }
 
     .transport { padding: 4rem 1.2rem; }
-    .transport-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+    .transport-item { grid-template-columns: 1fr; min-height: unset; }
+    .transport-item-img { height: 180px; }
+    .transport-item-body { padding: 1.4rem 1.4rem 1.6rem; }
 
-    .conseils { padding: 4rem 1.2rem; }
-    .conseils-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .conseils { padding: 1.5rem 1.2rem 4rem; }
+    .conseils-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
-    .conclusion { height: 420px; }
-    .conclusion-overlay { padding: 2rem 1.4rem; }
+    .conclusion { padding: 4rem 1.2rem; }
+    .conclusion-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .conclusion-body { text-align: center; align-items: center; }
+    .conclusion-img-wrap img { height: 240px; }
 
-    .cta { padding: 5rem 1.4rem; }
-    .cta-btns { flex-direction: column; width: 100%; }
+    .cta { padding: 4rem 1.2rem; }
+    .cta-cards { grid-template-columns: 1fr; gap: 0.8rem; }
+    .cta-card { flex-direction: row; align-items: center; }
+    .cta-card-img { width: 160px; height: 130px; flex-shrink: 0; }
+    .cta-card .cta-btn { margin: 0 1rem; flex: 1; text-align: center; font-size: 0.78rem; }
+    .cta-img-mobile { display: block; height: 220px; overflow: hidden; }
+    .cta-img-mobile img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .cta-btn { justify-content: center; }
 
-    .faq { padding: 4rem 1.2rem; }
+    .faq { padding: 0 1.2rem 4rem; }
     .faq-question { font-size: 0.92rem; }
 
-    .similaires { padding: 3.5rem 1.2rem; }
-    .sim-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .similaires { padding: 0.5rem 0 3.5rem; }
+    .similaires-inner { padding: 0 1.2rem; }
+    .sim-carousel { position: relative; }
+    .sim-grid { display: flex; flex-direction: row; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 0; scrollbar-width: none; -ms-overflow-style: none; }
+    .sim-grid::-webkit-scrollbar { display: none; }
+    .sim-card { flex: 0 0 100%; scroll-snap-align: start; border-radius: 0; box-shadow: none; border: none; }
+    .sim-carousel-btn { display: flex; align-items: center; justify-content: center; position: absolute; top: 38%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #c9a96e; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.18); transition: background 0.25s, transform 0.25s; }
+    .sim-carousel-btn:active { background: var(--turquoise); border-color: var(--turquoise); transform: translateY(-50%) scale(0.93); }
+    .sim-carousel-btn--prev { left: 0.2rem; }
+    .sim-carousel-btn--next { right: 0.2rem; }
+    .sim-carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 1.2rem; }
+    .sim-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(13,27,46,0.2); cursor: pointer; transition: background 0.25s, transform 0.25s; }
+    .sim-dot.active { background: var(--turquoise); transform: scale(1.3); }
 }
 </style>
 
