@@ -52,6 +52,34 @@ const continents = [
 >
     <link rel="preload" as="image" href="/images/bora-bora-hero.jpg" slot="head" />
 
+    <!-- Schema Organization -->
+    <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Destination Souvenir",
+        "url": "https://destinationsouvenir.com",
+        "logo": { "@type": "ImageObject", "url": "https://destinationsouvenir.com/logo.png" },
+        "description": "Blog voyage entre amis pour les 18-35 ans — guides pratiques, activités incontournables et bons plans.",
+        "inLanguage": "fr-FR",
+        "sameAs": [
+            "https://www.instagram.com/destinationsouvenir",
+            "https://www.tiktok.com/@destinationsetsouvenirs"
+        ]
+    })}</script>
+
+    <!-- Schema WebPage -->
+    <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Destination Souvenir — Blog voyage entre amis | Guides & Bons Plans",
+        "description": "Destination Souvenir, le blog voyage entre amis pour les 18-35 ans. Guides pratiques, activités incontournables, plages de rêve et bons plans pour des souvenirs inoubliables.",
+        "url": "https://destinationsouvenir.com",
+        "inLanguage": "fr-FR",
+        "isPartOf": { "@type": "WebSite", "url": "https://destinationsouvenir.com", "name": "Destination Souvenir" },
+        "about": { "@type": "Thing", "name": "Voyages entre amis" },
+        "publisher": { "@type": "Organization", "name": "Destination Souvenir", "url": "https://destinationsouvenir.com" }
+    })}</script>
+
     <!-- ══════════════════════════════════════
          HERO — Parallax + nav dans l'image
     ══════════════════════════════════════ -->
