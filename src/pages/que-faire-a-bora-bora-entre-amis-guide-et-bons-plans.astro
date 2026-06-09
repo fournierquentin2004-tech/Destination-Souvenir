@@ -2,64 +2,64 @@
 import Layout from '../layouts/Layout.astro';
 
 const activites = [
-    { titre: "Découvre l'Opéra de Sydney", desc: "Explore l'Opéra de Sydney et plonge au cœur de ses halls majestueux. Découvre les secrets de ce chef-d'œuvre mondial et peut-être une répétition en coulisses. Une visite unique à ne pas manquer.", img: "/images/Sydney%20blog/2.jpg", alt: "Visite de l'Opéra de Sydney en Australie", lien: "https://www.getyourguide.com/fr-fr/sydney-l200/visite-de-l-opera-de-sydney-t28787/?ranking_uuid=78cfcea9-82d4-4215-808a-091a77b9442c" },
-    { titre: "Excursion aux Blue Mountains", desc: "Pars à l'aventure dans les Blue Mountains et découvre l'un des paysages les plus spectaculaires d'Australie. Admire les cascades de Katoomba puis rencontre koalas et kangourous dans un décor splendide. Une escapade inoubliable.", img: "/images/Sydney%20blog/3.jpg", alt: "Paysage spectaculaire des Blue Mountains près de Sydney", lien: "https://www.getyourguide.com/fr-fr/sydney-l200/aventure-dans-les-blue-mountains-scenic-world-zoo-et-photo-avec-un-koala-t792241/?ranking_uuid=78cfcea9-82d4-4215-808a-091a77b9442c" },
-    { titre: "Cours de surf à Bondi Beach", desc: "Initie-toi au surf à Bondi Beach et glisse sur tes premières vagues dans une ambiance fun et décontractée. Deux heures pour t'éclater, rire et pouvoir te vanter d'avoir dompté ce sport mythique sous le soleil australien.", img: "/images/Sydney%20blog/1.jpg", alt: "Cours de surf à Bondi Beach Sydney", lien: "https://www.getyourguide.com/fr-fr/sydney-l200/depuis-bondi-beach-2-heures-de-surf-pour-les-debutants-t25560/?ranking_uuid=78cfcea9-82d4-4215-808a-091a77b9442c" },
+    { titre: "Paradis sous-marin", desc: "Plonge dans le lagon turquoise de Bora Bora et découvre un monde sous-marin majestueux : raies pastenagues curieuses, jardins coralliens préservés et requins impressionnants. Embarque sur un outrigger traditionnel et vis une aventure unique !", img: "/images/Bora%20Bora%20blog/4.jpg", alt: "Plongée en apnée dans le lagon turquoise de Bora Bora", lien: "https://www.getyourguide.com/fr-fr/bora-bora-l32139/bora-bora-visite-du-lagon-et-plongee-en-apnee-t405215/?ranking_uuid=13d45c46-4c63-483c-bbc3-4637f416219d" },
+    { titre: "Aventure en jet ski", desc: "Pars en jet ski sur les eaux turquoise de Bora Bora et amuse-toi tout en admirant des paysages magiques, avec le mont Otemanu comme panorama. Arrête-toi pour capturer des photos incroyables et profite d'une après-midi unique au cœur de ce coin de paradis !", img: "/images/Bora%20Bora%20blog/5.jpg", alt: "Jet ski sur le lagon de Bora Bora avec vue sur le mont Otemanu", lien: "https://www.getyourguide.com/fr-fr/plage-de-matira-bora-bora-l122245/jet-ski-autour-de-bora-bora-la-vitesse-au-paradis-t953746/?ranking_uuid=13d45c46-4c63-483c-bbc3-4637f416219d" },
+    { titre: "Survol de Bora Bora", desc: "Embarque pour un vol inoubliable au-dessus des plages bordées de cocotiers et des récifs coralliens. Admire l'un des lagons les plus beaux du monde depuis les airs, puis continue vers Tahaa, l'île à la vanille, pour des paysages à couper le souffle.", img: "/images/Bora%20Bora%20blog/6.jpg", alt: "Vue aérienne de Bora Bora et son lagon turquoise depuis un avion", lien: "https://www.getyourguide.com/fr-fr/raiatea-l32627/raiatea-bora-bora-et-taha-a-vol-panoramique-prive-d-une-heure-t827320/?ranking_uuid=13d45c46-4c63-483c-bbc3-4637f416219d" },
 ];
 
 const hebergements = [
-    { type: "CBD (Centre-ville)", ex: "Hôtels et appartements", desc: "Au cœur de l'action, à deux pas des restaurants, bars et sites touristiques. L'option idéale pour tout faire à pied et rentrer tard sans se ruiner en taxi.", tag: "Animé" },
-    { type: "Surry Hills", ex: "Hôtels boutique et auberges", desc: "Branché, animé et plein de charme. Idéal pour les amateurs de cafés indépendants, de bars sympas et d'une ambiance locale authentique.", tag: "Branché" },
-    { type: "Bondi Beach", ex: "Hôtels et résidences en bord de mer", desc: "Pour se réveiller les pieds dans le sable et enchaîner surf, baignade et brunch en terrasse. Le choix idéal pour profiter de la vie balnéaire.", tag: "Plage" },
+    { type: "Vaitape", ex: "Hôtels, pensions et auberges", desc: "À deux pas des boutiques, restaurants et de l'animation locale. L'option idéale pour être au cœur de la vie de l'île et rejoindre facilement les embarcadères.", tag: "Animé" },
+    { type: "Pofai", ex: "Pensions et petits hôtels", desc: "Calme et reposant, face au lagon. Parfait pour les petites pensions de famille et un séjour détente loin de l'agitation, avec de belles vues sur l'eau.", tag: "Détente" },
+    { type: "Faanui", ex: "Resorts de luxe et bungalows sur pilotis", desc: "Pour un séjour d'exception dans des resorts directement en bord de mer ou sur un motu privé. L'expérience Bora Bora dans toute sa splendeur.", tag: "Luxe" },
 ];
 
 const transports = [
-    { nom: "Train / Métro / Bus", desc: "Le réseau Opal couvre toute la ville. Pratique pour rejoindre Bondi, Surry Hills, le CBD ou les quartiers excentrés à moindre coût.", img: "/images/Sydney%20blog/6.jpg", alt: "Transport en commun à Sydney, Australie" },
-    { nom: "Ferry", desc: "La façon la plus agréable de se déplacer à Sydney. Indispensable pour rejoindre Manly, Watsons Bay ou Taronga Zoo avec une vue imprenable sur le port.", img: "/images/Sydney%20blog/5.jpg", alt: "Ferry sur le port de Sydney avec l'Opéra en arrière-plan" },
-    { nom: "Taxi / Uber", desc: "Rapide et pratique pour rentrer tard le soir ou rejoindre des endroits mal desservis. Plus cher que les transports en commun mais confortable.", img: "/images/Sydney%20blog/18.jpg", alt: "Taxi dans les rues animées de Sydney" },
+    { nom: "Navettes bateau", desc: "Indispensables si tu loges sur un motu. Les ferries relient les différents hôtels et l'île principale — inclus dans la plupart des séjours en resort.", img: "/images/Bora%20Bora%20blog/8.jpg", alt: "Navette bateau sur le lagon de Bora Bora" },
+    { nom: "Excursions organisées", desc: "Souvent le meilleur moyen de découvrir le lagon, les motus et les activités nautiques. Tout est prévu — idéal pour profiter sans se soucier de la logistique.", img: "/images/Bora%20Bora%20blog/9.jpg", alt: "Excursion organisée en bateau sur le lagon de Bora Bora" },
+    { nom: "Taxi", desc: "Disponibles sur l'île principale mais coûteux. Pratiques pour les courtes distances entre Vaitape et les points d'intérêt. Négocie le prix avant de monter.", img: "/images/Bora%20Bora%20blog/18.jpg", alt: "Transport en taxi sur l'île de Bora Bora" },
 ];
 
 const conseils = [
-    { titre: "Période idéale", desc: "Décembre à février (été australien) pour la chaleur, les plages et les festivals. Avril à juin offre aussi un temps doux et moins de monde — idéal pour les visites." },
-    { titre: "Crème solaire", desc: "Le soleil australien est redoutable, même en automne. Protection SPF 50+ indispensable pour toutes les sorties à Bondi Beach ou en excursion." },
-    { titre: "Night-club", desc: "La meilleure soirée de Sydney se passe tous les jeudis à l'Ivy Thursdays. Une adresse incontournable pour faire la fête comme un local." },
-    { titre: "Réservation", desc: "Réserve tes activités (Opéra, Blue Mountains) et ton hébergement à l'avance, surtout en été australien (décembre-février) — les prix grimpent vite." },
+    { titre: "Période idéale", desc: "Mai à octobre, pendant la saison sèche et ensoleillée, avec des températures idéales entre 27 et 30°C. La saison des pluies (novembre-avril) est moins recommandée." },
+    { titre: "Indispensables", desc: "Crème solaire haute protection et anti-moustique sont essentiels. Le soleil polynésien est intense — protège-toi même sous l'eau lors des plongées !" },
+    { titre: "Sécurité", desc: "Bora Bora est une destination très sûre. Les seuls risques sont le coup de soleil et la déshydratation — hydrate-toi régulièrement et évite de plonger seul." },
+    { titre: "Respect du lagon", desc: "Ne jette rien dans le lagon et respecte les coraux lors de tes plongées. Ce trésor naturel fragile mérite d'être préservé pour les générations futures." },
 ];
 
 const faq = [
-    { q: "Quelles sont les meilleures activités à faire à Sydney entre amis ?", r: "Les incontournables : visite de l'Opéra de Sydney, excursion aux Blue Mountains avec koalas et cascades, cours de surf à Bondi Beach, apéro vue sur le Harbour Bridge et soirées dans les rooftop bars de Surry Hills. Une ville où les plans ne manquent pas !" },
-    { q: "Où dormir à Sydney ?", r: "Le CBD pour être au cœur de l'action, Surry Hills pour l'ambiance branchée et les bars, Bondi Beach pour profiter de la plage à volonté, ou Manly pour une atmosphère plus paisible en bord de mer." },
-    { q: "Quelle est la période idéale pour aller à Sydney ?", r: "De décembre à février (été australien) pour profiter des plages et festivals en plein air. Avril à juin est aussi très agréable avec un temps plus doux et moins de touristes." },
+    { q: "Quelle est la meilleure période pour aller à Bora Bora ?", r: "La meilleure période s'étend de mai à octobre, pendant la saison sèche et ensoleillée, avec des températures agréables autour de 27 à 30°C. Idéal pour profiter du lagon et des activités nautiques." },
+    { q: "Quelles sont les meilleures activités à faire entre amis à Bora Bora ?", r: "Les incontournables : snorkeling avec raies et requins dans le lagon, jet-ski autour de l'île avec vue sur le mont Otemanu, survol en avion privé, sunset cruise et pique-nique sur un motu privé. Une destination où chaque activité est inoubliable !" },
+    { q: "Où dormir à Bora Bora ?", r: "Vaitape pour être proche de l'animation locale, Pofai pour un séjour calme et détente près du lagon, Faanui pour les resorts de luxe et les bungalows sur pilotis en bord de mer." },
 ];
 
 const similaires = [
+    { titre: "Que faire à Sydney entre amis", desc: "Opéra, plages mythiques, Harbour Bridge et une énergie unique — Sydney est l'une des villes les plus époustouflantes au monde.", img: "/images/Sydney%20blog/8.jpg", href: "/que-faire-a-sydney-entre-amis-guide-et-bons-plans", tag: "Océanie" },
     { titre: "Que faire à Cairns entre amis", desc: "Plongée dans la Grande Barrière de Corail, vol en hélicoptère et plages tropicales — Cairns est le paradis australien de l'aventure.", img: "/images/Cairns%20blog/3.jpg", href: "/que-faire-a-cairns-entre-amis-guide-et-bons-plans", tag: "Océanie" },
-    { titre: "Que faire à Bora Bora entre amis", desc: "Lagons turquoise, bungalows sur l'eau et couchers de soleil de rêve — Bora Bora incarne le paradis du Pacifique.", img: "/images/bora-bora-hero.jpg", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", tag: "Océanie" },
     { titre: "Que faire aux Maldives entre amis", desc: "Sable blanc, eaux cristallines et vie marine à couper le souffle — les Maldives sont une destination de rêve absolu.", img: "/images/Maldives%20blog/1.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans", tag: "Océan Indien" },
 ];
 ---
 
 <Layout
-    title="Que faire à Sydney entre amis : guide et bons plans 2026"
-    description="Surf à Bondi, visite de l'Opéra, soirées en boîte ou excursions dans les Blue Mountains : Sydney te réserve plein d'aventures !"
-    ogImage="/images/Sydney%20blog/1.jpg"
-    canonicalPath="/que-faire-a-sydney-entre-amis-guide-et-bons-plans"
+    title="Que faire à Bora Bora entre amis : guide et bons plans 2026"
+    description="Plages de sable blanc, eaux turquoise et couchers de soleil époustouflants : Bora Bora est un paradis polynésien à couper le souffle."
+    ogImage="/images/Bora%20Bora%20blog/1.jpg"
+    canonicalPath="/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans"
     heroPage={true}
     ogType="article"
 >
-    <link rel="preload" as="image" href="/images/Sydney%20blog/1.jpg" slot="head" />
+    <link rel="preload" as="image" href="/images/Bora%20Bora%20blog/1.jpg" slot="head" />
 
     <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Que faire à Sydney entre amis : guide et bons plans 2026",
-        "description": "Surf à Bondi, visite de l'Opéra, soirées en boîte ou excursions dans les Blue Mountains : Sydney te réserve plein d'aventures !",
-        "image": "https://destinationsouvenir.com/images/Sydney%20blog/1.jpg",
+        "headline": "Que faire à Bora Bora entre amis : guide et bons plans 2026",
+        "description": "Plages de sable blanc, eaux turquoise et couchers de soleil époustouflants : Bora Bora est un paradis polynésien à couper le souffle.",
+        "image": "https://destinationsouvenir.com/images/Bora%20Bora%20blog/1.jpg",
         "author": { "@type": "Organization", "name": "Destination Souvenir", "url": "https://destinationsouvenir.com" },
         "publisher": { "@type": "Organization", "name": "Destination Souvenir", "logo": { "@type": "ImageObject", "url": "https://destinationsouvenir.com/logo.png" } },
         "datePublished": "2025-11-10",
         "dateModified": "2026-06-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-a-sydney-entre-amis-guide-et-bons-plans" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans" },
         "inLanguage": "fr-FR"
     })}</script>
 
@@ -67,9 +67,9 @@ const similaires = [
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            { "@type": "Question", "name": "Quelles sont les meilleures activités à faire à Sydney entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Les incontournables : visite de l'Opéra de Sydney, excursion aux Blue Mountains, cours de surf à Bondi Beach, apéro vue sur le Harbour Bridge et soirées dans les rooftop bars de Surry Hills." } },
-            { "@type": "Question", "name": "Où dormir à Sydney ?", "acceptedAnswer": { "@type": "Answer", "text": "Le CBD pour être au cœur de l'action, Surry Hills pour l'ambiance branchée et les bars, Bondi Beach pour la plage, ou Manly pour une atmosphère plus paisible en bord de mer." } },
-            { "@type": "Question", "name": "Quelle est la période idéale pour aller à Sydney ?", "acceptedAnswer": { "@type": "Answer", "text": "De décembre à février (été australien) pour profiter des plages et festivals. Avril à juin est aussi très agréable avec un temps doux et moins de touristes." } }
+            { "@type": "Question", "name": "Quelle est la meilleure période pour aller à Bora Bora ?", "acceptedAnswer": { "@type": "Answer", "text": "La meilleure période s'étend de mai à octobre, pendant la saison sèche et ensoleillée, avec des températures agréables autour de 27 à 30°C." } },
+            { "@type": "Question", "name": "Quelles sont les meilleures activités à faire entre amis à Bora Bora ?", "acceptedAnswer": { "@type": "Answer", "text": "Snorkeling avec raies et requins dans le lagon, jet-ski autour de l'île avec vue sur le mont Otemanu, survol en avion privé, sunset cruise et pique-nique sur un motu." } },
+            { "@type": "Question", "name": "Où dormir à Bora Bora ?", "acceptedAnswer": { "@type": "Answer", "text": "Vaitape pour l'animation locale, Pofai pour un séjour calme près du lagon, Faanui pour les resorts de luxe et bungalows sur pilotis." } }
         ]
     })}</script>
 
@@ -79,7 +79,7 @@ const similaires = [
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://destinationsouvenir.com" },
             { "@type": "ListItem", "position": 2, "name": "Océanie", "item": "https://destinationsouvenir.com/oceanie" },
-            { "@type": "ListItem", "position": 3, "name": "Sydney", "item": "https://destinationsouvenir.com/que-faire-a-sydney-entre-amis-guide-et-bons-plans" }
+            { "@type": "ListItem", "position": 3, "name": "Bora Bora", "item": "https://destinationsouvenir.com/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans" }
         ]
     })}</script>
 
@@ -88,11 +88,11 @@ const similaires = [
         <div class="hero-bg"></div>
         <div class="hero-veil"></div>
         <div class="hero-cnt">
-            <p class="hero-kicker">Océanie &nbsp;·&nbsp; Sydney</p>
-            <h1>Que faire à <em>Sydney</em><br />entre amis&nbsp;?</h1>
+            <p class="hero-kicker">Pacifique &nbsp;·&nbsp; Bora Bora</p>
+            <h1>Que faire à <em>Bora Bora</em><br />entre amis&nbsp;?</h1>
             <div class="hero-rule"></div>
             <p class="hero-meta">Guide complet &nbsp;·&nbsp; activités &nbsp;·&nbsp; hébergement &nbsp;·&nbsp; budget</p>
-            <p class="hero-intro">Après de longues heures de vol, tu poses enfin le pied à Sydney. Le soleil, l'air marin, l'énergie de la ville… tout annonce le début d'une aventure incroyable entre amis.</p>
+            <p class="hero-intro">Les pieds dans le sable blanc, face à un lagon d'un turquoise presque irréel. Le soleil caresse ta peau, un cocktail à la main, et autour de toi tout devient simple, léger, suspendu. Prépare-toi à vivre un voyage inoubliable&nbsp;!</p>
         </div>
     </section>
 
@@ -102,7 +102,7 @@ const similaires = [
         <div class="acts-inner">
             <div class="acts-hd">
                 <span class="pill pill--sand">À faire absolument</span>
-                <h2>3 activités incontournables<br /><em>à Sydney entre amis</em></h2>
+                <h2>3 activités incontournables<br /><em>à Bora Bora entre amis</em></h2>
             </div>
             <div class="acts-carousel" id="actsCarousel">
                 <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">
@@ -138,14 +138,16 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/Sydney%20blog/9.jpg" alt="Vue panoramique du port de Sydney avec le Harbour Bridge" loading="lazy" />
+            <img class="mosaic-img--desktop" src="/images/Bora%20Bora%20blog/11.jpg" alt="Vue panoramique du lagon de Bora Bora et du mont Otemanu" loading="lazy" />
+            <img class="mosaic-img--mobile" src="/images/Bora%20Bora%20blog/16.jpg" alt="Vue panoramique du lagon de Bora Bora et du mont Otemanu" loading="lazy" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Sydney%20blog/7.jpg" alt="Bondi Beach et ses vagues sous le soleil australien" loading="lazy" />
-            <img src="/images/Sydney%20blog/10.jpg" alt="Skyline de Sydney au coucher du soleil" loading="lazy" />
+            <img src="/images/Bora%20Bora%20blog/13.jpg" alt="Bungalow sur pilotis au-dessus du lagon de Bora Bora" loading="lazy" />
+            <img src="/images/Bora%20Bora%20blog/2.jpg" alt="Plage de sable blanc à Bora Bora au coucher du soleil" loading="lazy" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Sydney%20blog/12.jpg" alt="Quartier animé de Surry Hills à Sydney" loading="lazy" />
+            <img class="mosaic-img--desktop" src="/images/Bora%20Bora%20blog/16.jpg" alt="Raies pastenagues dans les eaux cristallines de Bora Bora" loading="lazy" />
+            <img class="mosaic-img--mobile" src="/images/Bora%20Bora%20blog/11.jpg" alt="Raies pastenagues dans les eaux cristallines de Bora Bora" loading="lazy" />
         </div>
     </div>
 
@@ -154,12 +156,12 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/Sydney%20blog/4.jpg" alt="Hébergement avec vue sur le port de Sydney" loading="lazy" />
+                <img src="/images/Bora%20Bora%20blog/7.jpg" alt="Bungalow sur pilotis avec vue sur le lagon de Bora Bora" loading="lazy" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
-                <h2>Où se loger<br /><em>à Sydney ?</em></h2>
-                <p class="logements-sub">Du CBD animé aux plages de Bondi en passant par le quartier branché de Surry Hills — chaque coin de Sydney a son ambiance.</p>
+                <h2>Où se loger<br /><em>à Bora Bora ?</em></h2>
+                <p class="logements-sub">De l'animation de Vaitape aux resorts de luxe sur motu — Bora Bora offre des hébergements pour tous les styles et tous les budgets.</p>
                 <div class="logements-list">
                     {hebergements.map((h) => (
                         <div class="logement-item">
@@ -173,12 +175,12 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/Sydney%20blog/4.jpg" alt="Hébergement avec vue sur le port de Sydney" loading="lazy" />
+                    <img src="/images/Bora%20Bora%20blog/7.jpg" alt="Bungalow sur pilotis avec vue sur le lagon de Bora Bora" loading="lazy" />
                 </div>
                 <p class="tip">
-                    <span><strong>Astuce :</strong> réserve plusieurs mois à l'avance pour l'été australien (décembre-février) — Sydney est très prisée et les prix s'envolent rapidement&nbsp;!</span>
+                    <span><strong>Astuce :</strong> réserve plusieurs mois à l'avance pour les resorts sur pilotis — les meilleurs partent très vite, surtout en haute saison&nbsp;!</span>
                 </p>
-                <a href="https://www.booking.com/hotel/au/intercontinental-sydney.fr.html?lang=fr" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Sydney</a>
+                <a href="https://www.booking.com/hotel/pf/intercontinental-bora-bora-le-moana-resort.fr.html?lang=fr" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Bora Bora</a>
             </div>
         </div>
     </section>
@@ -189,8 +191,8 @@ const similaires = [
         <div class="budget-inner">
             <div class="budget-hd">
                 <span class="pill pill--turquoise">Budget</span>
-                <h2>Combien coûte<br /><em>un voyage à Sydney&nbsp;?</em></h2>
-                <p>Sydney est l'une des villes les plus chères d'Australie — mais les expériences valent largement l'investissement.</p>
+                <h2>Combien coûte<br /><em>un voyage à Bora Bora&nbsp;?</em></h2>
+                <p>Bora Bora est une destination premium — mais il existe des options pour tous les budgets, des pensions locales aux resorts de rêve.</p>
             </div>
 
             <div class="budget-table">
@@ -202,38 +204,38 @@ const similaires = [
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Hébergement</div>
-                    <div class="btr-val">30 – 60 €</div>
-                    <div class="btr-val">80 – 150 €</div>
-                    <div class="btr-val btr-val--luxe">200 €+</div>
+                    <div class="btr-val">70 – 150 €</div>
+                    <div class="btr-val">190 – 320 €</div>
+                    <div class="btr-val btr-val--luxe">600 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Repas</div>
                     <div class="btr-val">10 – 20 €</div>
-                    <div class="btr-val">25 – 45 €</div>
-                    <div class="btr-val btr-val--luxe">60 €+</div>
+                    <div class="btr-val">25 – 50 €</div>
+                    <div class="btr-val btr-val--luxe">80 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Transport</div>
-                    <div class="btr-val">5 – 10 €</div>
-                    <div class="btr-val">15 – 25 €</div>
-                    <div class="btr-val btr-val--luxe">40 €+</div>
+                    <div class="btr-val">0 – 10 €</div>
+                    <div class="btr-val">20 – 40 €</div>
+                    <div class="btr-val btr-val--luxe">60 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Activités</div>
-                    <div class="btr-val">15 – 30 €</div>
-                    <div class="btr-val">40 – 70 €</div>
-                    <div class="btr-val btr-val--luxe">100 €+</div>
+                    <div class="btr-val">30 – 80 €</div>
+                    <div class="btr-val">90 – 150 €</div>
+                    <div class="btr-val btr-val--luxe">200 €+</div>
                 </div>
             </div>
 
             <div class="budget-total">
                 <span class="budget-total-lbl">1 semaine · par personne · hors vol</span>
-                <span class="budget-total-range">900 – 1 200 €</span>
+                <span class="budget-total-range">1 200 – 2 000 €</span>
             </div>
 
             <p class="tip tip--light">
                 <span>💡</span>
-                <span><strong>Astuce :</strong> réserve ton vol plusieurs mois à l'avance pour les meilleures offres.</span>
+                <span><strong>Astuce :</strong> réserve ton vol plusieurs mois à l'avance — les vols vers Tahiti sont chers et se remplissent vite.</span>
             </p>
             <div class="budget-cta">
                 <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--turquoise">Comparer les vols sur Skyscanner</a>
@@ -247,7 +249,7 @@ const similaires = [
         <div class="transport-inner">
             <div class="transport-hd">
                 <span class="pill pill--sand">Déplacements</span>
-                <h2>Comment se déplacer<br /><em>à Sydney ?</em></h2>
+                <h2>Comment se déplacer<br /><em>à Bora Bora ?</em></h2>
             </div>
             <div class="transport-list">
                 {transports.map((t) => (
@@ -271,7 +273,7 @@ const similaires = [
         <div class="conseils-inner">
             <div class="conseils-hd">
                 <span class="pill pill--sand">Avant de partir</span>
-                <h2>Conseils pratiques<br /><em>pour un voyage réussi à Sydney</em></h2>
+                <h2>Conseils pratiques<br /><em>pour un voyage réussi à Bora Bora</em></h2>
             </div>
             <div class="conseils-grid">
                 {conseils.map((c, i) => (
@@ -291,12 +293,12 @@ const similaires = [
         <div class="conclusion-inner">
             <div class="conclusion-body">
                 <span class="pill pill--turquoise">Pourquoi y aller ?</span>
-                <h2>Sydney,<br /><em>nature et ville réunies</em></h2>
-                <p>Sydney allie nature et ville comme nulle part ailleurs : plages magnifiques, panoramas à couper le souffle depuis le Harbour Bridge, culture vivante à l'Opéra et quartiers animés à explorer sans fin.</p>
-                <p>Chaque coin de la ville promet des expériences uniques et inoubliables — une destination qui ne laisse jamais indifférent.</p>
+                <h2>Bora Bora,<br /><em>un rêve éveillé</em></h2>
+                <p>Visiter Bora Bora, c'est entrer dans un tableau vivant. Entre lagon turquoise, plages de sable blanc et mont Otemanu qui se reflète dans l'eau, chaque instant est un émerveillement.</p>
+                <p>Snorkeling avec les raies, jet-ski sous le soleil, couchers de soleil depuis un bungalow sur pilotis… tu rentreras avec des souvenirs plein la tête — et l'envie irrésistible d'y retourner.</p>
             </div>
             <div class="conclusion-img-wrap">
-                <img src="/images/Sydney%20blog/13.jpg" alt="Vue iconique sur l'Opéra et le Harbour Bridge de Sydney au coucher du soleil" loading="lazy" />
+                <img src="/images/Bora%20Bora%20blog/17.jpg" alt="Coucher de soleil sur le lagon de Bora Bora avec le mont Otemanu en arrière-plan" loading="lazy" />
             </div>
         </div>
     </section>
@@ -311,19 +313,19 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Sydney%20blog/19.jpg" alt="Activités à Sydney, visite de l'Opéra" loading="lazy" />
+                        <img src="/images/Bora%20Bora%20blog/20.jpg" alt="Activités à Bora Bora, snorkeling dans le lagon" loading="lazy" />
                     </div>
-                    <a href="https://www.getyourguide.com/fr-fr/sydney-l200/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
+                    <a href="https://www.getyourguide.com/fr-fr/bora-bora-l32139/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Sydney%20blog/4.jpg" alt="Hébergement à Sydney, Australie" loading="lazy" />
+                        <img src="/images/Bora%20Bora%20blog/14.jpg" alt="Hébergement à Bora Bora, bungalow sur pilotis" loading="lazy" />
                     </div>
-                    <a href="https://www.booking.com/searchresults.fr.html?ss=sydney&lang=fr" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
+                    <a href="https://www.booking.com/searchresults.fr.html?ss=Bora-Bora%2C+Polyn%C3%A9sie+fran%C3%A7aise&lang=fr" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Sydney%20blog/20.jpg" alt="Vol pour Sydney, Australie" loading="lazy" />
+                        <img src="/images/Bora%20Bora%20blog/19.jpg" alt="Vol pour Bora Bora, Polynésie française" loading="lazy" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -337,7 +339,7 @@ const similaires = [
         <div class="faq-inner">
             <div class="faq-hd">
                 <span class="pill pill--sand">Questions fréquentes</span>
-                <h2>FAQ — Sydney entre amis :<br /><em>vos questions</em></h2>
+                <h2>FAQ — Bora Bora entre amis :<br /><em>vos questions</em></h2>
             </div>
             <div class="faq-list">
                 {faq.map((item, i) => (
@@ -474,8 +476,8 @@ const similaires = [
 }
 
 .hero { position: relative; height: 100vh; min-height: 620px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-.hero-bg { position: absolute; inset: -8%; background-size: cover; background-position: center; background-image: url('/images/Sydney%20blog/8.jpg'); filter: brightness(1.15); }
-@media (max-width: 767px) { .hero-bg { inset: 0; background-position: center center; background-image: url('/images/Sydney%20blog/17.jpg'); } }
+.hero-bg { position: absolute; inset: -8%; background-size: cover; background-position: center; background-image: url('/images/Bora%20Bora%20blog/15.jpg'); filter: brightness(1.25); }
+@media (max-width: 767px) { .hero-bg { inset: 0; background-position: center center; background-image: url('/images/Bora%20Bora%20blog/10.jpg'); filter: none; } }
 .hero-veil { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,27,46,0.15) 0%, rgba(13,27,46,0.30) 50%, rgba(13,27,46,0.55) 100%); }
 .hero-cnt { position: relative; z-index: 5; color: #fff; padding: 0 2rem; max-width: 700px; transform: translateY(4vh); }
 .hero-kicker { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.95); margin-bottom: 1.6rem; display: flex; align-items: center; justify-content: center; gap: 14px; text-shadow: 0 0 12px #000, 0 0 12px #000, 0 2px 20px rgba(0,0,0,0.85); }
@@ -509,6 +511,7 @@ const similaires = [
 .act-btn:hover { background: #159e8e; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,168,152,0.3); }
 
 .mosaic { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 480px; gap: 4px; }
+.mosaic-a .mosaic-img--mobile { display: none; }
 .mosaic-a { overflow: hidden; }
 .mosaic-a img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s; }
 .mosaic-a:hover img { transform: scale(1.04); }
@@ -522,7 +525,7 @@ const similaires = [
 .logements-img { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(13,27,46,0.12); }
 .logements-img--desktop { position: sticky; top: 5rem; }
 .logements-img--mobile { display: none; }
-.logements-img img { width: 100%; height: 700px; object-fit: cover; object-position: center; display: block; filter: contrast(1.08) brightness(1.04); }
+.logements-img img { width: 100%; height: 700px; object-fit: cover; object-position: center; display: block; }
 .logements-content .pill { margin-bottom: 1.4rem; display: inline-block; }
 .logements-content h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; color: var(--green-dark); line-height: 1.1; margin-bottom: 0.8rem; }
 .logements-content h2 em { font-style: italic; color: var(--sand-dark); }
@@ -686,6 +689,8 @@ const similaires = [
 
     .mosaic { grid-template-columns: 1fr; height: auto; gap: 4px; }
     .mosaic-a { height: 56vw; }
+    .mosaic-a .mosaic-img--desktop { display: none; }
+    .mosaic-a .mosaic-img--mobile { display: block; }
     .mosaic-b { grid-template-columns: 1fr 1fr; grid-template-rows: unset; height: 38vw; }
 
     .logements { padding: 4rem 1.2rem; }
