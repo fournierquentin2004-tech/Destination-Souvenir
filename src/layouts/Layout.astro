@@ -224,6 +224,16 @@ const ogImageFull = `${siteUrl}${ogImage}`;
             backdrop?.classList.add("ready");
         });
 
+        // Fade-in images au chargement
+        document.querySelectorAll<HTMLImageElement>('main img').forEach(img => {
+            if (!img.complete || img.naturalWidth === 0) {
+                img.style.opacity = '0';
+                const show = () => { img.style.opacity = ''; };
+                img.addEventListener('load', show, { once: true });
+                img.addEventListener('error', show, { once: true });
+            }
+        });
+
         // Bouton retour en haut
         const backToTop = document.getElementById("back-to-top");
         window.addEventListener("scroll", () => {
@@ -272,7 +282,11 @@ const ogImageFull = `${siteUrl}${ogImage}`;
     }
 
     a { text-decoration: none; color: inherit; }
-    img { display: block; backface-visibility: hidden; transform: translateZ(0); }
+    img { display: block; backface-visibility: hidden; transform: translateZ(0); transition: opacity 0.4s ease; }
+
+    /* Placeholder couleur pendant le chargement des images */
+    .act-card-img, .mosaic-a, .mosaic-b, .logements-img, .transport-item-img,
+    .conclusion-img-wrap, .cta-card-img, .sim-img { background-color: #d8e8e6; }
 
     /* ── HEADER ── */
     .site-header {
