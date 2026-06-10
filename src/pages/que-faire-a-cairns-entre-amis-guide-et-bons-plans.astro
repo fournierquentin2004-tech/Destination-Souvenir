@@ -112,7 +112,7 @@ const similaires = [
                     {activites.map((a) => (
                         <article class="act-card">
                             <div class="act-card-img">
-                                <img src={a.img} alt={a.alt} loading="lazy" />
+                                <img src={a.img} alt={a.alt} loading="eager" />
                             </div>
                             <div class="act-card-body">
                                 <h3>{a.titre}</h3>
@@ -138,14 +138,14 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/Cairns%20blog/9.jpg" alt="Grande Barrière de Corail vue depuis les airs, Cairns" loading="lazy" />
+            <img src="/images/Cairns%20blog/9.jpg" alt="Grande Barrière de Corail vue depuis les airs, Cairns" loading="eager" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Cairns%20blog/12.jpg" alt="Lagon de Cairns en plein centre-ville" loading="lazy" />
-            <img src="/images/Cairns%20blog/14.jpg" alt="Forêt tropicale de Daintree près de Cairns" loading="lazy" />
+            <img src="/images/Cairns%20blog/12.jpg" alt="Lagon de Cairns en plein centre-ville" loading="eager" />
+            <img src="/images/Cairns%20blog/14.jpg" alt="Forêt tropicale de Daintree près de Cairns" loading="eager" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Cairns%20blog/15.jpg" alt="Plage paradisiaque de Palm Cove à Cairns" loading="lazy" />
+            <img src="/images/Cairns%20blog/15.jpg" alt="Plage paradisiaque de Palm Cove à Cairns" loading="eager" />
         </div>
     </div>
 
@@ -154,7 +154,7 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/Cairns%20blog/7.jpg" alt="Hébergement tropical à Cairns, Australie" loading="lazy" />
+                <img src="/images/Cairns%20blog/7.jpg" alt="Hébergement tropical à Cairns, Australie" loading="eager" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
@@ -173,7 +173,7 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/Cairns%20blog/7.jpg" alt="Hébergement tropical à Cairns, Australie" loading="lazy" />
+                    <img src="/images/Cairns%20blog/7.jpg" alt="Hébergement tropical à Cairns, Australie" loading="eager" />
                 </div>
                 <p class="tip">
                     <span><strong>Astuce :</strong> réserve tôt, surtout en haute saison (novembre-avril) — les meilleurs résorts et hôtels en bord de mer partent vite&nbsp;!</span>
@@ -253,7 +253,7 @@ const similaires = [
                 {transports.map((t) => (
                     <div class="transport-item">
                         <div class="transport-item-img">
-                            <img src={t.img} alt={t.alt} loading="lazy" />
+                            <img src={t.img} alt={t.alt} loading="eager" />
                         </div>
                         <div class="transport-item-body">
                             <h3>{t.nom}</h3>
@@ -296,7 +296,7 @@ const similaires = [
                 <p>Plongée au milieu des coraux, forêt tropicale à explorer, plages idylliques, survol en hélicoptère… c'est la destination idéale pour vivre des moments uniques en Australie.</p>
             </div>
             <div class="conclusion-img-wrap">
-                <img src="/images/Cairns%20blog/6.jpg" alt="Vue aérienne de la Grande Barrière de Corail et des eaux turquoise de Cairns" loading="lazy" />
+                <img src="/images/Cairns%20blog/6.jpg" alt="Vue aérienne de la Grande Barrière de Corail et des eaux turquoise de Cairns" loading="eager" />
             </div>
         </div>
     </section>
@@ -311,25 +311,25 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Cairns%20blog/2.jpg" alt="Activités à Cairns, Grande Barrière de Corail" loading="lazy" />
+                        <img src="/images/Cairns%20blog/2.jpg" alt="Activités à Cairns, Grande Barrière de Corail" loading="eager" />
                     </div>
                     <a href="https://www.getyourguide.com/fr-fr/cairns-l298/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Cairns%20blog/7.jpg" alt="Hébergement à Cairns, Australie" loading="lazy" />
+                        <img src="/images/Cairns%20blog/7.jpg" alt="Hébergement à Cairns, Australie" loading="eager" />
                     </div>
                     <a href="https://www.booking.com/searchresults.fr.html?ss=cairns&lang=fr" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Cairns%20blog/18.jpg" alt="Location de voiture à Cairns pour explorer la région" loading="lazy" />
+                        <img src="/images/Cairns%20blog/18.jpg" alt="Location de voiture à Cairns pour explorer la région" loading="eager" />
                     </div>
                     <a href="https://www.sixt.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Louer une voiture</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Cairns%20blog/20.jpg" alt="Vol pour Cairns, Australie" loading="lazy" />
+                        <img src="/images/Cairns%20blog/20.jpg" alt="Vol pour Cairns, Australie" loading="eager" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -379,7 +379,7 @@ const similaires = [
                 {similaires.map((s) => (
                     <a href={s.href} class="sim-card">
                         <div class="sim-img">
-                            <img src={s.img} alt={s.titre} loading="lazy" />
+                            <img src={s.img} alt={s.titre} loading="eager" />
                             <span class="sim-tag">{s.tag}</span>
                         </div>
                         <div class="sim-body">

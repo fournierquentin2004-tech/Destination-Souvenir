@@ -119,7 +119,7 @@ const continents = [
             {continents.map((c) => (
                 <a href={c.href} class="cont-card">
                     <div class="cont-img">
-                        <img src={c.img} alt={c.alt} loading="lazy" />
+                        <img src={c.img} alt={c.alt} loading="eager" />
                         <span class="cont-count">{c.count}</span>
                     </div>
                     <div class="cont-body">
@@ -151,7 +151,7 @@ const continents = [
                     {derniersAjouts.map((d) => (
                         <a href={d.href} class="ajout-card">
                             <div class="ajout-img">
-                                <img src={d.img} alt={d.titre ?? d.nom} loading="lazy" />
+                                <img src={d.img} alt={d.titre ?? d.nom} loading="eager" />
                                 <span class="ajout-tag">{d.tag}</span>
                             </div>
                             <div class="ajout-body">
@@ -188,7 +188,7 @@ const continents = [
             <!-- Grande card featured -->
             <a href={coupDeCoeur[0].href} class="cdc-featured">
                 <div class="cdc-feat-img">
-                    <img src={coupDeCoeur[0].img} alt={coupDeCoeur[0].alt} loading="lazy" />
+                    <img src={coupDeCoeur[0].img} alt={coupDeCoeur[0].alt} loading="eager" />
                 </div>
                 <div class="cdc-feat-body">
                     <span class="cdc-feat-pays">{coupDeCoeur[0].pays}</span>
@@ -202,7 +202,7 @@ const continents = [
                 {coupDeCoeur.slice(1).map((d) => (
                     <a href={d.href} class="cdc-small">
                         <div class="cdc-small-img">
-                            <img src={d.img} alt={d.alt} loading="lazy" />
+                            <img src={d.img} alt={d.alt} loading="eager" />
                         </div>
                         <div class="cdc-small-body">
                             <span class="cdc-small-pays">{d.pays}</span>
@@ -240,7 +240,7 @@ const continents = [
                             <span class="actu-titre-mobile">{a.titre}</span>
                         </div>
                         <div class="actu-band-img">
-                            <img src={a.img} alt={a.alt} loading="lazy" style={a.objPos ? `object-position: ${a.objPos}` : undefined} />
+                            <img src={a.img} alt={a.alt} loading="eager" style={a.objPos ? `object-position: ${a.objPos}` : undefined} />
                         </div>
                         <div class="actu-band-desc">
                             <p>{a.desc}</p>
@@ -269,7 +269,7 @@ const continents = [
                 {piedsDansSable.map((d) => (
                     <a href={d.href} class="plage-card">
                         <div class="plage-img-wrap">
-                            <img src={d.img} alt={d.alt} loading="lazy" />
+                            <img src={d.img} alt={d.alt} loading="eager" />
                         </div>
                         <div class="plage-info">
                             <h3>{d.nom}</h3>
@@ -314,7 +314,7 @@ const continents = [
             <div class="fete-grid">
                 {fete.map((f, i) => (
                     <a href={f.href} class={`fete-card ${i === 0 ? "fete-card--big" : ""}`}>
-                        <img src={f.img} alt={f.alt} loading="lazy" />
+                        <img src={f.img} alt={f.alt} loading="eager" />
                         <div class="fete-overlay">
                             <span class="fete-pays">{f.pays}</span>
                             <h3>{f.nom}</h3>

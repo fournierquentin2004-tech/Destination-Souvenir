@@ -115,7 +115,7 @@ const similaires = [
                     {activites.map((a) => (
                         <article class="act-card">
                             <div class="act-card-img">
-                                <img src={a.img} alt={a.alt} loading="lazy" />
+                                <img src={a.img} alt={a.alt} loading="eager" />
                             </div>
                             <div class="act-card-body">
                                 <h3>{a.titre}</h3>
@@ -143,14 +143,14 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/Maldives%20blog/17.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+            <img src="/images/Maldives%20blog/17.jpg" alt="Bungalow sur pilotis aux Maldives" loading="eager" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Maldives%20blog/12.jpg" alt="Plage de sable blanc aux Maldives" loading="lazy" />
-            <img src="/images/Maldives%20blog/21.jpg" alt="Récif corallien aux Maldives" loading="lazy" />
+            <img src="/images/Maldives%20blog/12.jpg" alt="Plage de sable blanc aux Maldives" loading="eager" />
+            <img src="/images/Maldives%20blog/21.jpg" alt="Récif corallien aux Maldives" loading="eager" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Maldives%20blog/8.jpg" alt="Bateau dhoni traditionnel aux Maldives" loading="lazy" />
+            <img src="/images/Maldives%20blog/8.jpg" alt="Bateau dhoni traditionnel aux Maldives" loading="eager" />
         </div>
     </div>
 
@@ -159,7 +159,7 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/Maldives%20blog/5.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+                <img src="/images/Maldives%20blog/5.jpg" alt="Bungalow sur pilotis aux Maldives" loading="eager" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
@@ -178,7 +178,7 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/Maldives%20blog/5.jpg" alt="Bungalow sur pilotis aux Maldives" loading="lazy" />
+                    <img src="/images/Maldives%20blog/5.jpg" alt="Bungalow sur pilotis aux Maldives" loading="eager" />
                 </div>
                 <p class="tip">
                     <span><strong>Astuce :</strong> réserve plusieurs mois à l'avance, surtout en haute saison (décembre–avril).</span>
@@ -258,7 +258,7 @@ const similaires = [
                 {transports.map((t) => (
                     <div class="transport-item">
                         <div class="transport-item-img">
-                            <img src={t.img} alt={`${t.nom} aux Maldives`} loading="lazy" />
+                            <img src={t.img} alt={`${t.nom} aux Maldives`} loading="eager" />
                         </div>
                         <div class="transport-item-body">
                             <h3>{t.nom}</h3>
@@ -303,7 +303,7 @@ const similaires = [
             <div class="conclusion-img-wrap">
                 <picture>
                     <source media="(min-width: 768px)" srcset="/images/Maldives%20blog/13.jpg" />
-                    <img src="/images/Maldives%20blog/12.jpg" alt="Coucher de soleil sur le lagon des Maldives" loading="lazy" />
+                    <img src="/images/Maldives%20blog/12.jpg" alt="Coucher de soleil sur le lagon des Maldives" loading="eager" />
                 </picture>
             </div>
         </div>
@@ -319,19 +319,19 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/1.jpg" alt="Tortues marines dans les eaux cristallines des Maldives" loading="lazy" />
+                        <img src="/images/Maldives%20blog/1.jpg" alt="Tortues marines dans les eaux cristallines des Maldives" loading="eager" />
                     </div>
                     <a href="https://www.getyourguide.com/fr-fr/maldives-l169135/" target="_blank" rel="noopener" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/8.jpg" alt="Bateau traditionnel dhoni aux Maldives" loading="lazy" />
+                        <img src="/images/Maldives%20blog/8.jpg" alt="Bateau traditionnel dhoni aux Maldives" loading="eager" />
                     </div>
                     <a href="https://www.booking.com/index.fr.html?aid=2311236&label=fr-fr-booking-desktop-DCpBIW3k2%2AWIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9195582%3Ali%3Adec%3Adm&sid=8c01b89ff726d3b7cb358c360dc7e62f&srpvid=c47b675e21170128&&errorc_searchstring_not_found=ss" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Maldives%20blog/22.jpg" alt="Vue aérienne des palmiers et lagons des Maldives" loading="lazy" />
+                        <img src="/images/Maldives%20blog/22.jpg" alt="Vue aérienne des palmiers et lagons des Maldives" loading="eager" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -381,7 +381,7 @@ const similaires = [
                 {similaires.map((s) => (
                     <a href={s.href} class="sim-card">
                         <div class="sim-img">
-                            <img src={s.img} alt={s.titre} loading="lazy" />
+                            <img src={s.img} alt={s.titre} loading="eager" />
                             <span class="sim-tag">{s.tag}</span>
                         </div>
                         <div class="sim-body">

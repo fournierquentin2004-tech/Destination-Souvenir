@@ -88,7 +88,7 @@ const similaires = [
         <div class="hero-bg"></div>
         <div class="hero-veil"></div>
         <div class="hero-cnt">
-            <p class="hero-kicker">Pacifique &nbsp;·&nbsp; Bora&nbsp;Bora</p>
+            <p class="hero-kicker">Pacifique <span class="kicker-sep">&nbsp;·&nbsp;</span> Bora&nbsp;Bora</p>
             <h1>Que faire à <em>Bora Bora</em><br />entre amis&nbsp;?</h1>
             <div class="hero-rule"></div>
             <p class="hero-meta">Guide complet &nbsp;·&nbsp; activités &nbsp;·&nbsp; hébergement &nbsp;·&nbsp; budget</p>
@@ -112,7 +112,7 @@ const similaires = [
                     {activites.map((a) => (
                         <article class="act-card">
                             <div class="act-card-img">
-                                <img src={a.img} alt={a.alt} loading="lazy" />
+                                <img src={a.img} alt={a.alt} loading="eager" />
                             </div>
                             <div class="act-card-body">
                                 <h3>{a.titre}</h3>
@@ -138,16 +138,16 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img class="mosaic-img--desktop" src="/images/Bora%20Bora%20blog/11.jpg" alt="Vue panoramique du lagon de Bora Bora et du mont Otemanu" loading="lazy" />
-            <img class="mosaic-img--mobile" src="/images/Bora%20Bora%20blog/16.jpg" alt="Vue panoramique du lagon de Bora Bora et du mont Otemanu" loading="lazy" />
+            <img class="mosaic-img--desktop" src="/images/Bora%20Bora%20blog/11.jpg" alt="Vue panoramique du lagon de Bora Bora et du mont Otemanu" loading="eager" />
+            <img class="mosaic-img--mobile" src="/images/Bora%20Bora%20blog/16.jpg" alt="Vue panoramique du lagon de Bora Bora et du mont Otemanu" loading="eager" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Bora%20Bora%20blog/13.jpg" alt="Bungalow sur pilotis au-dessus du lagon de Bora Bora" loading="lazy" />
-            <img src="/images/Bora%20Bora%20blog/2.jpg" alt="Plage de sable blanc à Bora Bora au coucher du soleil" loading="lazy" />
+            <img src="/images/Bora%20Bora%20blog/13.jpg" alt="Bungalow sur pilotis au-dessus du lagon de Bora Bora" loading="eager" />
+            <img src="/images/Bora%20Bora%20blog/2.jpg" alt="Plage de sable blanc à Bora Bora au coucher du soleil" loading="eager" />
         </div>
         <div class="mosaic-a">
-            <img class="mosaic-img--desktop" src="/images/Bora%20Bora%20blog/16.jpg" alt="Raies pastenagues dans les eaux cristallines de Bora Bora" loading="lazy" />
-            <img class="mosaic-img--mobile" src="/images/Bora%20Bora%20blog/11.jpg" alt="Raies pastenagues dans les eaux cristallines de Bora Bora" loading="lazy" />
+            <img class="mosaic-img--desktop" src="/images/Bora%20Bora%20blog/16.jpg" alt="Raies pastenagues dans les eaux cristallines de Bora Bora" loading="eager" />
+            <img class="mosaic-img--mobile" src="/images/Bora%20Bora%20blog/11.jpg" alt="Raies pastenagues dans les eaux cristallines de Bora Bora" loading="eager" />
         </div>
     </div>
 
@@ -156,7 +156,7 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/Bora%20Bora%20blog/7.jpg" alt="Bungalow sur pilotis avec vue sur le lagon de Bora Bora" loading="lazy" />
+                <img src="/images/Bora%20Bora%20blog/7.jpg" alt="Bungalow sur pilotis avec vue sur le lagon de Bora Bora" loading="eager" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
@@ -175,7 +175,7 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/Bora%20Bora%20blog/7.jpg" alt="Bungalow sur pilotis avec vue sur le lagon de Bora Bora" loading="lazy" />
+                    <img src="/images/Bora%20Bora%20blog/7.jpg" alt="Bungalow sur pilotis avec vue sur le lagon de Bora Bora" loading="eager" />
                 </div>
                 <p class="tip">
                     <span><strong>Astuce :</strong> réserve plusieurs mois à l'avance pour les resorts sur pilotis — les meilleurs partent très vite, surtout en haute saison&nbsp;!</span>
@@ -255,7 +255,7 @@ const similaires = [
                 {transports.map((t) => (
                     <div class="transport-item">
                         <div class="transport-item-img">
-                            <img src={t.img} alt={t.alt} loading="lazy" />
+                            <img src={t.img} alt={t.alt} loading="eager" />
                         </div>
                         <div class="transport-item-body">
                             <h3>{t.nom}</h3>
@@ -298,7 +298,7 @@ const similaires = [
                 <p>Snorkeling avec les raies, jet-ski sous le soleil, couchers de soleil depuis un bungalow sur pilotis… tu rentreras avec des souvenirs plein la tête — et l'envie irrésistible d'y retourner.</p>
             </div>
             <div class="conclusion-img-wrap">
-                <img src="/images/Bora%20Bora%20blog/17.jpg" alt="Coucher de soleil sur le lagon de Bora Bora avec le mont Otemanu en arrière-plan" loading="lazy" />
+                <img src="/images/Bora%20Bora%20blog/17.jpg" alt="Coucher de soleil sur le lagon de Bora Bora avec le mont Otemanu en arrière-plan" loading="eager" />
             </div>
         </div>
     </section>
@@ -313,19 +313,19 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Bora%20Bora%20blog/20.jpg" alt="Activités à Bora Bora, snorkeling dans le lagon" loading="lazy" />
+                        <img src="/images/Bora%20Bora%20blog/20.jpg" alt="Activités à Bora Bora, snorkeling dans le lagon" loading="eager" />
                     </div>
                     <a href="https://www.getyourguide.com/fr-fr/bora-bora-l32139/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Bora%20Bora%20blog/14.jpg" alt="Hébergement à Bora Bora, bungalow sur pilotis" loading="lazy" />
+                        <img src="/images/Bora%20Bora%20blog/14.jpg" alt="Hébergement à Bora Bora, bungalow sur pilotis" loading="eager" />
                     </div>
                     <a href="https://www.booking.com/searchresults.fr.html?ss=Bora-Bora%2C+Polyn%C3%A9sie+fran%C3%A7aise&lang=fr" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Bora%20Bora%20blog/19.jpg" alt="Vol pour Bora Bora, Polynésie française" loading="lazy" />
+                        <img src="/images/Bora%20Bora%20blog/19.jpg" alt="Vol pour Bora Bora, Polynésie française" loading="eager" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -375,7 +375,7 @@ const similaires = [
                 {similaires.map((s) => (
                     <a href={s.href} class="sim-card">
                         <div class="sim-img">
-                            <img src={s.img} alt={s.titre} loading="lazy" />
+                            <img src={s.img} alt={s.titre} loading="eager" />
                             <span class="sim-tag">{s.tag}</span>
                         </div>
                         <div class="sim-body">
@@ -670,6 +670,7 @@ const similaires = [
 
 @media (max-width: 767px), (max-width: 1024px) and (orientation: portrait) {
     .hero-cnt h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+    .kicker-sep { display: none; }
     .hero-meta { filter: drop-shadow(0 2px 8px rgba(0,0,0,0.8)); }
     .hero-intro { text-shadow: 0 0 16px rgba(0,0,0,0.9), 0 2px 20px rgba(0,0,0,0.8); }
 
