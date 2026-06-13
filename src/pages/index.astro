@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import { articles } from '../data/articles.js';
 
@@ -6,39 +6,39 @@ import { articles } from '../data/articles.js';
 const derniersAjouts = articles.slice(0, 6);
 
 const coupDeCoeur = [
-    { nom: "El Nido", pays: "Philippines", desc: "Lagons secrets, falaises karstiques plongeant dans une mer émeraude — le paradis tel qu'on l'imagine.", alt: "Que faire à El Nido Philippines entre amis - lagons et falaises karstiques", img: "/images/El%20Nido%20Philippines%20blog/1.jpg", href: "/que-faire-a-el-nido-aux-philippines-entre-amis-guide-et-bons-plans" },
-    { nom: "Sydney", pays: "Australie", desc: "L'Opéra, Bondi Beach et une énergie de ville qui mêle nature sauvage et vie urbaine trépidante.", alt: "Que faire à Sydney entre amis - Opera House, Bondi Beach et bons plans", img: "/images/Sydney%20blog/1.jpg", href: "/que-faire-a-sydney-entre-amis-guide-et-bons-plans" },
-    { nom: "Marrakech", pays: "Maroc", desc: "Souks labyrinthiques, riads somptueux et le désert à portée de main pour des souvenirs inoubliables.", alt: "Que faire à Marrakech entre amis - hammam, souks et désert", img: "/images/Marrakech%20blog/1.jpg", href: "/marrakech-10-activites-incontournables" },
+    { nom: "El Nido", pays: "Philippines", desc: "Lagons secrets, falaises karstiques plongeant dans une mer émeraude — le paradis tel qu'on l'imagine.", alt: "Que faire à El Nido Philippines entre amis - lagons et falaises karstiques", img: "/images/El%20Nido%20Philippines%20blog/1.webp", href: "/que-faire-a-el-nido-aux-philippines-entre-amis-guide-et-bons-plans" },
+    { nom: "Sydney", pays: "Australie", desc: "L'Opéra, Bondi Beach et une énergie de ville qui mêle nature sauvage et vie urbaine trépidante.", alt: "Que faire à Sydney entre amis - Opera House, Bondi Beach et bons plans", img: "/images/Sydney%20blog/1.webp", href: "/que-faire-a-sydney-entre-amis-guide-et-bons-plans" },
+    { nom: "Marrakech", pays: "Maroc", desc: "Souks labyrinthiques, riads somptueux et le désert à portée de main pour des souvenirs inoubliables.", alt: "Que faire à Marrakech entre amis - hammam, souks et désert", img: "/images/Marrakech%20blog/1.webp", href: "/marrakech-10-activites-incontournables" },
 ];
 
 const activites = [
-    { nom: "Bali", num: "01", titre: "10 activités incontournables de Bali", alt: "Activités incontournables à Bali entre amis - bain de boue avec les éléphants", img: "/images/Bali%20blog/4.jpg", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
-    { nom: "Tokyo", num: "02", titre: "10 activités incontournables de Tokyo", alt: "Activités incontournables à Tokyo entre amis - vue sur le mont Fuji et Shibuya", img: "/images/Tokyo%20blog/14.jpg", objPos: "center top", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
-    { nom: "Londres", num: "03", titre: "10 activités incontournables de Londres", alt: "Activités incontournables à Londres entre amis - Tower Bridge et pubs historiques", img: "/images/2025/11/Londres-a-deflouter-3.jpg", href: "/londres-10-activites-incontournables", desc: "Promenade sur le Tower Bridge au lever du jour, soirée dans un pub du XVIIe siècle, balade en bus rouge à impériale... On t'a sélectionné les 10 incontournables pour vivre Londres à fond." },
-    { nom: "Marrakech", num: "04", titre: "10 activités incontournables de Marrakech", alt: "Activités incontournables à Marrakech entre amis - hammam et souks", img: "/images/2025/12/Marrakech-a-deflouter-3-1.jpg", href: "/marrakech-10-activites-incontournables", desc: "Hammam traditionnel, balades nocturnes dans les souks, nuit dans un riad somptueux, excursion dans le désert... 10 activités pour tomber amoureux de Marrakech." },
+    { nom: "Bali", num: "01", titre: "10 activités incontournables de Bali", alt: "Activités incontournables à Bali entre amis - bain de boue avec les éléphants", img: "/images/Bali%20blog/4.webp", href: "/10-activites-incontournables-de-bali", desc: "Bain de boue avec les éléphants, surf à Uluwatu, temples au coucher du soleil, fêtes sur la plage de Seminyak... On a sélectionné les 10 expériences qui font vraiment la magie de Bali." },
+    { nom: "Tokyo", num: "02", titre: "10 activités incontournables de Tokyo", alt: "Activités incontournables à Tokyo entre amis - vue sur le mont Fuji et Shibuya", img: "/images/Tokyo%20blog/14.webp", objPos: "center top", href: "/tokyo-10-activites-incontournables", desc: "Karting déguisé dans Shibuya, vue sur le Mont Fuji, ramen à minuit dans les ruelles de Shinjuku... Tokyo explose tous les compteurs. Voici les 10 activités à ne pas rater." },
+    { nom: "Londres", num: "03", titre: "10 activités incontournables de Londres", alt: "Activités incontournables à Londres entre amis - Tower Bridge et pubs historiques", img: "/images/2025/11/Londres-a-deflouter-3.webp", href: "/londres-10-activites-incontournables", desc: "Promenade sur le Tower Bridge au lever du jour, soirée dans un pub du XVIIe siècle, balade en bus rouge à impériale... On t'a sélectionné les 10 incontournables pour vivre Londres à fond." },
+    { nom: "Marrakech", num: "04", titre: "10 activités incontournables de Marrakech", alt: "Activités incontournables à Marrakech entre amis - hammam et souks", img: "/images/2025/12/Marrakech-a-deflouter-3-1.webp", href: "/marrakech-10-activites-incontournables", desc: "Hammam traditionnel, balades nocturnes dans les souks, nuit dans un riad somptueux, excursion dans le désert... 10 activités pour tomber amoureux de Marrakech." },
 ];
 
 const piedsDansSable = [
-    { nom: "Maldives", alt: "Plage des Maldives entre amis - bungalows sur pilotis et lagon turquoise", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans", vibe: "Eaux cristallines, sable blanc immaculé et bungalows sur pilotis au-dessus du lagon." },
-    { nom: "Zanzibar", alt: "Plus belle plage de Zanzibar - cocotiers et océan Indien turquoise", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans", vibe: "Plages sauvages bordées de cocotiers, baignées par un océan Indien turquoise et chaud." },
-    { nom: "Koh Phi Phi", alt: "Plage de Koh Phi Phi Thaïlande entre amis - lagons et falaises de calcaire", img: "/images/2026/01/Koh-Phi-Phi-Thailand-Blog-1.jpg", href: "/que-faire-a-koh-phi-phi-entre-amis-guide-et-bons-plans", vibe: "Falaises de calcaire plongeant dans des lagons secrets aux couleurs irréelles." },
-    { nom: "Bora Bora", alt: "Bora Bora Polynésie française - plus beau lagon du monde entre amis", img: "/images/2026/01/Maldives-blog.jpg", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", vibe: "Le lagon le plus bleu du Pacifique Sud, entouré de coraux et d'un silence absolu." },
-    { nom: "Australie", alt: "Les 6 plus belles plages d'Australie - eaux turquoise et sable blanc", img: "/images/Australie%20plage%20Blog/1.jpg", href: "/les-6-plus-belles-plages-d-australie", vibe: "Plages sauvages à couper le souffle, des eaux turquoise de la Grande Barrière aux criques isolées." },
-    { nom: "Cancún", alt: "Plage de Cancún Mexique - Caraïbes turquoise et sable blanc", img: "/images/Canc%C3%BAn%20Mexique%20Blog/1.jpg", href: "/que-faire-a-cancun-entre-amis-guide-et-bons-plans", vibe: "Caraïbes turquoise, sable blanc et fêtes tropicales sur la Riviera Maya." },
+    { nom: "Maldives", alt: "Plage des Maldives entre amis - bungalows sur pilotis et lagon turquoise", img: "/images/2026/01/Maldives-blog.webp", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans", vibe: "Eaux cristallines, sable blanc immaculé et bungalows sur pilotis au-dessus du lagon." },
+    { nom: "Zanzibar", alt: "Plus belle plage de Zanzibar - cocotiers et océan Indien turquoise", img: "/images/2026/01/Zanzibar-a-deflouter-10.webp", href: "/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans", vibe: "Plages sauvages bordées de cocotiers, baignées par un océan Indien turquoise et chaud." },
+    { nom: "Koh Phi Phi", alt: "Plage de Koh Phi Phi Thaïlande entre amis - lagons et falaises de calcaire", img: "/images/2026/01/Koh-Phi-Phi-Thailand-Blog-1.webp", href: "/que-faire-a-koh-phi-phi-entre-amis-guide-et-bons-plans", vibe: "Falaises de calcaire plongeant dans des lagons secrets aux couleurs irréelles." },
+    { nom: "Bora Bora", alt: "Bora Bora Polynésie française - plus beau lagon du monde entre amis", img: "/images/2026/01/Maldives-blog.webp", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", vibe: "Le lagon le plus bleu du Pacifique Sud, entouré de coraux et d'un silence absolu." },
+    { nom: "Australie", alt: "Les 6 plus belles plages d'Australie - eaux turquoise et sable blanc", img: "/images/Australie%20plage%20Blog/1.webp", href: "/les-6-plus-belles-plages-d-australie", vibe: "Plages sauvages à couper le souffle, des eaux turquoise de la Grande Barrière aux criques isolées." },
+    { nom: "Cancún", alt: "Plage de Cancún Mexique - Caraïbes turquoise et sable blanc", img: "/images/Canc%C3%BAn%20Mexique%20Blog/1.webp", href: "/que-faire-a-cancun-entre-amis-guide-et-bons-plans", vibe: "Caraïbes turquoise, sable blanc et fêtes tropicales sur la Riviera Maya." },
 ];
 
 const fete = [
-    { nom: "Ibiza", pays: "Espagne", alt: "Faire la fête à Ibiza entre amis - meilleures boîtes de nuit", img: "/images/2025/10/Ibiza-a-deflouter-5.jpg", href: "/ou-faire-la-fete-a-ibiza" },
-    { nom: "Las Vegas", pays: "États-Unis", alt: "Faire la fête à Las Vegas entre amis - guide sorties et bons plans", img: "/images/Las-Vegas.jpg", href: "/ou-faire-la-fete-a-las-vegas" },
-    { nom: "Amsterdam", pays: "Pays-Bas", alt: "Faire la fête à Amsterdam entre amis - vie nocturne et bons plans", img: "/images/2026/01/Amsterdam-1.jpg", href: "/ou-faire-la-fete-a-amsterdam" },
+    { nom: "Ibiza", pays: "Espagne", alt: "Faire la fête à Ibiza entre amis - meilleures boîtes de nuit", img: "/images/2025/10/Ibiza-a-deflouter-5.webp", href: "/ou-faire-la-fete-a-ibiza" },
+    { nom: "Las Vegas", pays: "États-Unis", alt: "Faire la fête à Las Vegas entre amis - guide sorties et bons plans", img: "/images/Las-Vegas.webp", href: "/ou-faire-la-fete-a-las-vegas" },
+    { nom: "Amsterdam", pays: "Pays-Bas", alt: "Faire la fête à Amsterdam entre amis - vie nocturne et bons plans", img: "/images/2026/01/Amsterdam-1.webp", href: "/ou-faire-la-fete-a-amsterdam" },
 ];
 
 const continents = [
-    { nom: "Europe", tagline: "Capitales mythiques & côtes inoubliables", alt: "Voyager en Europe entre amis - destinations incontournables", img: "/images/2026/01/Split-a-deflouter-10.jpg", href: "/europe", count: "12 destinations" },
-    { nom: "Asie", tagline: "Temples, néons et plages secrètes", alt: "Voyage en Asie entre amis - Bali, Tokyo, Bangkok", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.jpg", href: "/asie", count: "10 destinations" },
-    { nom: "Amérique", tagline: "De Miami à Vegas, l'excès en beauté", alt: "Voyager en Amérique entre amis - Miami, Las Vegas, Rio", img: "/images/2025/10/Photo-miami-a-deflouter-10.jpg", href: "/amerique", count: "6 destinations" },
-    { nom: "Afrique", tagline: "Safari, épices et océan Indien", alt: "Voyage en Afrique entre amis - Zanzibar, Marrakech", img: "/images/2026/01/Zanzibar-a-deflouter-10.jpg", href: "/afrique", count: "4 destinations" },
-    { nom: "Océanie", tagline: "Coraux, lagons et grands espaces", alt: "Voyager en Océanie entre amis - Australie, Bora Bora", img: "/images/2026/01/Cairns-Australie.jpg", href: "/oceanie", count: "3 destinations" },
+    { nom: "Europe", tagline: "Capitales mythiques & côtes inoubliables", alt: "Voyager en Europe entre amis - destinations incontournables", img: "/images/2026/01/Split-a-deflouter-10.webp", href: "/europe", count: "12 destinations" },
+    { nom: "Asie", tagline: "Temples, néons et plages secrètes", alt: "Voyage en Asie entre amis - Bali, Tokyo, Bangkok", img: "/images/2025/10/Photo-Tokyo-a-deflouter-1-1.webp", href: "/asie", count: "10 destinations" },
+    { nom: "Amérique", tagline: "De Miami à Vegas, l'excès en beauté", alt: "Voyager en Amérique entre amis - Miami, Las Vegas, Rio", img: "/images/2025/10/Photo-miami-a-deflouter-10.webp", href: "/amerique", count: "6 destinations" },
+    { nom: "Afrique", tagline: "Safari, épices et océan Indien", alt: "Voyage en Afrique entre amis - Zanzibar, Marrakech", img: "/images/2026/01/Zanzibar-a-deflouter-10.webp", href: "/afrique", count: "4 destinations" },
+    { nom: "Océanie", tagline: "Coraux, lagons et grands espaces", alt: "Voyager en Océanie entre amis - Australie, Bora Bora", img: "/images/2026/01/Cairns-Australie.webp", href: "/oceanie", count: "3 destinations" },
 ];
 
 ---
@@ -46,11 +46,11 @@ const continents = [
 <Layout
     title="Destination Souvenir — Blog voyage entre amis | Guides & Bons Plans"
     description="Destination Souvenir, le blog voyage entre amis pour les 18-35 ans. Guides pratiques, activités incontournables, plages de rêve et bons plans pour des souvenirs inoubliables."
-    ogImage="/images/bora-bora-hero.jpg"
+    ogImage="/images/bora-bora-hero.webp"
     canonicalPath="/"
     heroPage={true}
 >
-    <link rel="preload" as="image" href="/images/bora-bora-hero.jpg" slot="head" />
+    <link rel="preload" as="image" href="/images/bora-bora-hero.webp" slot="head" />
 
     <!-- Schema Organization -->
     <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
@@ -346,7 +346,7 @@ const continents = [
 .hero-bg {
     position: absolute;
     inset: -10% 0 -10% 0;
-    background: #0d1b2e url('/images/bora-bora-hero.jpg') center / cover no-repeat;
+    background: #0d1b2e url('/images/bora-bora-hero.webp') center / cover no-repeat;
     will-change: transform;
 }
 
