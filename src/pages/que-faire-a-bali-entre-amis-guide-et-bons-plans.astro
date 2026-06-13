@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 
 const activites = [
@@ -115,7 +115,7 @@ const similaires = [
                     {activites.map((a) => (
                         <article class="act-card">
                             <div class="act-card-img">
-                                <img src={a.img} alt={a.alt} loading="eager" />
+                                <img src={a.img} alt={a.alt} loading="lazy" />
                             </div>
                             <div class="act-card-body">
                                 <h3>{a.titre}</h3>
@@ -143,14 +143,14 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/Bali%20blog/20.jpg" alt="Paysage de Bali" loading="eager" />
+            <img src="/images/Bali%20blog/20.jpg" alt="Paysage de Bali" loading="lazy" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Bali%20blog/23.jpg" alt="Éléphants à Bali" loading="eager" />
-            <img src="/images/Bali%20blog/6.jpg" alt="Scène de Bali" loading="eager" />
+            <img src="/images/Bali%20blog/23.jpg" alt="Éléphants à Bali" loading="lazy" />
+            <img src="/images/Bali%20blog/6.jpg" alt="Scène de Bali" loading="lazy" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Bali%20blog/22.jpg" alt="Nature à Bali" loading="eager" />
+            <img src="/images/Bali%20blog/22.jpg" alt="Nature à Bali" loading="lazy" />
         </div>
     </div>
 
@@ -159,7 +159,7 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/Bali%20blog/13.jpg" alt="Villa avec piscine à Bali" loading="eager" />
+                <img src="/images/Bali%20blog/13.jpg" alt="Villa avec piscine à Bali" loading="lazy" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
@@ -178,12 +178,12 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/Bali%20blog/13.jpg" alt="Villa avec piscine à Bali" loading="eager" />
+                    <img src="/images/Bali%20blog/13.jpg" alt="Villa avec piscine à Bali" loading="lazy" />
                 </div>
                 <p class="tip">
                     <span><strong>Astuce :</strong> réserve ta villa en avance, surtout en haute saison (juillet–août). Les meilleures villas partent très vite&nbsp;!</span>
                 </p>
-                <a href="https://www.booking.com/hotel/id/bucu-view-bungalows.fr.html?aid=2311236&label=fr-fr-booking-desktop-DCpBIW3k2%2AWIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9056139%3Ali%3Adec%3Adm&sid=8c01b89ff726d3b7cb358c360dc7e62f&all_sr_blocks=32885816_0_2_1_0&checkin=2025-11-19&checkout=2025-11-22&dest_id=-2701757&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=2&highlighted_blocks=32885816_0_2_1_0&hpos=2&matching_block_id=32885816_0_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=32885816_0_2_1_0__436748508&srepoch=1760789699&srpvid=e211561aea810162&type=total&ucfs=1&" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Bali</a>
+                <a href="https://www.booking.com/hotel/id/bucu-view-bungalows.fr.html" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Bali</a>
             </div>
         </div>
     </section>
@@ -258,7 +258,7 @@ const similaires = [
                 {transports.map((t) => (
                     <div class="transport-item">
                         <div class="transport-item-img">
-                            <img src={t.img} alt={`${t.nom} à Bali`} loading="eager" />
+                            <img src={t.img} alt={`${t.nom} à Bali`} loading="lazy" />
                         </div>
                         <div class="transport-item-body">
                             <h3>{t.nom}</h3>
@@ -303,7 +303,7 @@ const similaires = [
             <div class="conclusion-img-wrap">
                 <picture>
                     <source media="(min-width: 768px)" srcset="/images/Bali%20blog/20.jpg" />
-                    <img src="/images/Bali%20blog/20.jpg" alt="Coucher de soleil sur les rizières de Bali" loading="eager" />
+                    <img src="/images/Bali%20blog/20.jpg" alt="Coucher de soleil sur les rizières de Bali" loading="lazy" />
                 </picture>
             </div>
         </div>
@@ -319,25 +319,25 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Bali%20blog/4.jpg" alt="Activités à Bali entre amis" loading="eager" />
+                        <img src="/images/Bali%20blog/4.jpg" alt="Activités à Bali entre amis" loading="lazy" />
                     </div>
                     <a href="https://www.getyourguide.fr/bali-l347/" target="_blank" rel="noopener" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Bali%20blog/25.jpg" alt="Villa et hébergement à Bali" loading="eager" />
+                        <img src="/images/Bali%20blog/25.jpg" alt="Villa et hébergement à Bali" loading="lazy" />
                     </div>
-                    <a href="https://www.booking.com/index.fr.html?aid=2311236&label=fr-fr-booking-desktop-DCpBIW3k2%2AWIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9195582%3Ali%3Adec%3Adm&sid=8c01b89ff726d3b7cb358c360dc7e62f&srpvid=941b729dd7970510&&errorc_searchstring_not_found=ss" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
+                    <a href="https://www.booking.com/searchresults.fr.html?ss=Bali&dest_id=-2701757&dest_type=city" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Bali%20blog/27.jpg" alt="Transport à Bali" loading="eager" />
+                        <img src="/images/Bali%20blog/27.jpg" alt="Transport à Bali" loading="lazy" />
                     </div>
                     <a href="https://www.kqzyfj.com/click-101634807-17115158?url=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2Fbali%2Fjakarta%3Fdate%3D2026-03-12%26date2%3D2026-03-25%26people%3D2%26direction%3Dforward" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn--ghost">Déplace-toi partout en Indonésie</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Bali%20blog/26.jpg" alt="Vol pour Bali" loading="eager" />
+                        <img src="/images/Bali%20blog/26.jpg" alt="Vol pour Bali" loading="lazy" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -387,7 +387,7 @@ const similaires = [
                 {similaires.map((s) => (
                     <a href={s.href} class="sim-card">
                         <div class="sim-img">
-                            <img src={s.img} alt={s.titre} loading="eager" />
+                            <img src={s.img} alt={s.titre} loading="lazy" />
                             <span class="sim-tag">{s.tag}</span>
                         </div>
                         <div class="sim-body">

@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 
 const activites = [
@@ -40,7 +40,7 @@ const similaires = [
 ---
 
 <Layout
-    title="Que faire à El Nido aux Philippines entre amis : guide et bons plans 2026"
+    title="Que faire à El Nido, Philippines : guide et bons plans 2026"
     description="Lagons secrets, falaises calcaires, island hopping et plages de rêve. Découvre notre guide complet pour un séjour inoubliable à El Nido entre amis."
     ogImage="/images/El%20Nido%20Philippines%20blog/1.jpg"
     canonicalPath="/que-faire-a-el-nido-aux-philippines-entre-amis-guide-et-bons-plans"
@@ -53,7 +53,7 @@ const similaires = [
     <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Que faire à El Nido aux Philippines entre amis : guide et bons plans 2026",
+        "headline": "Que faire à El Nido, Philippines : guide et bons plans 2026",
         "description": "Lagons secrets, falaises calcaires, island hopping et plages de rêve. Découvre notre guide complet pour un séjour inoubliable à El Nido entre amis.",
         "image": "https://destinationsouvenir.com/images/El%20Nido%20Philippines%20blog/1.jpg",
         "author": { "@type": "Organization", "name": "Destination Souvenir", "url": "https://destinationsouvenir.com" },
@@ -117,7 +117,7 @@ const similaires = [
                             <div class="act-card-img">
                                 <picture>
                                     {a.imgMobile && <source media="(max-width: 767px)" srcset={a.imgMobile} />}
-                                    <img src={a.img} alt={a.alt} loading="eager" />
+                                    <img src={a.img} alt={a.alt} loading="lazy" />
                                 </picture>
                             </div>
                             <div class="act-card-body">
@@ -146,14 +146,14 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/El%20Nido%20Philippines%20blog/13.jpg" alt="Falaises calcaires et eaux turquoise d'El Nido, Philippines" loading="eager" />
+            <img src="/images/El%20Nido%20Philippines%20blog/13.jpg" alt="Falaises calcaires et eaux turquoise d'El Nido, Philippines" loading="lazy" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/El%20Nido%20Philippines%20blog/10.jpg" alt="Plage de sable blanc à El Nido, Philippines" loading="eager" />
-            <img src="/images/El%20Nido%20Philippines%20blog/3.jpg" alt="Lagon secret d'El Nido, Palawan, Philippines" loading="eager" />
+            <img src="/images/El%20Nido%20Philippines%20blog/10.jpg" alt="Plage de sable blanc à El Nido, Philippines" loading="lazy" />
+            <img src="/images/El%20Nido%20Philippines%20blog/3.jpg" alt="Lagon secret d'El Nido, Palawan, Philippines" loading="lazy" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/El%20Nido%20Philippines%20blog/7.jpg" alt="Eaux cristallines et récifs coralliens à El Nido" loading="eager" />
+            <img src="/images/El%20Nido%20Philippines%20blog/7.jpg" alt="Eaux cristallines et récifs coralliens à El Nido" loading="lazy" />
         </div>
     </div>
 
@@ -162,7 +162,7 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/El%20Nido%20Philippines%20blog/12.jpg" alt="Hébergement avec vue sur la mer à El Nido, Philippines" loading="eager" />
+                <img src="/images/El%20Nido%20Philippines%20blog/12.jpg" alt="Hébergement avec vue sur la mer à El Nido, Philippines" loading="lazy" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
@@ -181,7 +181,7 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/El%20Nido%20Philippines%20blog/12.jpg" alt="Hébergement avec vue sur la mer à El Nido, Philippines" loading="eager" />
+                    <img src="/images/El%20Nido%20Philippines%20blog/12.jpg" alt="Hébergement avec vue sur la mer à El Nido, Philippines" loading="lazy" />
                 </div>
                 <p class="tip">
                     <span><strong>Astuce :</strong> réserve ton hébergement plusieurs mois à l'avance — El Nido est très prisée en haute saison (novembre–mai) et les meilleures adresses partent vite !</span>
@@ -261,7 +261,7 @@ const similaires = [
                 {transports.map((t) => (
                     <div class="transport-item">
                         <div class="transport-item-img">
-                            <img src={t.img} alt={t.alt ?? `${t.nom} à El Nido`} loading="eager" />
+                            <img src={t.img} alt={t.alt ?? `${t.nom} à El Nido`} loading="lazy" />
                         </div>
                         <div class="transport-item-body">
                             <h3>{t.nom}</h3>
@@ -306,7 +306,7 @@ const similaires = [
             <div class="conclusion-img-wrap">
                 <picture>
                     <source media="(min-width: 768px)" srcset="/images/El%20Nido%20Philippines%20blog/1.jpg" />
-                    <img src="/images/El%20Nido%20Philippines%20blog/4.jpg" alt="Vue panoramique sur les îles d'El Nido, Philippines" loading="eager" />
+                    <img src="/images/El%20Nido%20Philippines%20blog/4.jpg" alt="Vue panoramique sur les îles d'El Nido, Philippines" loading="lazy" />
                 </picture>
             </div>
         </div>
@@ -322,25 +322,25 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/El%20Nido%20Philippines%20blog/9.jpg" alt="Activités à El Nido entre amis, Philippines" loading="eager" />
+                        <img src="/images/El%20Nido%20Philippines%20blog/9.jpg" alt="Activités à El Nido entre amis, Philippines" loading="lazy" />
                     </div>
                     <a href="https://www.getyourguide.com/s/?q=el+nido+philippines&searchSource=3" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/El%20Nido%20Philippines%20blog/12.jpg" alt="Hébergement à El Nido, Philippines" loading="eager" />
+                        <img src="/images/El%20Nido%20Philippines%20blog/12.jpg" alt="Hébergement à El Nido, Philippines" loading="lazy" />
                     </div>
                     <a href="https://www.booking.com/searchresults.fr.html?ss=el+nido&dest_id=-2425520&dest_type=city" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/El%20Nido%20Philippines%20blog/10.jpg" alt="Transport aux Philippines depuis El Nido" loading="eager" />
+                        <img src="/images/El%20Nido%20Philippines%20blog/10.jpg" alt="Transport aux Philippines depuis El Nido" loading="lazy" />
                     </div>
                     <a href="https://www.tkqlhce.com/click-101634807-17115158?url=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2Fmanila%2Fel-nido" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn--ghost">Déplace-toi partout aux Philippines</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/El%20Nido%20Philippines%20blog/18.jpg" alt="Vol pour El Nido aux Philippines" loading="eager" />
+                        <img src="/images/El%20Nido%20Philippines%20blog/18.jpg" alt="Vol pour El Nido aux Philippines" loading="lazy" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -390,7 +390,7 @@ const similaires = [
                 {similaires.map((s) => (
                     <a href={s.href} class="sim-card">
                         <div class="sim-img">
-                            <img src={s.img} alt={s.titre} loading="eager" />
+                            <img src={s.img} alt={s.titre} loading="lazy" />
                             <span class="sim-tag">{s.tag}</span>
                         </div>
                         <div class="sim-body">
