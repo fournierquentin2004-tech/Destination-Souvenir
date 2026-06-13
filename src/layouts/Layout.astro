@@ -6,6 +6,8 @@ interface Props {
     ogImage?: string;
     canonicalPath?: string;
     ogType?: string;
+    touristName?: string;
+    touristCountry?: string;
 }
 const {
     title = "Destination Souvenir",
@@ -13,7 +15,9 @@ const {
     heroPage = false,
     ogImage = "/images/bora-bora-hero.jpg",
     canonicalPath = "",
-    ogType = "website"
+    ogType = "website",
+    touristName,
+    touristCountry
 } = Astro.props;
 
 const siteUrl = "https://destinationsouvenir.com";
@@ -60,6 +64,17 @@ const ogImageFull = `${siteUrl}${ogImage}`;
             "query-input": "required name=search_term_string"
         }
     })} />
+
+    {touristName && touristCountry && <script is:inline type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "TouristDestination",
+        "name": touristName,
+        "description": description,
+        "url": canonical,
+        "image": ogImageFull,
+        "touristType": { "@type": "Audience", "audienceType": "Voyageurs entre amis" },
+        "containedInPlace": { "@type": "Country", "name": touristCountry }
+    })} />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
