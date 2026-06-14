@@ -2,66 +2,66 @@
 import Layout from '../layouts/Layout.astro';
 
 const activites = [
-    { titre: "Excursion plongée", desc: "Plonge dans des eaux cristallines autour des îles Catalinas, nage avec des raies manta, croise des requins de récif et admire les bancs de poissons colorés. Une journée sous-marine inoubliable pour les aventuriers du groupe !", img: "/images/Tamarindo%20Costa%20Rica%20blog/6.webp", alt: "Plongeurs avec une tortue de mer dans les eaux du Costa Rica à Tamarindo", lien: "https://www.getyourguide.com/fr-fr/tamarin-l995/las-catalinas-decouvrez-la-plongee-sous-marine-a-flamingo-et-tamarindo-t752273/?ranking_uuid=762c5f8f-b68e-42e2-ad0f-125920946fe4" },
-    { titre: "Cascades Sensoria", desc: "Entre au cœur de la forêt tropicale de Sensoria. Savoure un cocktail de bienvenue, explore des cascades aux eaux cristallines et détends-toi dans des piscines thermales naturelles sous la canopée. Une expérience unique entre aventure, nature et bien-être.", img: "/images/Tamarindo%20Costa%20Rica%20blog/4.webp", alt: "Cascade dans la forêt tropicale du Costa Rica près de Tamarindo", lien: "https://www.getyourguide.com/guanacaste-l592/guancaste-eco-luxury-thermals-and-waterfalls-experience-t433489/" },
-    { titre: "Sunset en catamaran", desc: "Navigue au coucher du soleil sur un catamaran, observe dauphins, tortues et baleines, fais du snorkeling dans une baie isolée et profite de l'open bar avec tes amis. Le coucher de soleil costaricain depuis le large est l'une des plus belles expériences du voyage.", img: "/images/Tamarindo%20Costa%20Rica%20blog/7.webp", alt: "Catamaran au coucher de soleil à Tamarindo, Costa Rica", lien: "https://www.getyourguide.com/fr-fr/tamarin-l995/tamarindo-excursion-en-catamaran-au-coucher-du-soleil-t450417/?ranking_uuid=67b913f7-ee42-4e6a-8b28-ea174e7f304c&q=Tamarin" },
+    { titre: "Corcovado & Christ Rédempteur", desc: "Monte jusqu'au sommet du Corcovado en van guidé et contemple le Christ Rédempteur dominant la ville. Vue à 360° sur la baie de Guanabara, Copacabana et les forêts tropicales — un panorama à couper le souffle que tu n'oublieras jamais.", img: "/images/Rio%20de%20Janeiro%20blog/1.webp", alt: "Christ Rédempteur vue aérienne au lever du soleil sur Rio de Janeiro et la baie de Guanabara", lien: "https://www.getyourguide.com/fr-fr/rio-de-janeiro-l9/rio-de-janeiro-6-etapes-incontournables-de-rio-avec-dejeuner-t388272/?ranking_uuid=6994de3e-dfe3-4679-9f12-68229c371aca" },
+    { titre: "Tour de la favela Rocinha", desc: "Plonge dans le quotidien vibrant de Rocinha, la plus grande favela de Rio, guidé par un habitant du quartier. Ruelles colorées, mosaïques, musique et rencontres authentiques — une expérience humaine unique, loin des clichés, qui te montre le vrai visage de Rio.", img: "/images/Rio%20de%20Janeiro%20blog/3.webp", alt: "Favela Rocinha colorée avec montagne en arrière-plan, Rio de Janeiro", lien: "https://www.getyourguide.com/fr-fr/rio-de-janeiro-l9/rio-de-janeiro-visite-d-une-demi-journee-de-la-favela-de-rocinha-a-pied-t41613/?ranking_uuid=b4927c75-1e58-46ff-9734-c7635269b08b" },
+    { titre: "Excursion en bateau à Paraty", desc: "Embarque pour une journée inoubliable dans la baie de Paraty — eaux cristallines, plages de sable blanc et îlots tropicaux à couper le souffle. Plonge dans des criques désertes, profite du soleil et découvre l'un des plus beaux coins du Brésil à seulement 4h de Rio.", img: "/images/Rio%20de%20Janeiro%20blog/10.webp", alt: "Vue aérienne d'une plage tropicale et île émeraude près de Paraty, Brésil", lien: "https://www.getyourguide.com/fr-fr/parati-l1845/paraty-excursion-en-bateau-rapide-a-saco-do-mamangua-t525053/?ranking_uuid=b4927c75-1e58-46ff-9734-c7635269b08b" },
 ];
 
 const hebergements = [
-    { type: "Centre de Tamarindo", ex: "Animé, bars, restaurants et vie nocturne", desc: "Le cœur battant de Tamarindo. Tout est à portée de main : restaurants variés, bars, boutiques et accès rapide à la plage principale. Parfait pour un groupe qui veut maximiser les soirées et les sorties sans perdre de temps en déplacement.", tag: "Budget" },
-    { type: "Playa Langosta", ex: "Tranquille, plage et couchers de soleil", desc: "Le bon équilibre entre calme et proximité du centre. Quartier plus résidentiel avec des hôtels de charme face à la mer, des couchers de soleil spectaculaires et une ambiance détendue. Idéal pour les groupes qui veulent se ressourcer sans être loin de l'action.", tag: "Équilibre" },
-    { type: "Playa Grande", ex: "Chic, nature et ambiance tranquille", desc: "L'option luxe et nature de Tamarindo. Des resorts haut de gamme, une plage préservée fréquentée par les tortues luth la nuit, et une atmosphère calme et exclusive. Parfait pour un groupe qui cherche le grand frisson de la nature sauvage costaricaine.", tag: "Luxe" },
+    { type: "Copacabana / Ipanema", ex: "Plages, animation, bars et sécurité", desc: "Le cœur touristique de Rio. Accès direct aux plages les plus célèbres du monde, des restaurants et bars à tous les prix, et une ambiance animée jour et nuit. Parfait pour un groupe qui veut tout avoir à portée de main : plage, vie nocturne et spots iconiques.", tag: "Budget" },
+    { type: "Santa Teresa", ex: "Charme, calme et vues panoramiques", desc: "Le quartier bohème et artistique perché sur les collines de Rio. Rues pavées, bars à cocktails, galeries d'art et vues sur la baie — Santa Teresa offre un équilibre parfait entre authenticité et confort. Idéal pour les groupes qui veulent vivre Rio autrement.", tag: "Équilibre" },
+    { type: "Barra da Tijuca", ex: "Resorts, plages longues et calme", desc: "L'option luxe de Rio, avec de grandes plages préservées, des resorts haut de gamme et une ambiance plus exclusive et tranquille. Parfait pour un groupe qui veut se ressourcer dans le grand luxe, tout en ayant accès aux spots naturels moins fréquentés de Rio.", tag: "Luxe" },
 ];
 
 const transports = [
-    { nom: "À pied", desc: "Le meilleur moyen d'explorer le centre de Tamarindo. La plage principale, les restaurants, les boutiques et les bars sont tous accessibles à pied depuis le cœur du village. Pratique, simple et agréable sous le soleil costaricain.", img: "/images/Tamarindo%20Costa%20Rica%20blog/3.webp", alt: "Forêt tropicale du Costa Rica à explorer à pied depuis Tamarindo" },
-    { nom: "Taxi", desc: "Indispensable pour les excursions dans la région ou les trajets vers d'autres plages. Les taxis locaux sont faciles à trouver et peu coûteux. Idéal la nuit ou pour rejoindre des spots plus éloignés comme Playa Grande ou les points de départ d'excursions.", img: "/images/Tamarindo%20Costa%20Rica%20blog/12.webp", alt: "Taxi à Tamarindo pour se déplacer au Costa Rica" },
-    { nom: "Scooter", desc: "La meilleure option pour explorer la région en totale liberté. Loue un scooter et découvre les plages sauvages alentour, les forêts tropicales et les points de vue cachés à ton rythme. Une aventure en soi !", img: "/images/Tamarindo%20Costa%20Rica%20blog/14.webp", alt: "Scooter pour explorer Tamarindo et la région au Costa Rica" },
+    { nom: "À pied", desc: "La meilleure façon de découvrir Copacabana, Ipanema et Leblon. Les promenades en bord de mer sont parmi les plus belles du monde — marcher entre les deux plages, longer l'océan et profiter de l'atmosphère brésilienne, c'est l'essence même de Rio.", img: "/images/Rio%20de%20Janeiro%20blog/9.webp", alt: "Promenade d'Ipanema avec les Dois Irmãos en arrière-plan, Rio de Janeiro" },
+    { nom: "Bus / Métro", desc: "Le réseau de bus et le métro de Rio sont abordables et couvrent bien les quartiers touristiques. Le métro est idéal pour aller de Copacabana au centre-ville. Les bus permettent d'atteindre des zones moins centrales à petit prix. Préfère les lignes AC (air conditionné).", img: "/images/Rio%20de%20Janeiro%20blog/12.webp", alt: "Bus Metrô Rio dans les rues de Rio de Janeiro" },
+    { nom: "Taxi / Uber", desc: "Uber est fortement recommandé pour se déplacer à Rio, surtout la nuit — plus sûr et tarifs fixes. Évite les taxis non officiels. Pour les excursions vers le Corcovado, le Pain de Sucre ou les zones moins couvertes par le métro, un Uber ou taxi accrédité est la meilleure option.", img: "/images/Rio%20de%20Janeiro%20blog/13.webp", alt: "Taxi ou VTC pour se déplacer à Rio de Janeiro en sécurité" },
 ];
 
 const conseils = [
-    { titre: "Période idéale", desc: "Décembre à mars — 32°C en moyenne, ciel bleu et mer calme. La saison sèche est parfaite pour profiter des plages, des excursions en mer et de la faune costaricaine dans les meilleures conditions." },
-    { titre: "Évite la saison des pluies", desc: "De juin à novembre, les pluies sont fréquentes et intenses. Certaines routes peuvent être difficiles d'accès et quelques excursions annulées. Si tu viens à cette période, prévois des activités adaptées." },
-    { titre: "Réserve à l'avance", desc: "Les excursions populaires (plongée aux Catalinas, catamaran sunset, Sensoria) se remplissent rapidement en haute saison. Réserve tes activités dès que possible pour être sûr d'avoir de la place." },
-    { titre: "Prends ton vol tôt", desc: "L'aéroport de Liberia (LIR) est le plus proche de Tamarindo — environ 1h de route. Réserve ton billet d'avion au moins 6 mois à l'avance pour obtenir les meilleures tarifs sur cette destination encore confidentielle." },
+    { titre: "Période idéale", desc: "Janvier à mars offre les températures les plus agréables (29°C en moyenne) et coïncide avec le Carnaval de Rio en février — une expérience unique au monde. La haute saison touristique est de décembre à mars." },
+    { titre: "Sécurité avant tout", desc: "Reste vigilant dans les zones touristiques, surtout la nuit. Utilise Uber plutôt que des taxis non officiels, ne montre pas ton téléphone ou ta montre dans la rue, et renseigne-toi sur les quartiers à éviter auprès de ton hôtel." },
+    { titre: "Réserve à l'avance", desc: "Le Christ Rédempteur et les tours de favela sont très demandés — réserve tes activités dès ta confirmation de voyage. En haute saison (décembre-mars) et pendant le Carnaval, les places s'envolent en quelques heures." },
+    { titre: "Prends ton vol tôt", desc: "L'aéroport international Tom Jobim (Galeão - GIG) dessert toute l'Europe directement. Réserve au moins 4 à 6 mois à l'avance pour obtenir les meilleurs tarifs sur cette destination très demandée." },
 ];
 
 const faq = [
-    { q: "Quelles sont les meilleures activités à faire à Tamarindo entre amis ?", r: "Les incontournables : plongée aux îles Catalinas pour nager avec les raies manta et les requins de récif, excursion aux cascades et piscines thermales de Sensoria au cœur de la forêt tropicale, et coucher de soleil en catamaran avec snorkeling et open bar. Sans oublier le surf sur les vagues parfaites de Tamarindo !" },
-    { q: "Où dormir à Tamarindo ?", r: "Le centre de Tamarindo pour être au cœur de l'animation, des restaurants et des bars. Playa Langosta pour un bon équilibre entre tranquillité et proximité du centre. Playa Grande pour une ambiance chic, nature et préservée, avec des plages à tortues la nuit." },
-    { q: "Quand partir à Tamarindo ?", r: "La période idéale pour partir à Tamarindo est de décembre à mars, avec un climat sec, un ciel dégagé et des températures autour de 32°C. C'est la haute saison parfaite pour les excursions en mer, les plages et toutes les activités outdoor." },
+    { q: "Quelles sont les meilleures activités à faire à Rio de Janeiro entre amis ?", r: "Les incontournables de Rio : visiter le Christ Rédempteur au Corcovado pour une vue à 360° sur la ville, faire le tour de la favela Rocinha avec un guide local pour une immersion authentique, et partir en excursion en bateau à Paraty pour des eaux cristallines et des plages sauvages à couper le souffle. Sans oublier les plages de Copacabana et Ipanema, la promenade de Selarón et les soirées de samba dans Santa Teresa !" },
+    { q: "Où dormir à Rio de Janeiro ?", r: "Copacabana et Ipanema pour être au cœur de l'animation, des plages et des restaurants — parfait pour un groupe dynamique. Santa Teresa pour un séjour authentique et bohème avec de belles vues sur la ville. Barra da Tijuca pour les amateurs de luxe, de calme et de grandes plages préservées." },
+    { q: "Quand partir à Rio de Janeiro ?", r: "La période idéale est de janvier à mars, avec des températures autour de 29°C et le célèbre Carnaval de Rio en février — l'une des plus grandes fêtes du monde. Pour éviter la foule du Carnaval tout en profitant du beau temps, vise la période septembre à novembre qui offre un excellent rapport qualité-expérience." },
 ];
 
 const similaires = [
-    { titre: "Que faire à Koh Phi Phi entre amis", desc: "Eaux turquoise, plages de sable blanc et soirées les pieds dans le sable — Koh Phi Phi, c'est le paradis absolu.", img: "/images/Koh%20Phi%20Phi%20blog/5.webp", href: "/que-faire-a-koh-phi-phi-entre-amis-guide-et-bons-plans", tag: "Asie" },
-    { titre: "Que faire à El Nido entre amis", desc: "Lagons cachés, falaises calcaires et plages désertes — El Nido, le joyau sauvage des Philippines.", img: "/images/El%20Nido%20Philippines%20blog/1.webp", href: "/que-faire-a-el-nido-aux-philippines-entre-amis-guide-et-bons-plans", tag: "Asie" },
+    { titre: "Que faire à Tamarindo entre amis", desc: "Surf, plongée et catamarans au coucher du soleil — Tamarindo, le Costa Rica dans toute sa splendeur sauvage.", img: "/images/Tamarindo%20Costa%20Rica%20blog/1.webp", href: "/que-faire-a-tamarindo-entre-amis-guide-et-bons-plans", tag: "Amérique" },
     { titre: "Que faire à Bali entre amis", desc: "Rizières en terrasses, temples mystérieux et nuits festives à Seminyak — Bali, l'île des dieux qui envoûte tous les voyageurs.", img: "/images/Bali%20blog/1.webp", href: "/que-faire-a-bali-entre-amis-guide-et-bons-plans", tag: "Asie" },
+    { titre: "Que faire à Cairns entre amis", desc: "Grande Barrière de Corail, forêts tropicales et îles paradisiaques — Cairns, le portail vers les merveilles naturelles de l'Australie.", img: "/images/Cairns%20blog/1.webp", href: "/que-faire-a-cairns-entre-amis-guide-et-bons-plans", tag: "Océanie" },
 ];
 ---
 
 <Layout
-    title="Que faire à Tamarindo entre amis : guide et bons plans 2026"
-    description="Plongée aux îles Catalinas, cascades Sensoria et coucher de soleil en catamaran. Découvre notre guide complet pour un séjour inoubliable à Tamarindo au Costa Rica."
-    ogImage="/images/Tamarindo%20Costa%20Rica%20blog/1.webp"
-    canonicalPath="/que-faire-a-tamarindo-entre-amis-guide-et-bons-plans"
+    title="Que faire à Rio de Janeiro entre amis : guide et bons plans 2026"
+    description="Christ Rédempteur, favela Rocinha et excursion à Paraty : notre guide complet pour préparer ton séjour à Rio de Janeiro entre amis au Brésil."
+    ogImage="/images/Rio%20de%20Janeiro%20blog/20.webp"
+    canonicalPath="/que-faire-a-rio-de-janeiro-entre-amis-guide-et-bons-plans"
     heroPage={true}
     ogType="article"
-    touristName="Tamarindo"
-    touristCountry="Costa Rica"
+    touristName="Rio de Janeiro"
+    touristCountry="Brésil"
 >
-    <link rel="preload" as="image" href="/images/Tamarindo%20Costa%20Rica%20blog/1.webp" slot="head" />
+    <link rel="preload" as="image" href="/images/Rio%20de%20Janeiro%20blog/20.webp" slot="head" />
 
     <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Que faire à Tamarindo entre amis : guide et bons plans 2026",
-        "description": "Plongée aux îles Catalinas, cascades Sensoria et coucher de soleil en catamaran. Découvre notre guide complet pour un séjour inoubliable à Tamarindo au Costa Rica.",
-        "image": "https://destinationsouvenir.com/images/Tamarindo%20Costa%20Rica%20blog/1.webp",
+        "headline": "Que faire à Rio de Janeiro entre amis : guide et bons plans 2026",
+        "description": "Christ Rédempteur, favela Rocinha et excursion à Paraty : notre guide complet pour préparer ton séjour à Rio de Janeiro entre amis au Brésil.",
+        "image": "https://destinationsouvenir.com/images/Rio%20de%20Janeiro%20blog/20.webp",
         "author": { "@type": "Organization", "name": "Destination Souvenir", "url": "https://destinationsouvenir.com" },
         "publisher": { "@type": "Organization", "name": "Destination Souvenir", "logo": { "@type": "ImageObject", "url": "https://destinationsouvenir.com/logo.png" } },
         "datePublished": "2026-06-14",
         "dateModified": "2026-06-14",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-a-tamarindo-entre-amis-guide-et-bons-plans" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-a-rio-de-janeiro-entre-amis-guide-et-bons-plans" },
         "inLanguage": "fr-FR"
     })}</script>
 
@@ -69,9 +69,9 @@ const similaires = [
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            { "@type": "Question", "name": "Quelles sont les meilleures activités à faire à Tamarindo entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Les incontournables : plongée aux îles Catalinas pour nager avec les raies manta et les requins de récif, excursion aux cascades et piscines thermales de Sensoria au cœur de la forêt tropicale, et coucher de soleil en catamaran avec snorkeling et open bar. Sans oublier le surf sur les vagues parfaites de Tamarindo !" } },
-            { "@type": "Question", "name": "Où dormir à Tamarindo ?", "acceptedAnswer": { "@type": "Answer", "text": "Le centre de Tamarindo pour être au cœur de l'animation, des restaurants et des bars. Playa Langosta pour un bon équilibre entre tranquillité et proximité du centre. Playa Grande pour une ambiance chic, nature et préservée, avec des plages à tortues la nuit." } },
-            { "@type": "Question", "name": "Quand partir à Tamarindo ?", "acceptedAnswer": { "@type": "Answer", "text": "La période idéale pour partir à Tamarindo est de décembre à mars, avec un climat sec, un ciel dégagé et des températures autour de 32°C. C'est la haute saison parfaite pour les excursions en mer, les plages et toutes les activités outdoor." } }
+            { "@type": "Question", "name": "Quelles sont les meilleures activités à faire à Rio de Janeiro entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Les incontournables de Rio : visiter le Christ Rédempteur au Corcovado pour une vue à 360° sur la ville, faire le tour de la favela Rocinha avec un guide local pour une immersion authentique, et partir en excursion en bateau à Paraty pour des eaux cristallines et des plages sauvages à couper le souffle. Sans oublier les plages de Copacabana et Ipanema, la promenade de Selarón et les soirées de samba dans Santa Teresa !" } },
+            { "@type": "Question", "name": "Où dormir à Rio de Janeiro ?", "acceptedAnswer": { "@type": "Answer", "text": "Copacabana et Ipanema pour être au cœur de l'animation, des plages et des restaurants — parfait pour un groupe dynamique. Santa Teresa pour un séjour authentique et bohème avec de belles vues sur la ville. Barra da Tijuca pour les amateurs de luxe, de calme et de grandes plages préservées." } },
+            { "@type": "Question", "name": "Quand partir à Rio de Janeiro ?", "acceptedAnswer": { "@type": "Answer", "text": "La période idéale est de janvier à mars, avec des températures autour de 29°C et le célèbre Carnaval de Rio en février — l'une des plus grandes fêtes du monde. Pour éviter la foule du Carnaval tout en profitant du beau temps, vise la période septembre à novembre qui offre un excellent rapport qualité-expérience." } }
         ]
     })}</script>
 
@@ -81,7 +81,7 @@ const similaires = [
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://destinationsouvenir.com" },
             { "@type": "ListItem", "position": 2, "name": "Amérique", "item": "https://destinationsouvenir.com/amerique" },
-            { "@type": "ListItem", "position": 3, "name": "Tamarindo", "item": "https://destinationsouvenir.com/que-faire-a-tamarindo-entre-amis-guide-et-bons-plans" }
+            { "@type": "ListItem", "position": 3, "name": "Rio de Janeiro", "item": "https://destinationsouvenir.com/que-faire-a-rio-de-janeiro-entre-amis-guide-et-bons-plans" }
         ]
     })}</script>
 
@@ -90,11 +90,11 @@ const similaires = [
         <div class="hero-bg"></div>
         <div class="hero-veil"></div>
         <div class="hero-cnt">
-            <p class="hero-kicker">Amérique &nbsp;·&nbsp; Costa Rica</p>
-            <h1>Que faire à <em>Tamarindo</em><br />entre amis&nbsp;?</h1>
+            <p class="hero-kicker">Amérique &nbsp;·&nbsp; Brésil</p>
+            <h1>Que faire à <em>Rio de Janeiro</em><br />entre amis&nbsp;?</h1>
             <div class="hero-rule"></div>
             <p class="hero-meta">Guide complet &nbsp;·&nbsp; activités &nbsp;·&nbsp; hébergement &nbsp;·&nbsp; budget</p>
-            <p class="hero-intro">Plongée, cascades tropicales et catamarans au coucher du soleil… Tamarindo, c'est <em>le Costa Rica dans toute sa splendeur sauvage.</em></p>
+            <p class="hero-intro">Christ Rédempteur, plages iconiques et nuits de samba… Rio, c'est <em>la ville la plus intense du monde.</em></p>
         </div>
     </section>
 
@@ -104,7 +104,7 @@ const similaires = [
         <div class="acts-inner">
             <div class="acts-hd">
                 <span class="pill pill--sand">À faire absolument</span>
-                <h2>3 activités incontournables<br /><em>à Tamarindo entre amis</em></h2>
+                <h2>3 activités incontournables<br /><em>à Rio de Janeiro entre amis</em></h2>
             </div>
             <div class="acts-carousel" id="actsCarousel">
                 <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">
@@ -144,14 +144,14 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/Tamarindo%20Costa%20Rica%20blog/9.webp" alt="Volcan Arenal et forêt tropicale du Costa Rica" loading="lazy" width="1920" height="1280" />
+            <img src="/images/Rio%20de%20Janeiro%20blog/2.webp" alt="Vue panoramique depuis le Pain de Sucre sur Copacabana et la baie de Guanabara" loading="lazy" width="1920" height="1080" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Tamarindo%20Costa%20Rica%20blog/2.webp" alt="Plage de sable blanc et eaux turquoise à Tamarindo, Costa Rica" loading="lazy" width="1920" height="1080" />
-            <img src="/images/Tamarindo%20Costa%20Rica%20blog/11.webp" alt="Vue aérienne de la baie de Tamarindo, Costa Rica" loading="lazy" width="3840" height="2160" />
+            <img src="/images/Rio%20de%20Janeiro%20blog/19.webp" alt="Vue depuis les Dois Irmãos sur Ipanema, la Lagoa et Copacabana, Rio de Janeiro" loading="lazy" width="1920" height="1313" />
+            <img src="/images/Rio%20de%20Janeiro%20blog/15.webp" alt="Escadaria Selarón, les célèbres marches colorées de Rio de Janeiro" loading="lazy" width="1920" height="1440" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Tamarindo%20Costa%20Rica%20blog/10.webp" alt="Vue aérienne de la côte et des îlots du Costa Rica près de Tamarindo" loading="lazy" width="1920" height="1280" />
+            <img src="/images/Rio%20de%20Janeiro%20blog/6.webp" alt="Vue aérienne de Rio de Janeiro avec le Christ Rédempteur et le Pain de Sucre" loading="lazy" width="1920" height="1080" />
         </div>
     </div>
 
@@ -160,12 +160,12 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/Tamarindo%20Costa%20Rica%20blog/16.webp" alt="Piscine avec palmiers dans un resort à Tamarindo, Costa Rica" loading="lazy" width="1080" height="1350" />
+                <img src="/images/Rio%20de%20Janeiro%20blog/21.webp" alt="Vue aérienne d'un hôtel en bord de mer à Rio de Janeiro avec montagne" loading="lazy" width="1920" height="1440" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
-                <h2>Où se loger<br /><em>à Tamarindo ?</em></h2>
-                <p class="logements-sub">Du centre animé aux plages sauvages — le quartier que tu choisis change complètement l'ambiance de ton séjour au Costa Rica.</p>
+                <h2>Où se loger<br /><em>à Rio de Janeiro ?</em></h2>
+                <p class="logements-sub">Des plages de Copacabana aux collines de Santa Teresa — le quartier que tu choisis définit complètement l'ambiance de ton séjour à Rio.</p>
                 <div class="logements-list">
                     {hebergements.map((h) => (
                         <div class="logement-item">
@@ -179,12 +179,12 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/Tamarindo%20Costa%20Rica%20blog/8.webp" alt="Resort avec piscine tropicale à Tamarindo, Costa Rica" loading="lazy" width="1280" height="720" />
+                    <img src="/images/Rio%20de%20Janeiro%20blog/21.webp" alt="Vue aérienne d'un hôtel en bord de mer à Rio de Janeiro avec montagne" loading="lazy" width="1920" height="1440" />
                 </div>
                 <p class="tip">
-                    <span><strong>Astuce :</strong> réserve ton hébergement plusieurs mois à l'avance, surtout pour décembre et janvier — la haute saison est très courte et les meilleures adresses partent en quelques heures !</span>
+                    <span><strong>Astuce :</strong> réserve ton hébergement plusieurs mois à l'avance, surtout si tu vises le Carnaval de février — les hôtels de Copacabana et Ipanema affichent complet un an à l'avance !</span>
                 </p>
-                <a href="https://www.booking.com/hotel/cr/pasatiempo.fr.html" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Tamarindo</a>
+                <a href="https://www.booking.com/hotel/br/grand-hyatt-rio.fr.html" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Rio</a>
             </div>
         </div>
     </section>
@@ -195,8 +195,8 @@ const similaires = [
         <div class="budget-inner">
             <div class="budget-hd">
                 <span class="pill pill--turquoise">Budget</span>
-                <h2>Combien coûte<br /><em>un voyage à Tamarindo&nbsp;?</em></h2>
-                <p>Tamarindo s'adapte à tous les profils — des voyageurs budget aux groupes qui veulent profiter sans compter.</p>
+                <h2>Combien coûte<br /><em>un voyage à Rio de Janeiro&nbsp;?</em></h2>
+                <p>Rio s'adapte à tous les budgets — des auberges de jeunesse de Santa Teresa aux resorts de Barra da Tijuca.</p>
             </div>
 
             <div class="budget-table">
@@ -208,38 +208,38 @@ const similaires = [
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Hébergement</div>
-                    <div class="btr-val">20 – 40 €</div>
-                    <div class="btr-val">50 – 100 €</div>
-                    <div class="btr-val btr-val--luxe">150 €+</div>
+                    <div class="btr-val">25 – 50 €</div>
+                    <div class="btr-val">70 – 120 €</div>
+                    <div class="btr-val btr-val--luxe">200 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Repas</div>
-                    <div class="btr-val">5 – 12 €</div>
-                    <div class="btr-val">15 – 30 €</div>
-                    <div class="btr-val btr-val--luxe">40 €+</div>
+                    <div class="btr-val">8 – 15 €</div>
+                    <div class="btr-val">20 – 35 €</div>
+                    <div class="btr-val btr-val--luxe">60 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Transport</div>
-                    <div class="btr-val">2 – 5 €</div>
-                    <div class="btr-val">10 – 15 €</div>
-                    <div class="btr-val btr-val--luxe">25 €+</div>
+                    <div class="btr-val">3 – 8 €</div>
+                    <div class="btr-val">10 – 20 €</div>
+                    <div class="btr-val btr-val--luxe">40 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Activités</div>
-                    <div class="btr-val">10 – 20 €</div>
-                    <div class="btr-val">25 – 60 €</div>
-                    <div class="btr-val btr-val--luxe">100 €+</div>
+                    <div class="btr-val">10 – 25 €</div>
+                    <div class="btr-val">40 – 80 €</div>
+                    <div class="btr-val btr-val--luxe">150 €+</div>
                 </div>
             </div>
 
             <div class="budget-total">
                 <span class="budget-total-lbl">1 semaine · par personne · hors vol</span>
-                <span class="budget-total-range">500 – 1 000 €</span>
+                <span class="budget-total-range">800 – 1 500 €</span>
             </div>
 
             <p class="tip tip--light">
                 <span>💡</span>
-                <span><strong>Astuce :</strong> l'aéroport de Liberia (LIR) est le plus proche de Tamarindo — environ 1h de route. Préfère-le à San José pour économiser jusqu'à 2h de trajet !</span>
+                <span><strong>Astuce :</strong> l'aéroport Galeão (GIG) est le principal aéroport international de Rio — plusieurs compagnies proposent des vols directs depuis Paris. Réserve 4 à 6 mois à l'avance pour obtenir les meilleurs tarifs !</span>
             </p>
             <div class="budget-cta">
                 <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--turquoise">Comparer les vols sur Skyscanner</a>
@@ -253,13 +253,13 @@ const similaires = [
         <div class="transport-inner">
             <div class="transport-hd">
                 <span class="pill pill--sand">Déplacements</span>
-                <h2>Comment se déplacer<br /><em>à Tamarindo ?</em></h2>
+                <h2>Comment se déplacer<br /><em>à Rio de Janeiro ?</em></h2>
             </div>
             <div class="transport-list">
                 {transports.map((t) => (
                     <div class="transport-item">
                         <div class="transport-item-img">
-                            <img src={t.img} alt={t.alt ?? `${t.nom} à Tamarindo`} loading="lazy" />
+                            <img src={t.img} alt={t.alt ?? `${t.nom} à Rio de Janeiro`} loading="lazy" />
                         </div>
                         <div class="transport-item-body">
                             <h3>{t.nom}</h3>
@@ -277,7 +277,7 @@ const similaires = [
         <div class="conseils-inner">
             <div class="conseils-hd">
                 <span class="pill pill--sand">Avant de partir</span>
-                <h2>Conseils pratiques<br /><em>pour un voyage réussi à Tamarindo</em></h2>
+                <h2>Conseils pratiques<br /><em>pour un voyage réussi à Rio</em></h2>
             </div>
             <div class="conseils-grid">
                 {conseils.map((c, i) => (
@@ -297,14 +297,14 @@ const similaires = [
         <div class="conclusion-inner">
             <div class="conclusion-body">
                 <span class="pill pill--turquoise">Pourquoi y aller ?</span>
-                <h2>Tamarindo,<br /><em>le Costa Rica qui te prend par surprise</em></h2>
-                <p>Tamarindo est le spot parfait pour allier plage, surf et activités tropicales. Ici, tu as tout à portée de main : plages magnifiques, spots de surf accessibles dès le premier jour, et excursions pour découvrir les mangroves ou la vie marine.</p>
-                <p>Que tu viennes pour l'action ou la détente, Tamarindo te garantit un séjour intense, fun et mémorable — avec le coucher de soleil costaricain le plus spectaculaire que tu aies jamais vu.</p>
+                <h2>Rio de Janeiro entre amis,<br /><em>la ville qui te prend par les tripes</em></h2>
+                <p>Rio, c'est une expérience totale — des plages légendaires aux favelas colorées, des sommets verdoyants aux nuits de samba. Ici, chaque quartier a sa propre énergie, chaque lever de soleil sur le Corcovado te donne l'impression de voir le monde pour la première fois.</p>
+                <p>Que tu viennes pour le Carnaval, les plages, l'aventure ou la culture, Rio te garantit un séjour intense, inoubliable et profondément humain. La Cidade Maravilhosa mérite bien son surnom.</p>
             </div>
             <div class="conclusion-img-wrap">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="/images/Tamarindo%20Costa%20Rica%20blog/5.webp" />
-                    <img src="/images/Tamarindo%20Costa%20Rica%20blog/5.webp" alt="Coucher de soleil sur la plage de Tamarindo, Costa Rica" loading="lazy" width="1920" height="1080" />
+                    <source media="(min-width: 768px)" srcset="/images/Rio%20de%20Janeiro%20blog/2.webp" />
+                    <img src="/images/Rio%20de%20Janeiro%20blog/2.webp" alt="Vue panoramique depuis le Pain de Sucre sur Copacabana, la baie de Guanabara et les montagnes de Rio" loading="lazy" width="1920" height="1080" />
                 </picture>
             </div>
         </div>
@@ -320,25 +320,19 @@ const similaires = [
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Tamarindo%20Costa%20Rica%20blog/6.webp" alt="Activités à Tamarindo entre amis — plongée au Costa Rica" loading="lazy" width="1920" height="1080" />
+                        <img src="/images/Rio%20de%20Janeiro%20blog/15.webp" alt="Escadaria Selarón, activités culturelles à Rio de Janeiro" loading="lazy" width="1920" height="1440" />
                     </div>
-                    <a href="https://www.getyourguide.com/s/?q=tamarindo&searchSource=3" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
+                    <a href="https://www.getyourguide.com/fr-fr/rio-de-janeiro-l9/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Tamarindo%20Costa%20Rica%20blog/8.webp" alt="Hébergement avec piscine à Tamarindo, Costa Rica" loading="lazy" width="1280" height="720" />
+                        <img src="/images/Rio%20de%20Janeiro%20blog/11.webp" alt="Hôtel de luxe avec piscine et vue sur la mer à Rio de Janeiro" loading="lazy" width="1280" height="720" />
                     </div>
-                    <a href="https://www.booking.com/searchresults.fr.html?ss=Tamarindo" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
+                    <a href="https://www.booking.com/searchresults.fr.html?ss=Rio+de+Janeiro" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Tamarindo%20Costa%20Rica%20blog/15.webp" alt="4x4 sur une piste au Costa Rica depuis Tamarindo" loading="lazy" width="1080" height="1350" />
-                    </div>
-                    <a href="https://www.tkqlhce.com/click-101634807-17115158?url=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2Fsan-jose%2Ftamarindo" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn--ghost">Déplace-toi partout au Costa Rica</a>
-                </div>
-                <div class="cta-card">
-                    <div class="cta-card-img">
-                        <img src="/images/Tamarindo%20Costa%20Rica%20blog/13.webp" alt="Vol pour Tamarindo au Costa Rica" loading="lazy" width="1920" height="1241" />
+                        <img src="/images/Rio%20de%20Janeiro%20blog/14.webp" alt="Vol pour Rio de Janeiro au Brésil" loading="lazy" width="1920" height="1241" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -352,7 +346,7 @@ const similaires = [
         <div class="faq-inner">
             <div class="faq-hd">
                 <span class="pill pill--sand">Questions fréquentes</span>
-                <h2>FAQ — Tamarindo entre amis :<br /><em>vos questions</em></h2>
+                <h2>FAQ — Rio de Janeiro entre amis :<br /><em>vos questions</em></h2>
             </div>
             <div class="faq-list">
                 {faq.map((item, i) => (
@@ -506,11 +500,11 @@ const similaires = [
     inset: 0%;
     background-size: cover;
     background-position: center center;
-    background-image: url('/images/Tamarindo%20Costa%20Rica%20blog/1.webp');
+    background-image: url('/images/Rio%20de%20Janeiro%20blog/20.webp');
     filter: brightness(1);
 }
 @media (max-width: 767px) {
-    .hero-bg { background-image: url('/images/Tamarindo%20Costa%20Rica%20blog/1.webp'); inset: 0; background-size: cover; background-position: center center; filter: brightness(1); }
+    .hero-bg { background-image: url('/images/Rio%20de%20Janeiro%20blog/18.webp'); inset: 0; background-size: cover; background-position: center center; filter: brightness(1); }
 }
 .hero-veil {
     position: absolute;
@@ -703,7 +697,7 @@ const similaires = [
 
 .cta { background: #fff; padding: 7rem 2rem; }
 .cta-inner { max-width: 1100px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
-.cta-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; width: 100%; margin-top: 0.5rem; }
+.cta-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 340px)); gap: 1.5rem; margin-top: 0.5rem; justify-content: center; }
 .cta-card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; border: 1px solid rgba(13,27,46,0.08); box-shadow: 0 4px 20px rgba(13,27,46,0.06); transition: transform 0.3s, box-shadow 0.3s; }
 .cta-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(13,27,46,0.12); }
 .cta-card-img { height: 200px; overflow: hidden; }
