@@ -2,66 +2,66 @@
 import Layout from '../layouts/Layout.astro';
 
 const activites = [
-    { titre: "Nage avec les dauphins à Mnemba", desc: "Plonge dans un rêve bleu au large de Zanzibar : rencontre les dauphins dans leur paradis naturel, explore les récifs multicolores de Mnemba et savoure un instant de bonheur sur ces eaux turquoise, bercé par la douceur de l'océan Indien.", img: "/images/Zanzibar%20blog/1.webp", alt: "Femme sous l'eau nageant avec les dauphins à l'île de Mnemba, Zanzibar", lien: "https://www.getyourguide.com/fr-fr/zanzibar-l871/ile-de-mnemba-nage-avec-les-dauphins-et-plongee-avec-tuba-avec-dejeuner-en-option-t608498/?ranking_uuid=12de050a-6aef-4a10-9552-adae0847ecaf" },
-    { titre: "Prison Island & plage de Nakupenda", desc: "Explore Prison Island et découvre ses tortues centenaires, nage dans les eaux cristallines, savoure un déjeuner local, puis détends-toi sur le sable immaculé de Nakupenda sous le soleil tropical. Une journée paradisiaque avec tes amis !", img: "/images/Zanzibar%20blog/2.webp", alt: "Plage paradisiaque de Nakupenda avec sable blanc et eaux turquoise à Zanzibar", lien: "https://www.getyourguide.com/fr-fr/archipel-de-zanzibar-l95591/zanzibar-excursion-en-bateau-a-prison-island-et-nakupenda-avec-dejeuner-t594405/?ranking_uuid=12de050a-6aef-4a10-9552-adae0847ecaf" },
-    { titre: "Safari au parc national de Mikumi", desc: "Vis une aventure sauvage au parc national de Mikumi : observe des lions, éléphants et girafes évoluer librement dans de vastes plaines, savoure un déjeuner au cœur de la brousse et contemple le soleil se coucher sur ces plaines infinies — un moment inoubliable.", img: "/images/Zanzibar%20blog/3.webp", alt: "Panthère dans un arbre au parc national de Mikumi lors d'un safari depuis Zanzibar", lien: "https://www.getyourguide.com/fr-fr/zanzibar-ville-l872/depuis-zanzibar-excursion-d-une-journee-au-parc-national-de-mikumi-avec-vols-et-dejeuner-t436276/?ranking_uuid=12de050a-6aef-4a10-9552-adae0847ecaf" },
+    { titre: "Dîner sous les étoiles dans le désert d'Agafay", desc: "Pars à la découverte du désert d'Agafay. Monte sur un chameau, savoure un thé marocain au coucher du soleil, découvre les collines dorées et les villages berbères, puis termine la soirée avec un dîner traditionnel et un spectacle envoûtant autour du feu.", img: "/images/Marrakech%20blog/9.webp", alt: "Dîner traditionnel sous les étoiles dans le désert d'Agafay près de Marrakech", lien: "https://www.getyourguide.com/fr-fr/prefecture-de-marrakech-l208/diner-sous-les-etoiles-dans-le-desert-d-agafay-coucher-de-soleil-a-dos-de-chameau-t477070/?ranking_uuid=4ba5139c-38a1-4c9f-92b6-0dc5e6463b84" },
+    { titre: "Excursion dans la vallée de l'Ourika", desc: "Explore la vallée de l'Ourika et les montagnes de l'Atlas. Admire les villages berbères, les collines rouges et les oliveraies, puis profite d'une balade jusqu'aux cascades de Setti Fatma pour un moment de calme et de nature. Prépare-toi à en prendre plein les yeux !", img: "/images/Marrakech%20blog/3.webp", alt: "Vallée de l'Ourika avec cascades et montagnes de l'Atlas près de Marrakech", lien: "https://www.getyourguide.com/fr-fr/marrakech-l208/marrakech-dejeuner-dans-la-vallee-de-l-ourika-et-randonnee-guidee-jusqu-aux-cascades-t480657/?ranking_uuid=279a9048-215b-4d06-a3b0-8d2471580058&q=Setti%20Fadma" },
+    { titre: "Voyage au cœur des dunes de Merzouga", desc: "Embarque pendant trois jours pour un voyage d'exception : traverse les montagnes de l'Atlas, pars à dos de chameau dans les dunes dorées de Merzouga, admire un coucher de soleil à couper le souffle, dors sous un ciel étoilé et réveille-toi avec le lever du soleil sur le désert.", img: "/images/Marrakech%20blog/4.webp", alt: "Dunes de Merzouga au coucher du soleil lors d'un voyage en 3 jours depuis Marrakech", lien: "https://www.getyourguide.com/fr-fr/prefecture-de-marrakech-l208/de-marrakech-a-merzouga-3-jours-d-aventure-dans-le-desert-t482521/?ranking_uuid=4ba5139c-38a1-4c9f-92b6-0dc5e6463b84" },
 ];
 
 const hebergements = [
-    { type: "Nungwi & Kendwa", ex: "Plages magnifiques, ambiance festive et activités", desc: "La côte nord de Zanzibar, c'est LE spot pour un groupe en quête d'ambiance. Plages de rêve, soirées animées au bord de l'eau, beach bars et nombreuses excursions. Kendwa accueille des full moon parties légendaires — parfait pour un séjour festif les pieds dans le sable.", tag: "Festif" },
-    { type: "Paje & Jambiani", ex: "Kitesurf, cafés branchés et atmosphère jeune", desc: "La côte est pour ceux qui veulent sortir des sentiers battus. Paje est le paradis du kitesurf avec ses cafés branchés et beach bars. Jambiani offre une ambiance plus authentique et calme, idéale pour un groupe qui cherche à se ressourcer loin du tourisme de masse.", tag: "Équilibre" },
-    { type: "Stone Town", ex: "Culture swahilie, restaurants et vie nocturne locale", desc: "Le cœur historique classé au patrimoine mondial de l'UNESCO. Ruelles labyrinthiques, épices envoutantes, marchés colorés et restaurants de fruits de mer — Stone Town est parfait pour explorer la culture swahilie et profiter d'une nightlife locale authentique à petit prix.", tag: "Culture" },
+    { type: "La Médina", ex: "Ruelles vivantes, souks, riads et immersion totale", desc: "Le cœur authentique de Marrakech classé au patrimoine mondial de l'UNESCO. Ruelles labyrinthiques, souks colorés et riads traditionnels — la Médina, c'est l'expérience marocaine dans toute sa splendeur. Parfait pour un groupe qui veut s'immerger dans la culture locale et être à pied de tout.", tag: "Immersion" },
+    { type: "Guéliz", ex: "Moderne, restaurants, cafés et boutiques branchées", desc: "Le quartier européen et moderne de Marrakech. Cafés tendance, restaurants gastronomiques, galeries d'art et boutiques branchées — Guéliz offre une ambiance cosmopolite parfaite pour un groupe qui veut profiter du meilleur des deux mondes, à quelques minutes de la Médina.", tag: "Moderne" },
+    { type: "Hivernage & Palmeraie", ex: "Hôtels de luxe, clubs, rooftops et nightlife chic", desc: "Pour les groupes en quête de fête et de luxe. Hivernage concentre les clubs les plus branchés, les rooftops et les hôtels haut de gamme. La Palmeraie offre calme, nature et villas avec piscine pour ceux qui veulent une ambiance resort exclusive loin de l'agitation de la ville.", tag: "Luxe" },
 ];
 
 const transports = [
-    { nom: "Taxi", desc: "Abordable et pratique pour se déplacer entre les quartiers et de l'aéroport à ton hébergement. Négocie toujours le prix à l'avance — les taxis ne sont pas équipés de compteur. Pour l'aéroport, prévois environ 20–30 $ selon ta destination.", img: "/images/Zanzibar%20blog/5.webp", alt: "Taxi à Zanzibar pour se déplacer sur l'île" },
-    { nom: "Scooter & moto-taxi", desc: "La liberté totale pour explorer l'île à ton rythme, de Nungwi à Paje en passant par Stone Town. Location disponible partout pour 15–25 $/jour. Attention aux routes non éclairées le soir et aux pistes glissantes par temps de pluie.", img: "/images/Zanzibar%20blog/14.webp", alt: "Scooter pour explorer librement l'île de Zanzibar" },
-    { nom: "Bateaux & excursions", desc: "Indispensables pour rejoindre les îlots paradisiaques comme Mnemba, Prison Island ou Nakupenda. Les excursions organisées incluent le transport en bateau. Pour le continent, le ferry relie Stone Town à Dar es Salaam en 2h.", img: "/images/Zanzibar%20blog/6.webp", alt: "Bateau traditionnel dhow à Zanzibar pour explorer les îles" },
+    { nom: "Petit taxi & grand taxi", desc: "Les petits taxis rouges circulent dans Marrakech pour les trajets courts — négocie toujours le prix avant de monter. Les grands taxis beige relient Marrakech aux destinations alentours comme Essaouira ou Ourika. Pratiques, abordables et disponibles partout dans la ville.", img: "/images/Marrakech%20blog/7.webp", alt: "Taxis rouges dans les rues de Marrakech pour se déplacer facilement" },
+    { nom: "Location de voiture", desc: "Idéal pour explorer le désert d'Agafay, les cascades d'Ouzoud ou les montagnes de l'Atlas à ton rythme. Loue ta voiture directement à l'aéroport Marrakech-Ménara et profite de la liberté totale pour découvrir les paysages marocains sans contrainte de planning.", img: "/images/Marrakech%20blog/28.webp", alt: "Location de voiture à Marrakech pour explorer l'Atlas et le désert librement" },
+    { nom: "À pied", desc: "C'est le meilleur moyen de découvrir la Médina. Les ruelles de la vieille ville sont trop étroites pour les voitures — perds-toi volontairement dans les souks, suis les odeurs d'épices, et laisse-toi surprendre par chaque recoin. La Médina se vit à pied, sans GPS et sans heure.", img: "/images/Marrakech%20blog/6.webp", alt: "Balade à pied dans les ruelles et souks de la Médina de Marrakech" },
 ];
 
 const conseils = [
-    { titre: "Période idéale", desc: "Décembre à février : saison chaude et sèche, 28–32 °C, mer calme — idéale pour le snorkeling et la plage. Évite les grandes pluies de mars–mai et d'octobre–novembre." },
-    { titre: "Fortes marées", desc: "Préfère la côte nord (Nungwi, Kendwa) pour éviter les importantes marées de la côte est qui laissent parfois la mer très loin du rivage — surtout gênant pour la baignade à marée basse." },
-    { titre: "Eau & santé", desc: "Ne bois que de l'eau en bouteille. Pense à la vaccination contre la fièvre typhoïde et l'hépatite A. Un traitement antipaludéen est recommandé pour les séjours prolongés ou les excursions sur le continent." },
-    { titre: "Paiement", desc: "Beaucoup de petits commerces, restaurants locaux et taxis n'acceptent que le cash. Emporte suffisamment de shillings tanzaniens et de dollars US — les ATM de Stone Town sont les plus fiables." },
+    { titre: "Période idéale", desc: "Mars–mai et sept–nov : 20–28 °C. Évite juillet–août (40 °C+) et les week-ends de l'Aïd." },
+    { titre: "Négociation", desc: "Dans les souks, commence à 30–40 % du prix affiché. Ne montre pas ton enthousiasme, sois prêt à partir." },
+    { titre: "Arnaques à éviter", desc: "Refuse les 'guides' non officiels dans les souks — ils touchent des commissions. Reste ferme et décline poliment." },
+    { titre: "Monnaie & budget", desc: "Le dirham ne se change pas hors du Maroc. Emporte des euros et prévois du cash pour les souks et restaurants locaux." },
 ];
 
 const faq = [
-    { q: "Quelle est la meilleure période pour aller à Zanzibar ?", r: "De décembre à février : profite de la chaleur tropicale avec des températures agréables entre 28 et 32 °C, une mer calme et un ciel dégagé — la meilleure fenêtre pour le snorkeling, les plages et les excursions en bateau." },
-    { q: "Quelles sont les meilleures activités à Zanzibar entre amis ?", r: "Les incontournables de Zanzibar : nager avec les dauphins à l'île de Mnemba, excursion à Prison Island avec les tortues centenaires et la sandbank de Nakupenda, safari au parc national de Mikumi, soirée à Kendwa et snorkeling sur les récifs coralliens de la côte nord." },
-    { q: "Où dormir à Zanzibar entre amis ?", r: "Nungwi et Kendwa pour les plages et la vie nocturne, Paje pour le kitesurf et l'ambiance jeune, Jambiani pour le calme et l'authenticité, Stone Town pour la culture swahilie et les restaurants de fruits de mer. Le choix dépend de l'ambiance que tu recherches !" },
+    { q: "Quelle est la meilleure période pour aller à Marrakech ?", r: "Mars à mai et septembre à novembre offrent les températures les plus agréables (20–28 °C) et les meilleures conditions pour explorer la ville et faire des excursions. Évite juillet–août où il fait 40 °C+ et les foules de la haute saison estivale." },
+    { q: "Quelles sont les meilleures activités à Marrakech entre amis ?", r: "Les incontournables de Marrakech : dîner sous les étoiles dans le désert d'Agafay avec balade à dos de chameau, excursion dans la vallée de l'Ourika et les cascades de Setti Fatma, soirée dans les clubs d'Hivernage, exploration des souks de la Médina et hammam traditionnel." },
+    { q: "Où dormir à Marrakech entre amis ?", r: "La Médina pour l'immersion totale dans les riads traditionnels, Guéliz pour le confort moderne et les restaurants tendance, Hivernage pour la nightlife et les hôtels de luxe, la Palmeraie pour une ambiance villa avec piscine. Le choix dépend de l'ambiance que tu recherches !" },
 ];
 
 const similaires = [
-    { titre: "Que faire aux Maldives entre amis", desc: "Overwater bungalows, plongée avec requins et snorkeling face à des lagons turquoise — les Maldives, le paradis absolu de l'océan Indien.", img: "/images/Maldives%20blog/1.webp", href: "/que-faire-aux-maldives-entre-amis-guide-et-bons-plans", tag: "Asie" },
-    { titre: "Que faire à Bora Bora entre amis", desc: "Lagons turquoise, plages désertes sur les motus et couchers de soleil en Polynésie française — Bora Bora, le joyau du Pacifique.", img: "/images/Bora%20Bora%20blog/1.webp", href: "/que-faire-a-bora-bora-entre-amis-guide-et-bons-plans", tag: "Océanie" },
+    { titre: "Que faire à Zanzibar entre amis", desc: "Plages paradisiaques, dauphins à Mnemba et safari au parc de Mikumi — Zanzibar, l'île aux épices de l'océan Indien.", img: "/images/Zanzibar%20blog/10.webp", href: "/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans", tag: "Afrique" },
+    { titre: "Que faire à Bali entre amis", desc: "Rizières en terrasses, temples mystérieux et nuits festives à Seminyak — Bali, l'île des dieux qui envoûte tous les voyageurs.", img: "/images/Bali%20blog/1.webp", href: "/que-faire-a-bali-entre-amis-guide-et-bons-plans", tag: "Asie" },
     { titre: "Que faire à Rio de Janeiro entre amis", desc: "Christ Rédempteur, favela Rocinha et plages de Copacabana — Rio, la ville la plus intense du monde qui te prend par les tripes.", img: "/images/Rio%20de%20Janeiro%20blog/1.webp", href: "/que-faire-a-rio-de-janeiro-entre-amis-guide-et-bons-plans", tag: "Amérique" },
 ];
 ---
 
 <Layout
-    title="Que faire à Zanzibar entre amis : guide et bons plans 2026"
-    description="Dauphins à Mnemba, Prison Island et safari au Mikumi : notre guide complet pour préparer ton séjour à Zanzibar entre amis en Tanzanie."
-    ogImage="/images/Zanzibar%20blog/10.webp"
-    canonicalPath="/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans"
+    title="Que faire à Marrakech entre amis : guide et bons plans 2026"
+    description="Désert d'Agafay, vallée de l'Ourika et dunes de Merzouga : notre guide complet pour préparer ton séjour à Marrakech entre amis au Maroc."
+    ogImage="/images/Marrakech%20blog/1.webp"
+    canonicalPath="/que-faire-a-marrakech-entre-amis-guide-et-bons-plans"
     heroPage={true}
     ogType="article"
-    touristName="Zanzibar"
-    touristCountry="Tanzanie"
+    touristName="Marrakech"
+    touristCountry="Maroc"
 >
-    <link rel="preload" as="image" href="/images/Zanzibar%20blog/10.webp" slot="head" />
+    <link rel="preload" as="image" href="/images/Marrakech%20blog/1.webp" slot="head" />
 
     <script is:inline type="application/ld+json" slot="head">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Que faire à Zanzibar entre amis : guide et bons plans 2026",
-        "description": "Dauphins à Mnemba, Prison Island et safari au Mikumi : notre guide complet pour préparer ton séjour à Zanzibar entre amis en Tanzanie.",
-        "image": "https://destinationsouvenir.com/images/Zanzibar%20blog/10.webp",
+        "headline": "Que faire à Marrakech entre amis : guide et bons plans 2026",
+        "description": "Désert d'Agafay, vallée de l'Ourika et dunes de Merzouga : notre guide complet pour préparer ton séjour à Marrakech entre amis au Maroc.",
+        "image": "https://destinationsouvenir.com/images/Marrakech%20blog/1.webp",
         "author": { "@type": "Organization", "name": "Destination Souvenir", "url": "https://destinationsouvenir.com" },
         "publisher": { "@type": "Organization", "name": "Destination Souvenir", "logo": { "@type": "ImageObject", "url": "https://destinationsouvenir.com/logo.png" } },
         "datePublished": "2026-06-15",
         "dateModified": "2026-06-15",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://destinationsouvenir.com/que-faire-a-marrakech-entre-amis-guide-et-bons-plans" },
         "inLanguage": "fr-FR"
     })}</script>
 
@@ -69,9 +69,9 @@ const similaires = [
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            { "@type": "Question", "name": "Quelle est la meilleure période pour aller à Zanzibar ?", "acceptedAnswer": { "@type": "Answer", "text": "De décembre à février : profite de la chaleur tropicale avec des températures agréables entre 28 et 32 °C, une mer calme et un ciel dégagé — la meilleure fenêtre pour le snorkeling, les plages et les excursions en bateau." } },
-            { "@type": "Question", "name": "Quelles sont les meilleures activités à Zanzibar entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Les incontournables de Zanzibar : nager avec les dauphins à l'île de Mnemba, excursion à Prison Island avec les tortues centenaires et la sandbank de Nakupenda, safari au parc national de Mikumi, soirée à Kendwa et snorkeling sur les récifs coralliens de la côte nord." } },
-            { "@type": "Question", "name": "Où dormir à Zanzibar entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Nungwi et Kendwa pour les plages et la vie nocturne, Paje pour le kitesurf et l'ambiance jeune, Jambiani pour le calme et l'authenticité, Stone Town pour la culture swahilie et les restaurants de fruits de mer." } }
+            { "@type": "Question", "name": "Quelle est la meilleure période pour aller à Marrakech ?", "acceptedAnswer": { "@type": "Answer", "text": "Mars à mai et septembre à novembre offrent les températures les plus agréables (20–28 °C) et les meilleures conditions pour explorer la ville et faire des excursions. Évite juillet–août où il fait 40 °C+ et les foules de la haute saison estivale." } },
+            { "@type": "Question", "name": "Quelles sont les meilleures activités à Marrakech entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "Les incontournables de Marrakech : dîner sous les étoiles dans le désert d'Agafay avec balade à dos de chameau, excursion dans la vallée de l'Ourika et les cascades de Setti Fatma, soirée dans les clubs d'Hivernage, exploration des souks de la Médina et hammam traditionnel." } },
+            { "@type": "Question", "name": "Où dormir à Marrakech entre amis ?", "acceptedAnswer": { "@type": "Answer", "text": "La Médina pour l'immersion totale dans les riads traditionnels, Guéliz pour le confort moderne et les restaurants tendance, Hivernage pour la nightlife et les hôtels de luxe, la Palmeraie pour une ambiance villa avec piscine." } }
         ]
     })}</script>
 
@@ -81,7 +81,7 @@ const similaires = [
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://destinationsouvenir.com" },
             { "@type": "ListItem", "position": 2, "name": "Afrique", "item": "https://destinationsouvenir.com/afrique" },
-            { "@type": "ListItem", "position": 3, "name": "Zanzibar", "item": "https://destinationsouvenir.com/que-faire-a-zanzibar-entre-amis-guide-et-bons-plans" }
+            { "@type": "ListItem", "position": 3, "name": "Marrakech", "item": "https://destinationsouvenir.com/que-faire-a-marrakech-entre-amis-guide-et-bons-plans" }
         ]
     })}</script>
 
@@ -90,11 +90,11 @@ const similaires = [
         <div class="hero-bg"></div>
         <div class="hero-veil"></div>
         <div class="hero-cnt">
-            <p class="hero-kicker">Afrique &nbsp;·&nbsp; Tanzanie</p>
-            <h1>Que faire à <em>Zanzibar</em><br />entre amis&nbsp;?</h1>
+            <p class="hero-kicker">Afrique &nbsp;·&nbsp; Maroc</p>
+            <h1>Que faire à <em>Marrakech</em><br />entre amis&nbsp;?</h1>
             <div class="hero-rule"></div>
             <p class="hero-meta">Guide complet &nbsp;·&nbsp; activités &nbsp;·&nbsp; hébergement &nbsp;·&nbsp; budget</p>
-            <p class="hero-intro">Plages de sable blanc, dauphins en liberté et safaris mythiques… Zanzibar, c'est <em>l'île aux épices qui te marque à jamais.</em></p>
+            <p class="hero-intro">Souks envoûtants, désert d'Agafay et nuits festives… Marrakech, c'est <em>la ville ocre qui t'envoûte pour toujours.</em></p>
         </div>
     </section>
 
@@ -104,7 +104,7 @@ const similaires = [
         <div class="acts-inner">
             <div class="acts-hd">
                 <span class="pill pill--sand">À faire absolument</span>
-                <h2>3 activités incontournables<br /><em>à Zanzibar entre amis</em></h2>
+                <h2>3 activités incontournables<br /><em>à Marrakech entre amis</em></h2>
             </div>
             <div class="acts-carousel" id="actsCarousel">
                 <button class="carousel-btn carousel-btn--prev" aria-label="Précédent">
@@ -144,14 +144,14 @@ const similaires = [
     <!-- ══ GALERIE MOSAÏQUE ══ -->
     <div class="mosaic">
         <div class="mosaic-a">
-            <img src="/images/Zanzibar%20blog/13.webp" alt="Coucher de soleil spectaculaire sur l'océan Indien à Zanzibar" loading="lazy" />
+            <img src="/images/Marrakech%20blog/23.webp" alt="Souks colorés et artisanat de la Médina de Marrakech" loading="lazy" />
         </div>
         <div class="mosaic-b">
-            <img src="/images/Zanzibar%20blog/9.webp" alt="Plage de sable blanc de Zanzibar avec eaux turquoise" loading="lazy" />
-            <img src="/images/Zanzibar%20blog/11.webp" alt="Ambiance sur une plage de Zanzibar en Tanzanie" loading="lazy" />
+            <img src="/images/Marrakech%20blog/11.webp" alt="Ambiance festive à Marrakech avec vue sur la ville ocre" loading="lazy" />
+            <img src="/images/Marrakech%20blog/25.webp" alt="Architecture traditionnelle marocaine au cœur de Marrakech" loading="lazy" />
         </div>
         <div class="mosaic-a">
-            <img src="/images/Zanzibar%20blog/16.webp" alt="Vue panoramique sur le lagon turquoise de Zanzibar" loading="lazy" />
+            <img src="/images/Marrakech%20blog/20.webp" alt="Panorama sur les toits ocre de la Médina de Marrakech" loading="lazy" />
         </div>
     </div>
 
@@ -160,12 +160,12 @@ const similaires = [
     <section class="logements" id="hebergement">
         <div class="logements-inner">
             <div class="logements-img logements-img--desktop">
-                <img src="/images/Zanzibar%20blog/12.webp" alt="Hôtel en bord de mer à Zanzibar avec vue sur l'océan Indien" loading="lazy" />
+                <img src="/images/Marrakech%20blog/21.webp" alt="Riad de luxe avec piscine à Marrakech au Maroc" loading="lazy" />
             </div>
             <div class="logements-content">
                 <span class="pill pill--sand">Où dormir</span>
-                <h2>Où se loger<br /><em>à Zanzibar ?</em></h2>
-                <p class="logements-sub">De la côte festive de Nungwi aux ruelles historiques de Stone Town — le quartier que tu choisis définit complètement l'ambiance de ton séjour à Zanzibar.</p>
+                <h2>Où se loger<br /><em>à Marrakech ?</em></h2>
+                <p class="logements-sub">De la Médina authentique aux hôtels de luxe d'Hivernage — le quartier que tu choisis définit complètement l'ambiance de ton séjour à Marrakech.</p>
                 <div class="logements-list">
                     {hebergements.map((h) => (
                         <div class="logement-item">
@@ -179,12 +179,12 @@ const similaires = [
                     ))}
                 </div>
                 <div class="logements-img logements-img--mobile">
-                    <img src="/images/Zanzibar%20blog/12.webp" alt="Hôtel en bord de mer à Zanzibar avec vue sur l'océan Indien" loading="lazy" />
+                    <img src="/images/Marrakech%20blog/21.webp" alt="Riad de luxe avec piscine à Marrakech au Maroc" loading="lazy" />
                 </div>
                 <p class="tip">
-                    <span><strong>Astuce :</strong> réserve ton hébergement plusieurs mois à l'avance pour profiter des meilleures offres, surtout en haute saison (décembre–février) où les établissements de Nungwi et Kendwa affichent complet très tôt !</span>
+                    <span><strong>Astuce :</strong> réserve ton hébergement plusieurs mois à l'avance pour profiter des meilleures offres, surtout en haute saison (mars–mai et sept–nov) où les riads de la Médina affichent complet très tôt !</span>
                 </p>
-                <a href="https://www.booking.com/hotel/tz/my-blue-ora-resort.fr.html" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Zanzibar</a>
+                <a href="https://www.booking.com/hotel/ma/du-tresor.fr.html" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Trouver un hébergement à Marrakech</a>
             </div>
         </div>
     </section>
@@ -195,8 +195,8 @@ const similaires = [
         <div class="budget-inner">
             <div class="budget-hd">
                 <span class="pill pill--turquoise">Budget</span>
-                <h2>Combien coûte<br /><em>un voyage à Zanzibar&nbsp;?</em></h2>
-                <p>Zanzibar est accessible et s'adapte à tous les budgets — des guesthouses locales aux resorts de luxe sur la côte nord.</p>
+                <h2>Combien coûte<br /><em>un voyage à Marrakech&nbsp;?</em></h2>
+                <p>Marrakech est l'une des destinations les plus accessibles — des riads économiques aux palaces de luxe, il y en a pour tous les budgets.</p>
             </div>
 
             <div class="budget-table">
@@ -208,25 +208,25 @@ const similaires = [
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Hébergement</div>
-                    <div class="btr-val">15 – 40 €</div>
-                    <div class="btr-val">50 – 120 €</div>
+                    <div class="btr-val">10 – 30 €</div>
+                    <div class="btr-val">40 – 100 €</div>
                     <div class="btr-val btr-val--luxe">150 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Repas</div>
-                    <div class="btr-val">4 – 10 €</div>
-                    <div class="btr-val">10 – 25 €</div>
+                    <div class="btr-val">5 – 12 €</div>
+                    <div class="btr-val">12 – 25 €</div>
                     <div class="btr-val btr-val--luxe">40 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Transport</div>
-                    <div class="btr-val">1 – 3 €</div>
-                    <div class="btr-val">5 – 15 €</div>
+                    <div class="btr-val">1 – 4 €</div>
+                    <div class="btr-val">4 – 10 €</div>
                     <div class="btr-val btr-val--luxe">20 €+</div>
                 </div>
                 <div class="budget-table-row">
                     <div class="btr-label">Activités</div>
-                    <div class="btr-val">20 – 40 €</div>
+                    <div class="btr-val">15 – 40 €</div>
                     <div class="btr-val">40 – 80 €</div>
                     <div class="btr-val btr-val--luxe">100 €+</div>
                 </div>
@@ -234,12 +234,12 @@ const similaires = [
 
             <div class="budget-total">
                 <span class="budget-total-lbl">1 semaine · par personne · hors vol</span>
-                <span class="budget-total-range">450 – 800 €</span>
+                <span class="budget-total-range">350 – 700 €</span>
             </div>
 
             <p class="tip tip--light">
                 <span>💡</span>
-                <span><strong>Astuce :</strong> il n'y a pas de vol direct depuis la France vers Zanzibar — la plupart des connexions passent par Nairobi, Addis-Abeba ou Dubaï. Réserve 4 à 6 mois à l'avance pour les meilleurs tarifs !</span>
+                <span><strong>Astuce :</strong> des vols directs relient Paris à Marrakech toute l'année en moins de 3h30. Réserve 2 à 4 mois à l'avance pour les meilleurs tarifs — les prix peuvent doubler en haute saison !</span>
             </p>
             <div class="budget-cta">
                 <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--turquoise">Comparer les vols sur Skyscanner</a>
@@ -253,7 +253,7 @@ const similaires = [
         <div class="transport-inner">
             <div class="transport-hd">
                 <span class="pill pill--sand">Déplacements</span>
-                <h2>Comment se déplacer<br /><em>à Zanzibar ?</em></h2>
+                <h2>Comment se déplacer<br /><em>à Marrakech ?</em></h2>
             </div>
             <div class="transport-list">
                 {transports.map((t) => (
@@ -277,7 +277,7 @@ const similaires = [
         <div class="conseils-inner">
             <div class="conseils-hd">
                 <span class="pill pill--sand">Avant de partir</span>
-                <h2>Conseils pratiques<br /><em>pour un voyage réussi à Zanzibar</em></h2>
+                <h2>Conseils pratiques<br /><em>pour un voyage réussi à Marrakech</em></h2>
             </div>
             <div class="conseils-grid">
                 {conseils.map((c, i) => (
@@ -297,14 +297,14 @@ const similaires = [
         <div class="conclusion-inner">
             <div class="conclusion-body">
                 <span class="pill pill--turquoise">Pourquoi y aller ?</span>
-                <h2>Zanzibar entre amis,<br /><em>l'île qui te marque à jamais</em></h2>
-                <p>Zanzibar est une destination parfaite entre amis : plages dignes de cartes postales, soirées animées à Kendwa, excursions dauphins, rencontres avec les tortues centenaires, ambiance décontractée et nature sauvage au parc de Mikumi.</p>
-                <p>Que tu sois plutôt plage, aventure ou fête, Zanzibar offre le mélange idéal pour créer des souvenirs inoubliables. L'île aux épices de l'océan Indien t'attend — tu n'auras plus envie de repartir !</p>
+                <h2>Marrakech entre amis,<br /><em>la ville qui t'envoûte</em></h2>
+                <p>Marrakech est une destination parfaite entre amis : souks enivrants, hammams traditionnels, dîner sous les étoiles dans le désert, nuits festives à Hivernage et excursions grandioses dans l'Atlas ou le Sahara.</p>
+                <p>Que tu sois plutôt culture, aventure ou fête, Marrakech offre le mélange idéal pour créer des souvenirs inoubliables. La ville ocre de l'Atlas t'attend — tu n'auras plus envie de repartir !</p>
             </div>
             <div class="conclusion-img-wrap">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="/images/Zanzibar%20blog/13.webp" />
-                    <img src="/images/Zanzibar%20blog/13.webp" alt="Coucher de soleil sur les eaux turquoise de l'océan Indien à Zanzibar" loading="lazy" />
+                    <source media="(min-width: 768px)" srcset="/images/Marrakech%20blog/19.webp" />
+                    <img src="/images/Marrakech%20blog/19.webp" alt="Coucher de soleil sur les toits ocre de la Médina de Marrakech" loading="lazy" />
                 </picture>
             </div>
         </div>
@@ -316,23 +316,29 @@ const similaires = [
         <div class="cta-inner">
             <div class="nl-badge">Prêt à partir ?</div>
             <h2>Prépare ton séjour<br /><em>dès maintenant</em></h2>
-            <p class="cta-sub">Réserve tes activités, ton hébergement et ton vol au meilleur prix.</p>
+            <p class="cta-sub">Réserve tes activités, ton hébergement, tes vols et ta voiture au meilleur prix.</p>
             <div class="cta-cards">
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Zanzibar%20blog/9.webp" alt="Excursions et activités incontournables à Zanzibar avec GetYourGuide" loading="lazy" />
+                        <img src="/images/Marrakech%20blog/8.webp" alt="Excursions et activités incontournables à Marrakech avec GetYourGuide" loading="lazy" />
                     </div>
-                    <a href="https://www.getyourguide.com/fr-fr/zanzibar-l871/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
+                    <a href="https://www.getyourguide.com/fr-fr/marrakech-l208/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--dark">Réserver une activité</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Zanzibar%20blog/4.webp" alt="Hôtel en bord de mer à Zanzibar, réservation sur Booking" loading="lazy" />
+                        <img src="/images/Marrakech%20blog/5.webp" alt="Riad et hôtels à Marrakech, réservation sur Booking" loading="lazy" />
                     </div>
-                    <a href="https://www.booking.com/searchresults.fr.html?ss=Zanzibar" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
+                    <a href="https://www.booking.com/searchresults.fr.html?ss=Marrakech" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Trouver un hébergement</a>
                 </div>
                 <div class="cta-card">
                     <div class="cta-card-img">
-                        <img src="/images/Zanzibar%20blog/15.webp" alt="Vol pour Zanzibar en Tanzanie, comparer sur Skyscanner" loading="lazy" />
+                        <img src="/images/Marrakech%20blog/28.webp" alt="Location de voiture à Marrakech pour explorer le Maroc avec Sixt" loading="lazy" />
+                    </div>
+                    <a href="https://www.sixt.fr/betafunnel/#/offerlist?zen_pu_location=ceb55f40-2a52-4180-9ff4-98ca0c3be2b7&zen_do_location=ceb55f40-2a52-4180-9ff4-98ca0c3be2b7&zen_pu_title=Marrakech%20A%C3%A9roport&zen_do_title=Marrakech%20A%C3%A9roport&zen_pu_branch_id=BRANCH%3A6598&zen_do_branch_id=BRANCH%3A6598&zen_offer_matrix_id=e4131322-b036-4540-b9b0-5afec611aa61&zen_vehicle_type=car&zen_pickup_country_code=MA&zen_resident_country_required=false&zen_point_of_sale=FR" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Louer une voiture</a>
+                </div>
+                <div class="cta-card">
+                    <div class="cta-card-img">
+                        <img src="/images/Marrakech%20blog/29.webp" alt="Vols pas chers pour Marrakech, comparer les prix sur Skyscanner" loading="lazy" />
                     </div>
                     <a href="https://www.skyscanner.fr/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--ghost">Comparer les vols</a>
                 </div>
@@ -346,7 +352,7 @@ const similaires = [
         <div class="faq-inner">
             <div class="faq-hd">
                 <span class="pill pill--sand">Questions fréquentes</span>
-                <h2>FAQ — Zanzibar entre amis :<br /><em>vos questions</em></h2>
+                <h2>FAQ — Marrakech entre amis :<br /><em>vos questions</em></h2>
             </div>
             <div class="faq-list">
                 {faq.map((item, i) => (
@@ -500,11 +506,11 @@ const similaires = [
     inset: 0%;
     background-size: cover;
     background-position: center center;
-    background-image: url('/images/Zanzibar%20blog/10.webp');
+    background-image: url('/images/Marrakech%20blog/1.webp');
     filter: brightness(1);
 }
 @media (max-width: 767px) {
-    .hero-bg { background-image: url('/images/Zanzibar%20blog/18.webp'); inset: 0; background-size: cover; background-position: center center; filter: brightness(1); }
+    .hero-bg { background-image: url('/images/Marrakech%20blog/24.webp'); inset: 0; background-size: cover; background-position: center center; filter: brightness(1); }
 }
 .hero-veil {
     position: absolute;
@@ -666,6 +672,7 @@ const similaires = [
 .transport-item-body { padding: 1.8rem 2rem; display: flex; flex-direction: column; justify-content: center; gap: 0.4rem; }
 .transport-item-body h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 900; color: var(--green-dark); margin: 0; }
 .transport-item-body p { font-size: 0.92rem; color: var(--text); line-height: 1.7; margin: 0; font-weight: 500; }
+.transport-cta { text-align: center; margin-top: 2.5rem; }
 @media (min-width: 768px) {
     .transport-inner { max-width: 1200px; }
     .transport-list { flex-direction: row; gap: 1.5rem; }
@@ -697,7 +704,7 @@ const similaires = [
 
 .cta { background: #fff; padding: 7rem 2rem; }
 .cta-inner { max-width: 1100px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
-.cta-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 340px)); gap: 1.5rem; margin-top: 0.5rem; justify-content: center; }
+.cta-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 280px)); gap: 1.5rem; margin-top: 0.5rem; justify-content: center; }
 .cta-card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; border: 1px solid rgba(13,27,46,0.08); box-shadow: 0 4px 20px rgba(13,27,46,0.06); transition: transform 0.3s, box-shadow 0.3s; }
 .cta-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(13,27,46,0.12); }
 .cta-card-img { height: 200px; overflow: hidden; }
