@@ -1,0 +1,98 @@
+{
+  "site": {
+    "name": "Destination Souvenir",
+    "url": "https://destinationsouvenir.com",
+    "target": "18-35 ans, voyages entre amis, fun et aventure"
+  },
+  "affiliates": {
+    "12go_countries": ["cambodge", "indonesie", "philippines", "thailande", "vietnam"],
+    "12go_base_url": "https://www.kqzyfj.com/click-101634807-17115158?url=https%3A%2F%2F12go.asia%2Fen%2Ftravel%2F",
+    "gyg_base_url": "https://www.getyourguide.com/fr-fr/",
+    "booking_lang": "fr"
+  },
+  "schedule": {
+    "weekday_stop_hour": 17,
+    "weekday_resume_hour": 22,
+    "weekend_start_hour": 22,
+    "weekend_end_hour": 10,
+    "rest_days": ["saturday", "sunday"]
+  },
+  "images": {
+    "unsplash_api_key": "PENDING",
+    "unsplash_base_url": "https://api.unsplash.com/search/photos",
+    "webp_quality": 85,
+    "images_base_path": "public/images",
+    "shared_path": "public/images/shared",
+    "archive_path": "public/images/formatjpg"
+  },
+  "article_image_map": {
+    "1": "hero_desktop",
+    "2": "hero_mobile",
+    "3": "activite_1",
+    "4": "activite_2",
+    "5": "activite_3",
+    "6": "mosaique_gauche",
+    "7": "mosaique_centre_haut",
+    "8": "mosaique_centre_bas",
+    "9": "mosaique_droite",
+    "10": "logement",
+    "11": "transport_1",
+    "12": "transport_2",
+    "13": "conclusion",
+    "14": "cta_activites",
+    "15": "cta_logement",
+    "16": "cta_transport_12go_ou_vols",
+    "17": "cta_vols_si_12go"
+  },
+  "shared_images": {
+    "note": "Images réutilisées dans tous les articles — à copier depuis shared/ plutôt que re-télécharger",
+    "catalog": {
+      "cta_vols": {
+        "file": "public/images/shared/cta-vols.webp",
+        "description": "Avion décollant, image générique pour CTA 'Comparer les vols' — même image dans 16 articles",
+        "used_as": "image N°17 (avec 12go) ou N°16 (sans 12go)",
+        "unsplash_fallback": "airplane takeoff sky"
+      },
+      "cta_location_voiture": {
+        "file": "public/images/shared/cta-location-voiture.webp",
+        "description": "Voiture de location générique (agence, self-drive)",
+        "used_as": "image N°11 ou N°12 si le transport est une location de voiture",
+        "unsplash_fallback": "car rental road trip"
+      },
+      "cta_voiture_vtc": {
+        "file": "public/images/shared/cta-voiture-vtc.webp",
+        "description": "Grab / Uber / VTC / taxi standard — trajet avec chauffeur",
+        "used_as": "image N°11 ou N°12 si le transport est Grab, Uber, VTC ou taxi",
+        "unsplash_fallback": "taxi city urban ride"
+      },
+      "cta_scooter": {
+        "file": "public/images/shared/cta-scooter.webp",
+        "description": "Scooter / moto-taxi — UNIQUEMENT pour les destinations d'Asie",
+        "used_as": "image N°11 ou N°12 si le transport est scooter ou moto-taxi ET que la destination est en Asie",
+        "restriction": "Asie uniquement (Thaïlande, Indonésie, Vietnam, Philippines, Cambodge, Japon, Corée...)",
+        "unsplash_fallback": "scooter motorbike travel asia"
+      },
+      "cta_metro": {
+        "file": "public/images/shared/cta-metro.webp",
+        "note": "À créer lors du premier article avec métro — pas encore dans shared/",
+        "description": "Métro / transport en commun urbain",
+        "used_as": "image N°11 ou N°12 si le transport est le métro",
+        "unsplash_fallback": "subway metro train station"
+      }
+    },
+    "transport_image_rules": {
+      "note": "Pour les images 11 et 12 (transports), utilise shared si le type correspond aux règles, sinon télécharge une image spécifique à la destination",
+      "shared_types": {
+        "location de voiture": "cta-location-voiture.webp",
+        "grab": "cta-voiture-vtc.webp",
+        "uber": "cta-voiture-vtc.webp",
+        "vtc": "cta-voiture-vtc.webp",
+        "taxi": "cta-voiture-vtc.webp",
+        "scooter": "cta-scooter.webp — ASIE UNIQUEMENT",
+        "moto-taxi": "cta-scooter.webp — ASIE UNIQUEMENT",
+        "vols": "cta-vols.webp"
+      },
+      "destination_specific_types": ["tuk-tuk", "bateau", "ferry", "bus local", "rickshaw", "songthaew", "train local", "pousse-pousse", "gondole", "scooter hors Asie"]
+    }
+  }
+}
