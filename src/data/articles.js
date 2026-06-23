@@ -90,7 +90,7 @@ export const articles = [
         tag: "Afrique",
         desc: "Souks labyrinthiques, riads somptueux et désert à portée de main.",
         img: "/images/2025/12/Marrakech-a-deflouter-3-1.jpg",
-        href: "/marrakech-10-activites-incontournables",
+        href: "/que-faire-a-marrakech-entre-amis-guide-et-bons-plans",
     },
     {
         nom: "Londres",
